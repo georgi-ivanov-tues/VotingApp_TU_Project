@@ -6,14 +6,16 @@ import android.os.Build;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.annotation.RequiresApi;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.votingapp.R;
@@ -38,6 +40,7 @@ public class TakeVotingFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -45,28 +48,24 @@ public class TakeVotingFragment extends Fragment {
         Voting voting = (Voting) getArguments().getSerializable(Keys.VOTE_OBJECT);
         ((TextView) view.findViewById(R.id.votingТitle)).setText(voting.getTitle());
         LinearLayout takeVotingLinearLayout = (LinearLayout) view.findViewById(R.id.takeVotingLinearLayout);
-
-        RadioGroup radioGroup = (RadioGroup) view.findViewById(R.id.voting_radio_group);
+        RadioGroup radioGroup = new RadioGroup(getActivity());
         RadioButton[] options = new RadioButton[voting.getOptions().size()];
         for (int i = 0; i < voting.getOptions().size(); i++) {
             options[i] = new RadioButton(getActivity());
-            options[i].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
-            options[i].setText((voting.getOptions().get(i)).getOptionText());
+            options[i].setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
+            options[i].setText(((Option) voting.getOptions().get(i)).getOptionText());
             radioGroup.addView(options[i]);
         }
-//        takeVotingLinearLayout.addView(radioGroup);
-
-//        Button save = new Button(getActivity());
-//        save.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
-//        save.setText("Гласуване");
-//        takeVotingLinearLayout.addView(save);
-
+        takeVotingLinearLayout.addView(radioGroup);
+        Button save = new Button(getActivity());
+        save.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
+        save.setText("Гласуване");
+        takeVotingLinearLayout.addView(save);
         return view;
+
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
-
     }
 
     @Override
@@ -77,8 +76,5 @@ public class TakeVotingFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-    }
-
-    public interface OnFragmentInteractionListener {
     }
 }

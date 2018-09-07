@@ -1,6 +1,5 @@
 package com.votingapp;
 
-import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,8 +13,6 @@ import com.votingapp.models.Referendum;
 import com.votingapp.models.Vote;
 import com.votingapp.models.Voting;
 import com.votingapp.utils.Keys;
-
-import java.io.Serializable;
 
 public class VotingActivity extends AppCompatActivity implements ListFragment.SelectionListener {
 
