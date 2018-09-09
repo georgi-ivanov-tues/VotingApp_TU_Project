@@ -43,7 +43,7 @@ public class VotingResultsFragment extends Fragment {
             TextView optionTextView = new TextView(getActivity());
             optionTextView.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
             optionTextView.setText(option.getOptionText() + " - " + option.getTimesSelected());
-            optionTextView.settextst
+//            optionTextView.settextst
             votingResultsLinearLayout.addView(optionTextView);
         }
 
