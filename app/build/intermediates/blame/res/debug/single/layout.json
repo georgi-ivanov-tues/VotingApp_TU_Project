@@ -40,12 +40,12 @@
         "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/layout/notification_action_tombstone.xml"
     },
     {
-        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
-        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_media_action.xml"
-    },
-    {
         "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
         "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/design/25.0.1/res/layout/design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_media_action.xml"
     },
     {
         "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
@@ -72,12 +72,12 @@
         "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
-    },
-    {
         "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
         "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow_custom.xml",
@@ -226,6 +226,10 @@
     {
         "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/layout/fragment_voting_results.xml",
+        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/res/layout/fragment_voting_results.xml"
     },
     {
         "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",

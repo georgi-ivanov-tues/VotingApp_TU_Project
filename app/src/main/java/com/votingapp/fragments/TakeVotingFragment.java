@@ -1,5 +1,6 @@
 package com.votingapp.fragments;
 
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Build;
@@ -86,6 +87,15 @@ public class TakeVotingFragment extends Fragment {
                     for (Option option : voting.getOptions()) {
                         System.out.println(option.getOptionText() + " = " + option.getTimesSelected());
                     }
+
+                    VotingResultsFragment votingResultsFragment = new VotingResultsFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable(Keys.VOTE_OBJECT, voting);
+                    votingResultsFragment.setArguments(bundle);
+                    FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                    transaction.replace(R.id.list_content_fragment, votingResultsFragment);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
                 }
 
             }

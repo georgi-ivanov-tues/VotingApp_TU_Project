@@ -1,6 +1,9 @@
 package com.votingapp.fragments;
 
+import android.app.AlertDialog;
+import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -48,6 +51,17 @@ public class TakeReferendumFragment extends Fragment {
                     CharSequence text = "Моля отговорете на референдума!";
                     Toast toast = Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT);
                     toast.show();
+
+                    /*
+                    AlertDialog.Builder builder = new AlertDialog.Builder(VehicleActivity.this);
+                    builder.setTitle(R.string.vehicle_activity_view_on_back_pressed)
+                            .setNegativeButton(R.string.ok, new DialogInterface.OnClickListener(){
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                    builder.show();
+                    */
                 }else {
                     RadioButton radioButton = (RadioButton) parentView.findViewById(selectedId);
                     if ("Да".equals(radioButton.getText()))
@@ -55,8 +69,19 @@ public class TakeReferendumFragment extends Fragment {
                     else if ("Не".equals(radioButton.getText()))
                         referendum.getOptionNo().increaseTimesSelected();
 
+
                     System.out.println("REFERENDUM OPTION YES = " + referendum.getOptionYes().getTimesSelected());
                     System.out.println("REFERENDUM OPTION NO = " + referendum.getOptionNo().getTimesSelected());
+
+                    ReferendumResultsFragment takePollFragment = new ReferendumResultsFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable(Keys.VOTE_OBJECT, referendum);
+                    takePollFragment.setArguments(bundle);
+                    FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                    transaction.replace(R.id.list_content_fragment, takePollFragment);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+
                 }
             }
         });

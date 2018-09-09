@@ -2,24 +2,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.votingapp.fragments.ReferendumResultsFragment">
+    tools:context="com.votingapp.fragments.ReferendumResultsFragment"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/referendumТitle"
+        android:id="@+id/referendumResultsТitle"
         style="@style/text_vote_title"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/referendumYesOption"
+        android:id="@+id/referendumResultsYesOption"
         style="@style/text_vote_title"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/referendumNoOption"
+        android:id="@+id/referendumResultsNoOption"
         style="@style/text_vote_title" />
 
 
