@@ -29,4 +29,8 @@ public class Option {
     public void setTimesSelected(int timesSelected) {
         this.timesSelected = timesSelected;
     }
+
+    public void increaseTimesSelected(){
+        timesSelected++;
+    }
 }

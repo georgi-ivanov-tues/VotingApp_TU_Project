@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.votingapp.R;
 import com.votingapp.models.Referendum;
@@ -32,16 +33,31 @@ public class TakeReferendumFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_take_referendum, container, false);
-        Referendum referendum = (Referendum) getArguments().getSerializable(Keys.VOTE_OBJECT);
+        final Referendum referendum = (Referendum) getArguments().getSerializable(Keys.VOTE_OBJECT);
         ((TextView) view.findViewById(R.id.referendumТitle)).setText(referendum.getTitle());
-        view.findViewById(R.id.save_button).setOnClickListener(new View.OnClickListener() {
+
+        Button saveButton = (Button) view.findViewById(R.id.save_button);
+        saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                RadioGroup radioGroup = (RadioGroup) view.findViewById(R.id.referendum_radio_group);
+                View parentView = (View) view.getParent();
+                RadioGroup radioGroup = (RadioGroup) parentView.findViewById(R.id.referendum_radio_group);
                 int selectedId = radioGroup.getCheckedRadioButtonId();
-                RadioButton radioButton = (RadioButton) view.findViewById(selectedId);
 
-                System.out.println("REFERENDUM SELECTED OPTION = " + radioButton.getText());
+                if(selectedId == -1){
+                    CharSequence text = "Моля отговорете на референдума!";
+                    Toast toast = Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT);
+                    toast.show();
+                }else {
+                    RadioButton radioButton = (RadioButton) parentView.findViewById(selectedId);
+                    if ("Да".equals(radioButton.getText()))
+                        referendum.getOptionYes().increaseTimesSelected();
+                    else if ("Не".equals(radioButton.getText()))
+                        referendum.getOptionNo().increaseTimesSelected();
+
+                    System.out.println("REFERENDUM OPTION YES = " + referendum.getOptionYes().getTimesSelected());
+                    System.out.println("REFERENDUM OPTION NO = " + referendum.getOptionNo().getTimesSelected());
+                }
             }
         });
         return view;

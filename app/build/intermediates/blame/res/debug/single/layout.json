@@ -316,6 +316,10 @@
         "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_screen_content_include.xml"
     },
     {
+        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/layout/fragment_referendum_results.xml",
+        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/res/layout/fragment_referendum_results.xml"
+    },
+    {
         "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
         "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/layout/abc_screen_simple.xml"
     },

@@ -22,4 +22,20 @@ public class Referendum extends Vote {
     public void setQuestion(Question question) {
         this.question = question;
     }
+
+    public Option getOptionYes() {
+        return optionYes;
+    }
+
+    public void setOptionYes(Option optionYes) {
+        this.optionYes = optionYes;
+    }
+
+    public Option getOptionNo() {
+        return optionNo;
+    }
+
+    public void setOptionNo(Option optionNo) {
+        this.optionNo = optionNo;
+    }
 }
