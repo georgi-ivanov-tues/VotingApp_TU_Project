@@ -1,6 +1,7 @@
 package com.votingapp.fragments;
 
 import android.app.Dialog;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -117,6 +118,15 @@ public class TakePollFragment extends Fragment {
                         i++;
                     }
                 }
+
+                PollResultsFragment pollResultsFragment = new PollResultsFragment();
+                Bundle bundle = new Bundle();
+                bundle.putSerializable(Keys.VOTE_OBJECT, poll);
+                pollResultsFragment.setArguments(bundle);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.list_content_fragment, pollResultsFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
         return view;

@@ -9,9 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import com.votingapp.AppController;
 import com.votingapp.R;
+import com.votingapp.models.Option;
 import com.votingapp.models.Referendum;
 import com.votingapp.utils.Keys;
+
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 public class ReferendumResultsFragment extends Fragment {
     public ReferendumResultsFragment() {
@@ -36,10 +42,17 @@ public class ReferendumResultsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_referendum_results, container, false);
         final Referendum referendum = (Referendum) getArguments().getSerializable(Keys.VOTE_OBJECT);
         ((TextView) view.findViewById(R.id.referendumResultsТitle)).setText(referendum.getTitle());
+        ArrayList<Option> options = new ArrayList<>();
+        options.add(referendum.getOptionYes());
+        options.add(referendum.getOptionNo());
+
+        int totalNumberOfVotes = AppController.getTotalNumberOfVotes(options);
+        String optionTextPercentageYes = new DecimalFormat("##.##").format(((referendum.getOptionYes().getTimesSelected() / (double) totalNumberOfVotes) * 100)) + "%";
         ((TextView) view.findViewById(R.id.referendumResultsYesOption)).setText(
-                referendum.getOptionYes().getOptionText() + " - " + referendum.getOptionYes().getTimesSelected());
+                referendum.getOptionYes().getOptionText() + " - " + optionTextPercentageYes + " (" + referendum.getOptionYes().getTimesSelected() + ")");
+        String optionTextPercentageNo = new DecimalFormat("##.##").format(((referendum.getOptionNo().getTimesSelected() / (double) totalNumberOfVotes) * 100)) + "%";
         ((TextView) view.findViewById(R.id.referendumResultsNoOption)).setText(
-                referendum.getOptionNo().getOptionText() + " - " + referendum.getOptionNo().getTimesSelected());
+                referendum.getOptionNo().getOptionText() + " - " + optionTextPercentageNo + " (" + referendum.getOptionNo().getTimesSelected() + ")");
 
         return view;
     }

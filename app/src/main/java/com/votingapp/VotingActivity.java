@@ -1,5 +1,7 @@
 package com.votingapp;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,31 +18,18 @@ import com.votingapp.utils.Keys;
 
 public class VotingActivity extends AppCompatActivity implements ListFragment.SelectionListener {
 
+    FragmentTransaction transaction;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        System.out.println("Voting Activity");
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_voting);
-//
-//        String defaultFragment = (String) getIntent().getSerializableExtra(Keys.VOTING_ACTIVITY_FRAGMENT);
-//
-//        ListFragment listFragment = new ListFragment();
-//        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-//        transaction.replace(R.id.list_content_fragment, listFragment);
-//        transaction.commit();
-//
-//        if(Keys.LIST_VOTINGS.equals(defaultFragment)){
-//
-//        }else if(Keys.LIST_POOLS.equals(defaultFragment)){
-//
-//        }else if(Keys.LIST_REFERENDUMS.equals(defaultFragment)){
-//
-//        }
-
-
         System.out.println("Voting Activity");
         super.onCreate(savedInstanceState);
-        setContentView((int) R.layout.activity_voting);
+        setContentView(R.layout.activity_voting);
+
+        loadListFragment();
+    }
+
+    private void loadListFragment(){
         String defaultFragment = (String) getIntent().getSerializableExtra(Keys.VOTING_ACTIVITY_FRAGMENT);
         Bundle bundle = new Bundle();
         if (Keys.LIST_VOTINGS.equals(defaultFragment)) {
@@ -53,6 +42,7 @@ public class VotingActivity extends AppCompatActivity implements ListFragment.Se
         ListFragment listFragment = new ListFragment();
         listFragment.setArguments(bundle);
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.list_content_fragment, listFragment, "listFragment");
         transaction.replace(R.id.list_content_fragment, listFragment);
         transaction.commit();
     }
@@ -61,7 +51,6 @@ public class VotingActivity extends AppCompatActivity implements ListFragment.Se
     public void onItemSelected(Vote vote) {
         System.out.println("Selected vote is = " + vote.getTitle());
         Bundle bundle;
-        FragmentTransaction transaction;
         if (vote.getClass().equals(Voting.class)) {
             TakeVotingFragment takeVotingFragment = new TakeVotingFragment();
             bundle = new Bundle();
@@ -89,6 +78,16 @@ public class VotingActivity extends AppCompatActivity implements ListFragment.Se
             transaction.replace(R.id.list_content_fragment, takeReferendumFragment);
             transaction.addToBackStack(null);
             transaction.commit();
+        }
+    }
+
+    @Override
+    public void onBackPressed(){
+        Fragment currentFragment = getFragmentManager().findFragmentByTag("listFragment");
+        if (currentFragment != null && currentFragment.isVisible()) {
+            finish();
+        }else {
+            loadListFragment();
         }
     }
 }

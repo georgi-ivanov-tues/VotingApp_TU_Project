@@ -1,10 +1,14 @@
 [
     {
-        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
-        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\drawable-v23\\abc_control_background_material.xml"
+        "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
+        "source": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\drawable-v23\\abc_control_background_material.xml"
     },
     {
-        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/drawable-v23/abc_control_background_material.xml",
-        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable-v23/abc_control_background_material.xml"
+        "merged": "D:\\Users\\giivanov\\GitHub\\VotingApp_TU_Project\\D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
+        "source": "D:\\Users\\giivanov\\GitHub\\VotingApp_TU_Project\\D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\drawable-v23\\abc_control_background_material.xml"
+    },
+    {
+        "merged": "D:\\Users\\giivanov\\GitHub\\VotingApp_TU_Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
+        "source": "D:\\Users\\giivanov\\GitHub\\VotingApp_TU_Project\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\drawable-v23\\abc_control_background_material.xml"
     }
 ]

@@ -73,12 +73,11 @@ public class TakeReferendumFragment extends Fragment {
                     System.out.println("REFERENDUM OPTION YES = " + referendum.getOptionYes().getTimesSelected());
                     System.out.println("REFERENDUM OPTION NO = " + referendum.getOptionNo().getTimesSelected());
 
-                    ReferendumResultsFragment takePollFragment = new ReferendumResultsFragment();
+                    ReferendumResultsFragment referendumResultsFragment = new ReferendumResultsFragment();
                     Bundle bundle = new Bundle();
                     bundle.putSerializable(Keys.VOTE_OBJECT, referendum);
-                    takePollFragment.setArguments(bundle);
+                    referendumResultsFragment.setArguments(bundle);
                     FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                    transaction.replace(R.id.list_content_fragment, takePollFragment);
                     transaction.addToBackStack(null);
                     transaction.commit();
 

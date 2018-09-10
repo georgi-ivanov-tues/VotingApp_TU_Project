@@ -33,4 +33,12 @@ public class AppController extends Application{
     public static synchronized AppController getInstance() {
         return mInstance;
     }
+
+    public static int getTotalNumberOfVotes(ArrayList<Option> options){
+        int totalNumberOfVotes = 0;
+        for(Option option : options){
+            totalNumberOfVotes += option.getTimesSelected();
+        }
+        return totalNumberOfVotes;
+    }
 }

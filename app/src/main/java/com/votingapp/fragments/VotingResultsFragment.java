@@ -10,10 +10,13 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
 import com.votingapp.models.Voting;
 import com.votingapp.utils.Keys;
+
+import java.text.DecimalFormat;
 
 public class VotingResultsFragment extends Fragment {
     public VotingResultsFragment() {
@@ -39,11 +42,13 @@ public class VotingResultsFragment extends Fragment {
         ((TextView) view.findViewById(R.id.votingResultsТitle)).setText(voting.getTitle());
         LinearLayout votingResultsLinearLayout = (LinearLayout) view.findViewById(R.id.votingResultsLinearLayout);
 
+        int totalNumberOfVotes = AppController.getTotalNumberOfVotes(voting.getOptions());
         for(Option option : voting.getOptions()){
             TextView optionTextView = new TextView(getActivity());
-            optionTextView.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
-            optionTextView.setText(option.getOptionText() + " - " + option.getTimesSelected());
-//            optionTextView.settextst
+            optionTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            String optionTextPercentage = new DecimalFormat("##.##").format(((option.getTimesSelected() / (double) totalNumberOfVotes) * 100)) + "%";
+            optionTextView.setText(option.getOptionText() + " - " + optionTextPercentage + " (" + option.getTimesSelected() + ")");
+            optionTextView.setTextAppearance(getActivity(), R.style.text_vote_title);
             votingResultsLinearLayout.addView(optionTextView);
         }
 
