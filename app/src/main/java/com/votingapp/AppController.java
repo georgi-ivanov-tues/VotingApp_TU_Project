@@ -7,6 +7,7 @@ import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
 import com.votingapp.models.Question;
 import com.votingapp.models.Referendum;
+import com.votingapp.models.UserProfile;
 import com.votingapp.models.Vote;
 import com.votingapp.models.Voting;
 
@@ -20,6 +21,7 @@ import java.util.HashMap;
 public class AppController extends Application{
 
     private static AppController mInstance;
+    public static UserProfile userProfile;
     public static ArrayList<Vote> votes = new ArrayList<>();
 
     @Override
@@ -27,6 +29,7 @@ public class AppController extends Application{
         super.onCreate();
         mInstance = this;
 
+        userProfile = new UserProfile();
         System.out.println("Application created!!!");
     }
 

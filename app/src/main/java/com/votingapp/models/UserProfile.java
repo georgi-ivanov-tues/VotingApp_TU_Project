@@ -9,13 +9,25 @@ public class UserProfile {
     private ArrayList<Poll> polls = new ArrayList<>();
     private ArrayList<Referendum> referendums = new ArrayList<>();
 
-    private void addVoting(Voting voting){
+    public void addVoting(Voting voting){
         votings.add(voting);
     }
-    private void addPoll(Poll poll){
+    public void addPoll(Poll poll) {
         polls.add(poll);
     }
-    private void addReferendum(Referendum referendum){
+    public void addReferendum(Referendum referendum){
         referendums.add(referendum);
+    }
+
+    public ArrayList<Voting> getVotings() {
+        return votings;
+    }
+
+    public ArrayList<Poll> getPolls() {
+        return polls;
+    }
+
+    public ArrayList<Referendum> getReferendums() {
+        return referendums;
     }
 }

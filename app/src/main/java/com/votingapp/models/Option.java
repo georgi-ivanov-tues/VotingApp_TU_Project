@@ -8,6 +8,7 @@ public class Option {
 
     private String optionText;
     private int timesSelected;
+    private boolean selectedByCurrentUser = false;
 
     public Option(String optionText) {
         this.optionText = optionText;
@@ -32,5 +33,13 @@ public class Option {
 
     public void increaseTimesSelected(){
         timesSelected++;
+    }
+
+    public boolean isSelectedByCurrentUser() {
+        return selectedByCurrentUser;
+    }
+
+    public void setSelectedByCurrentUser(boolean selectedByCurrentUser) {
+        this.selectedByCurrentUser = selectedByCurrentUser;
     }
 }

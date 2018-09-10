@@ -2,13 +2,5 @@
     {
         "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
         "source": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
-    },
-    {
-        "merged": "D:\\Users\\giivanov\\GitHub\\VotingApp_TU_Project\\D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
-        "source": "D:\\Users\\giivanov\\GitHub\\VotingApp_TU_Project\\D:\\Projects\\TU_Project\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
-    },
-    {
-        "merged": "D:\\Users\\giivanov\\GitHub\\VotingApp_TU_Project\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
-        "source": "D:\\Users\\giivanov\\GitHub\\VotingApp_TU_Project\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
     }
 ]

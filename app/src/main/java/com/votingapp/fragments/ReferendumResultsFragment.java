@@ -1,6 +1,7 @@
 package com.votingapp.fragments;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -48,11 +49,18 @@ public class ReferendumResultsFragment extends Fragment {
 
         int totalNumberOfVotes = AppController.getTotalNumberOfVotes(options);
         String optionTextPercentageYes = new DecimalFormat("##.##").format(((referendum.getOptionYes().getTimesSelected() / (double) totalNumberOfVotes) * 100)) + "%";
-        ((TextView) view.findViewById(R.id.referendumResultsYesOption)).setText(
+        TextView optionYesTextView = ((TextView) view.findViewById(R.id.referendumResultsYesOption));
+        optionYesTextView.setText(
                 referendum.getOptionYes().getOptionText() + " - " + optionTextPercentageYes + " (" + referendum.getOptionYes().getTimesSelected() + ")");
+        if(referendum.getOptionYes().isSelectedByCurrentUser())
+            optionYesTextView.setTypeface(null, Typeface.BOLD);
+
         String optionTextPercentageNo = new DecimalFormat("##.##").format(((referendum.getOptionNo().getTimesSelected() / (double) totalNumberOfVotes) * 100)) + "%";
-        ((TextView) view.findViewById(R.id.referendumResultsNoOption)).setText(
+        TextView optionNoTextView = ((TextView) view.findViewById(R.id.referendumResultsNoOption));
+        optionNoTextView.setText(
                 referendum.getOptionNo().getOptionText() + " - " + optionTextPercentageNo + " (" + referendum.getOptionNo().getTimesSelected() + ")");
+        if(referendum.getOptionNo().isSelectedByCurrentUser())
+            optionNoTextView.setTypeface(null, Typeface.BOLD);
 
         return view;
     }

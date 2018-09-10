@@ -18,6 +18,7 @@ import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
 import com.votingapp.models.Question;
 import com.votingapp.models.Referendum;
+import com.votingapp.models.UserProfile;
 import com.votingapp.models.Voting;
 import com.votingapp.utils.Keys;
 
@@ -96,7 +97,8 @@ public class HomeActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_user_profile) {
-
+            Intent userProfileActivityIntent = new Intent(HomeActivity.this, UserProfileActivity.class);
+            startActivity(userProfileActivityIntent);
         } else if (id == R.id.nav_votings) {
             Intent votingActivityIntent = new Intent(HomeActivity.this, VotingActivity.class);
             votingActivityIntent.putExtra(Keys.VOTING_ACTIVITY_FRAGMENT, Keys.LIST_VOTINGS);
