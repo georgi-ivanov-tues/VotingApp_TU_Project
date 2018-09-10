@@ -17,6 +17,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
 import com.votingapp.models.Voting;
@@ -81,6 +82,7 @@ public class TakeVotingFragment extends Fragment {
                     for (Option option : voting.getOptions()) {
                         if (option.getOptionText().equals(radioButton.getText())) {
                             option.increaseTimesSelected();
+                            option.setSelectedByCurrentUser(true);
                         }
                     }
 
@@ -88,13 +90,14 @@ public class TakeVotingFragment extends Fragment {
                         System.out.println(option.getOptionText() + " = " + option.getTimesSelected());
                     }
 
+                    AppController.userProfile.addVoting(voting);
+
                     VotingResultsFragment votingResultsFragment = new VotingResultsFragment();
                     Bundle bundle = new Bundle();
                     bundle.putSerializable(Keys.VOTE_OBJECT, voting);
                     votingResultsFragment.setArguments(bundle);
                     FragmentTransaction transaction = getFragmentManager().beginTransaction();
                     transaction.replace(R.id.list_content_fragment, votingResultsFragment);
-                    transaction.addToBackStack(null);
                     transaction.commit();
                 }
 

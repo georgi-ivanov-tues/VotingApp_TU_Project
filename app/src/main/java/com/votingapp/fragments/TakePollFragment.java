@@ -19,6 +19,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
@@ -107,6 +108,7 @@ public class TakePollFragment extends Fragment {
                         for (Option option : options) {
                             if (option.getOptionText().equals(radioButton.getText())) {
                                 option.increaseTimesSelected();
+                                option.setSelectedByCurrentUser(true);
                             }
                         }
 
@@ -119,13 +121,14 @@ public class TakePollFragment extends Fragment {
                     }
                 }
 
+                AppController.userProfile.addPoll(poll);
+
                 PollResultsFragment pollResultsFragment = new PollResultsFragment();
                 Bundle bundle = new Bundle();
                 bundle.putSerializable(Keys.VOTE_OBJECT, poll);
                 pollResultsFragment.setArguments(bundle);
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.list_content_fragment, pollResultsFragment);
-                transaction.addToBackStack(null);
                 transaction.commit();
             }
         });

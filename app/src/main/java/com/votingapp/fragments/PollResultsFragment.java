@@ -1,6 +1,7 @@
 package com.votingapp.fragments;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -61,12 +62,15 @@ public class PollResultsFragment extends Fragment {
             takeVotingLinearLayout.addView(questionTitle);
             int totalNumberOfVotes = AppController.getTotalNumberOfVotes(options);
             for (int i = 0; i < options.size(); i++) {
-                TextView option = new TextView(getActivity());
-                option.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
-                String optionTextPercentage = new DecimalFormat("##.##").format(((options.get(i).getTimesSelected() / (double) totalNumberOfVotes) * 100)) + "%";
-                option.setText((options.get(i)).getOptionText() + " - " + optionTextPercentage + " ("  +(options.get(i)).getTimesSelected() + ")");
-                option.setTextAppearance(getActivity(), R.style.text_vote_title);
-                takeVotingLinearLayout.addView(option);
+                Option option = options.get(i);
+                TextView optionTextView = new TextView(getActivity());
+                optionTextView.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
+                String optionTextPercentage = new DecimalFormat("##.##").format((option.getTimesSelected() / (double) totalNumberOfVotes) * 100) + "%";
+                optionTextView.setText(option.getOptionText() + " - " + optionTextPercentage + " ("  +(options.get(i)).getTimesSelected() + ")");
+                optionTextView.setTextAppearance(getActivity(), R.style.text_vote_title);
+                if(option.isSelectedByCurrentUser())
+                    optionTextView.setTypeface(null, Typeface.BOLD);
+                takeVotingLinearLayout.addView(optionTextView);
             }
         }
         return view;

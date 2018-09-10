@@ -16,6 +16,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Referendum;
 import com.votingapp.utils.Keys;
@@ -64,23 +65,26 @@ public class TakeReferendumFragment extends Fragment {
                     */
                 }else {
                     RadioButton radioButton = (RadioButton) parentView.findViewById(selectedId);
-                    if ("Да".equals(radioButton.getText()))
+                    if ("Да".equals(radioButton.getText())) {
                         referendum.getOptionYes().increaseTimesSelected();
-                    else if ("Не".equals(radioButton.getText()))
+                        referendum.getOptionYes().setSelectedByCurrentUser(true);
+                    }else if ("Не".equals(radioButton.getText())) {
                         referendum.getOptionNo().increaseTimesSelected();
-
+                        referendum.getOptionNo().setSelectedByCurrentUser(true);
+                    }
 
                     System.out.println("REFERENDUM OPTION YES = " + referendum.getOptionYes().getTimesSelected());
                     System.out.println("REFERENDUM OPTION NO = " + referendum.getOptionNo().getTimesSelected());
+
+                    AppController.userProfile.addReferendum(referendum);
 
                     ReferendumResultsFragment referendumResultsFragment = new ReferendumResultsFragment();
                     Bundle bundle = new Bundle();
                     bundle.putSerializable(Keys.VOTE_OBJECT, referendum);
                     referendumResultsFragment.setArguments(bundle);
                     FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                    transaction.addToBackStack(null);
+                    transaction.replace(R.id.list_content_fragment, referendumResultsFragment);
                     transaction.commit();
-
                 }
             }
         });

@@ -7,9 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.votingapp.fragments.ListFragment;
+import com.votingapp.fragments.PollResultsFragment;
+import com.votingapp.fragments.ReferendumResultsFragment;
 import com.votingapp.fragments.TakePollFragment;
 import com.votingapp.fragments.TakeReferendumFragment;
 import com.votingapp.fragments.TakeVotingFragment;
+import com.votingapp.fragments.VotingResultsFragment;
 import com.votingapp.models.Poll;
 import com.votingapp.models.Referendum;
 import com.votingapp.models.Vote;
@@ -50,35 +53,47 @@ public class VotingActivity extends AppCompatActivity implements ListFragment.Se
     @Override
     public void onItemSelected(Vote vote) {
         System.out.println("Selected vote is = " + vote.getTitle());
-        Bundle bundle;
+        boolean alreadyVoted = false;
         if (vote.getClass().equals(Voting.class)) {
-            TakeVotingFragment takeVotingFragment = new TakeVotingFragment();
-            bundle = new Bundle();
-            bundle.putSerializable(Keys.VOTE_OBJECT, vote);
-            takeVotingFragment.setArguments(bundle);
-            transaction = getFragmentManager().beginTransaction();
-            transaction.replace(R.id.list_content_fragment, takeVotingFragment);
-            transaction.addToBackStack(null);
-            transaction.commit();
+            for(Voting currentVoting : AppController.userProfile.getVotings()) {
+                if (currentVoting.getTitle().equals(vote.getTitle())) {
+                    alreadyVoted = true;
+                    loadFragment(new VotingResultsFragment(), currentVoting);
+                }
+            }
+            if(!alreadyVoted) {
+                loadFragment(new TakeVotingFragment(), vote);
+            }
         } else if (vote.getClass().equals(Poll.class)) {
-            TakePollFragment takePollFragment = new TakePollFragment();
-            bundle = new Bundle();
-            bundle.putSerializable(Keys.VOTE_OBJECT, vote);
-            takePollFragment.setArguments(bundle);
-            transaction = getFragmentManager().beginTransaction();
-            transaction.replace(R.id.list_content_fragment, takePollFragment);
-            transaction.addToBackStack(null);
-            transaction.commit();
+            for(Poll currentPoll : AppController.userProfile.getPolls()) {
+                if (currentPoll.getTitle().equals(vote.getTitle())) {
+                    alreadyVoted = true;
+                    loadFragment(new PollResultsFragment(), currentPoll);
+                }
+            }
+            if(!alreadyVoted) {
+                loadFragment(new TakePollFragment(), vote);
+            }
         } else if (vote.getClass().equals(Referendum.class)) {
-            TakeReferendumFragment takeReferendumFragment = new TakeReferendumFragment();
-            bundle = new Bundle();
-            bundle.putSerializable(Keys.VOTE_OBJECT, vote);
-            takeReferendumFragment.setArguments(bundle);
-            transaction = getFragmentManager().beginTransaction();
-            transaction.replace(R.id.list_content_fragment, takeReferendumFragment);
-            transaction.addToBackStack(null);
-            transaction.commit();
+            for(Referendum currentReferendum : AppController.userProfile.getReferendums()){
+                if(currentReferendum.getTitle().equals(vote.getTitle())) {
+                    alreadyVoted = true;
+                    loadFragment(new ReferendumResultsFragment(), currentReferendum);
+                }
+            }
+            if(!alreadyVoted) {
+                loadFragment(new TakeReferendumFragment(), vote);
+            }
         }
+    }
+
+    private void loadFragment(Fragment fragmentToLoad, Vote vote){
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(Keys.VOTE_OBJECT, vote);
+        fragmentToLoad.setArguments(bundle);
+        transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.list_content_fragment, fragmentToLoad);
+        transaction.commit();
     }
 
     @Override

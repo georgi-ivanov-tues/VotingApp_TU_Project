@@ -1,6 +1,7 @@
 package com.votingapp.fragments;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -49,6 +50,9 @@ public class VotingResultsFragment extends Fragment {
             String optionTextPercentage = new DecimalFormat("##.##").format(((option.getTimesSelected() / (double) totalNumberOfVotes) * 100)) + "%";
             optionTextView.setText(option.getOptionText() + " - " + optionTextPercentage + " (" + option.getTimesSelected() + ")");
             optionTextView.setTextAppearance(getActivity(), R.style.text_vote_title);
+            if(option.isSelectedByCurrentUser())
+                optionTextView.setTypeface(null, Typeface.BOLD);
+
             votingResultsLinearLayout.addView(optionTextView);
         }
 
