@@ -54,6 +54,8 @@ public class TakePollFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_take_poll, container, false);
         final Poll poll = (Poll) getArguments().getSerializable(Keys.VOTE_OBJECT);
         ((TextView) view.findViewById(R.id.pollTitle)).setText(poll.getTitle());
+        getActivity().setTitle(poll.getTitle());
+
         LinearLayout takeVotingLinearLayout = (LinearLayout) view.findViewById(R.id.takePollLinearLayout);
         takeVotingLinearLayout.addView(new ScrollView(getActivity()));
         final ArrayList<TextView> questions = new ArrayList<>();
@@ -64,6 +66,7 @@ public class TakePollFragment extends Fragment {
             System.out.println(pair.getKey() + " = " + pair.getValue());
             TextView questionTitle = new TextView(getActivity());
             questionTitle.setText(question.getQuestionText());
+            questionTitle.setTextAppearance(getActivity(), R.style.text_vote_title);
             takeVotingLinearLayout.addView(questionTitle);
             RadioGroup radioGroup = new RadioGroup(getActivity());
             RadioButton[] radioButtonOptions = new RadioButton[options.size()];

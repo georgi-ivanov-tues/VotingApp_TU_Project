@@ -47,6 +47,8 @@ public class TakeVotingFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_take_voting, container, false);
         final Voting voting = (Voting) getArguments().getSerializable(Keys.VOTE_OBJECT);
         ((TextView) view.findViewById(R.id.votingТitle)).setText(voting.getTitle());
+        getActivity().setTitle(voting.getTitle());
+
         LinearLayout takeVotingLinearLayout = (LinearLayout) view.findViewById(R.id.takeVotingLinearLayout);
         RadioGroup radioGroup = new RadioGroup(getActivity());
         radioGroup.setId(new Integer(1234));

@@ -46,7 +46,6 @@ public class VotingActivity extends AppCompatActivity implements ListFragment.Se
         listFragment.setArguments(bundle);
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.list_content_fragment, listFragment, "listFragment");
-        transaction.replace(R.id.list_content_fragment, listFragment);
         transaction.commit();
     }
 

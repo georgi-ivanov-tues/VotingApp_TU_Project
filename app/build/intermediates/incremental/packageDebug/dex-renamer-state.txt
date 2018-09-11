@@ -1,4 +1,4 @@
-#Tue Sep 11 14:24:54 EEST 2018
+#Tue Sep 11 17:46:48 EEST 2018
 base.0=D\:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=D\:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

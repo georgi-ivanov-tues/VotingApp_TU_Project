@@ -7,4 +7,11 @@
     android:orientation="vertical"
     android:id="@+id/userProfileLinearLayout">
 
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/userProfile"-->
+        <!--style="@style/text_vote_title"-->
+        <!--android:text="KUR ZA TU!!!"/>-->
+
 </LinearLayout>

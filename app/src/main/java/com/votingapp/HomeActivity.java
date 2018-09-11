@@ -15,10 +15,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.drive.Drive;
+import com.google.android.gms.drive.DriveClient;
+import com.google.android.gms.drive.DriveContents;
+import com.google.android.gms.drive.DriveFile;
+import com.google.android.gms.drive.DriveResourceClient;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.google.android.gms.tasks.Task;
 import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
 import com.votingapp.models.Question;
@@ -42,6 +50,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
+import static com.google.android.gms.drive.Drive.getDriveResourceClient;
+
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -49,17 +59,10 @@ public class HomeActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        setTitle("Гласувания, анкети, референдуми");
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -70,17 +73,25 @@ public class HomeActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        String votingPathFile_OLD = "1DJiTUEblvSyaGpgFcxi840ZNyjCLT4X7\"";
-        String votingsPathFile = "1Ee6cBkbY9ohmnA6ewGdrnWLpWVRdHpdn";
-        String referendumsPathFile = "1tUdkU2UJfHY-zM1ZWt-82sT4E3gyoYT7";
-        String pollsPathFile = "1xICuvwRi53Dk5CtGtFryfRElnRnzpjd7";
+        Button loadDataButton = (Button) findViewById(R.id.load_data_button);
+        loadDataButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String votingPathFile_OLD = "1DJiTUEblvSyaGpgFcxi840ZNyjCLT4X7\"";
+                String votingsPathFile = "1Ee6cBkbY9ohmnA6ewGdrnWLpWVRdHpdn";
+                String referendumsPathFile = "1tUdkU2UJfHY-zM1ZWt-82sT4E3gyoYT7";
+                String pollsPathFile = "1xICuvwRi53Dk5CtGtFryfRElnRnzpjd7";
 
-        loadDataFromFiles(votingsPathFile, Voting.class);
-        loadDataFromFiles(referendumsPathFile, Referendum.class);
-        loadDataFromFiles(pollsPathFile, Poll.class);
+                loadDataFromFiles(votingsPathFile, Voting.class);
+                loadDataFromFiles(referendumsPathFile, Referendum.class);
+                loadDataFromFiles(pollsPathFile, Poll.class);
+            }
+        });
 
 
-//        setUpData();
+//        GoogleSignInAccount googleSignInAccount = new GoogleSignInAccount()
+//        Task<DriveContents> openFileTask =
+//                getDriveResourceClient(this,).openFile(file, DriveFile.MODE_READ_ONLY);
     }
 
     private void loadDataFromFiles(final String votesPathFile, final Class voteType){
@@ -139,7 +150,7 @@ public class HomeActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home, menu);
+//        getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
 
@@ -150,10 +161,7 @@ public class HomeActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -167,7 +175,9 @@ public class HomeActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_user_profile) {
-//            Intent userProfileActivityIntent = new UserProfileActivity(HomeActivity.this, UserProfileActivity);
+            Intent userProfileActivityIntent = new Intent(HomeActivity.this, UserProfileActivity.class);
+            startActivity(userProfileActivityIntent);
+
         } else if (id == R.id.nav_votings) {
             Intent votingActivityIntent = new Intent(HomeActivity.this, VotingActivity.class);
             votingActivityIntent.putExtra(Keys.VOTING_ACTIVITY_FRAGMENT, Keys.LIST_VOTINGS);

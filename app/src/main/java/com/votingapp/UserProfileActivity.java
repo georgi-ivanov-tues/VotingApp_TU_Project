@@ -1,8 +1,11 @@
 package com.votingapp;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -10,6 +13,7 @@ import android.widget.TextView;
 import com.votingapp.models.Poll;
 import com.votingapp.models.Referendum;
 import com.votingapp.models.Voting;
+import com.votingapp.utils.Keys;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -25,32 +29,43 @@ public class UserProfileActivity extends AppCompatActivity {
         ArrayList<Poll> polls = AppController.userProfile.getPolls();
         ArrayList<Referendum> referendums = AppController.userProfile.getReferendums();
 
-        LinearLayout userProfileLinearLayout = (LinearLayout) findViewById(R.id.userProfileLinearLayout);
-
-        TextView votingsTitleTextView = new TextView(this);
+        // Get the widgets reference from XML layout
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.userProfileLinearLayout);
+        TextView votingsTitleTextView = new TextView(getApplicationContext());
+        votingsTitleTextView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        votingsTitleTextView.setTextAppearance(getApplicationContext(), R.style.text_vote_title2);
         votingsTitleTextView.setText("Гласувания");
-        votingsTitleTextView.setTextAppearance(this, R.style.text_vote_title);
-        votingsTitleTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-        userProfileLinearLayout.addView(votingsTitleTextView);
+        linearLayout.addView(votingsTitleTextView);
 
-        for(Voting voting : votings){
+        for(final Voting voting : votings){
             TextView votingTextView = new TextView(this);
             votingTextView.setText(voting.getTitle());
             votingTextView.setTextAppearance(this, R.style.text_vote_title);
-            votingTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-            userProfileLinearLayout.addView(votingTextView);
+            votingTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            votingsTitleTextView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent votingActivityIntent = new Intent(UserProfileActivity.this, VotingActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable(Keys.VOTE_OBJECT, voting);
+                    votingActivityIntent.putExtra(Keys.VOTING_ACTIVITY_FRAGMENT, Keys.LIST_VOTINGS);
+                    votingActivityIntent.putExtras(bundle);
+                    startActivity(votingActivityIntent);
+                }
+            });
+            linearLayout.addView(votingTextView);
         }
 
-        TextView pollsTitleTextView = new TextView(this);
+        TextView pollsTitleTextView = new TextView(getApplicationContext());
+        pollsTitleTextView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT));
         pollsTitleTextView.setText("Анкети");
-        pollsTitleTextView.setTextAppearance(this, R.style.text_vote_title);
-        pollsTitleTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-        userProfileLinearLayout.addView(pollsTitleTextView);
+        pollsTitleTextView.setTextAppearance(getApplicationContext(), R.style.text_vote_title2);
+        linearLayout.addView(pollsTitleTextView);
 
-        TextView referendumsTitleTextView = new TextView(this);
-        referendumsTitleTextView.setText("Гласувания");
-        referendumsTitleTextView.setTextAppearance(this, R.style.text_vote_title);
-        referendumsTitleTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-        userProfileLinearLayout.addView(referendumsTitleTextView);
+        TextView referendumsTitleTextView = new TextView(getApplicationContext());
+        referendumsTitleTextView.setText("Референдуми");
+        referendumsTitleTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        referendumsTitleTextView.setTextAppearance(getApplicationContext(), R.style.text_vote_title2);
+        linearLayout.addView(referendumsTitleTextView);
     }
 }

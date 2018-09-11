@@ -36,17 +36,6 @@ public class ListFragment extends android.app.ListFragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-//        System.out.println("List Fragment on Create");
-//        super.onCreate(savedInstanceState);
-//        votesData = new ArrayList<>();
-//        votesAdapter = new VotesAdapter(getActivity(), votesData);
-//        setListAdapter(votesAdapter);
-//        votesAdapter.clear();
-////        Vote[] votes = (Vote[]) AppController.getInstance().votes.toArray();
-//        if(AppController.getInstance().votes != null)
-//            votesAdapter.addAll(AppController.getInstance().votes);
-//        // ?????????????
-
         super.onCreate(savedInstanceState);
         String listType = (String) getArguments().getSerializable(Keys.VOTING_ACTIVITY_FRAGMENT);
         this.votesData = new ArrayList();
@@ -55,13 +44,15 @@ public class ListFragment extends android.app.ListFragment {
         this.votesAdapter.clear();
         if (Keys.LIST_VOTINGS.equals(listType)) {
             this.votesAdapter.addAll(getVotesByType(Voting.class));
+            getActivity().setTitle("Списък от гласувания");
         } else if (Keys.LIST_POOLS.equals(listType)) {
             this.votesAdapter.addAll(getVotesByType(Poll.class));
+            getActivity().setTitle("Списък от анкети");
         } else if (Keys.LIST_REFERENDUMS.equals(listType)) {
             this.votesAdapter.addAll(getVotesByType(Referendum.class));
+            getActivity().setTitle("Списък от референдуми");
         }
     }
-
 
     private SelectionListener mSelectionCallback;
 
@@ -105,7 +96,6 @@ public class ListFragment extends android.app.ListFragment {
         while (it.hasNext()) {
             Vote vote = (Vote) it.next();
             if (vote.getClass().equals(type)) {
-                System.out.println("TRUE TRUE TRUE");
                 votesByType.add(vote);
             }
         }

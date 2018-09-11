@@ -39,6 +39,7 @@ public class TakeReferendumFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_take_referendum, container, false);
         final Referendum referendum = (Referendum) getArguments().getSerializable(Keys.VOTE_OBJECT);
         ((TextView) view.findViewById(R.id.referendumТitle)).setText(referendum.getTitle());
+        getActivity().setTitle(referendum.getTitle());
 
         Button saveButton = (Button) view.findViewById(R.id.save_button);
         saveButton.setOnClickListener(new View.OnClickListener() {
