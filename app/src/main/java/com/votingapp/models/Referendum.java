@@ -10,6 +10,8 @@ public class Referendum extends Vote {
     private Option optionYes = new Option("Yes");
     private Option optionNo = new Option("No");
 
+    public Referendum(){}
+
     public Referendum(String title, Question question) {
         super(title);
         this.question = question;

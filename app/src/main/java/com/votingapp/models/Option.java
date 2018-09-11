@@ -10,6 +10,8 @@ public class Option {
     private int timesSelected;
     private boolean selectedByCurrentUser = false;
 
+    public Option(){}
+
     public Option(String optionText) {
         this.optionText = optionText;
         this.timesSelected = 0;

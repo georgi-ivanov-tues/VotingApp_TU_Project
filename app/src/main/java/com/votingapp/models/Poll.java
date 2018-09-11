@@ -11,6 +11,8 @@ public class Poll extends Vote {
 
     private HashMap<Question, ArrayList<Option>> pollContent;
 
+    public Poll(){}
+
     public Poll(String title, HashMap<Question, ArrayList<Option>> pollContent) {
         super(title);
         this.pollContent = pollContent;

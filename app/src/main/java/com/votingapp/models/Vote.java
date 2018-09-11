@@ -8,6 +8,8 @@ import java.io.Serializable;
 
 public abstract class Vote implements Serializable {
 
+    public Vote(){}
+
     private String title;
 
     public Vote(String title) {

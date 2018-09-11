@@ -17,6 +17,8 @@ public class Voting extends Vote {
         this.options = options;
     }
 
+    public Voting(){}
+
     public Question getQuestion() {
         return question;
     }

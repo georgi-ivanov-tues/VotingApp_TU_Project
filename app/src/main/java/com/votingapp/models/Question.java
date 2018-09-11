@@ -6,6 +6,8 @@ package com.votingapp.models;
 
 public class Question {
 
+    public Question(){}
+
     private String questionText;
 
     public Question(String questionText) {
