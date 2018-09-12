@@ -893,8 +893,6 @@ int id multiply 0x7f0c0036
 int id nav_home 0x7f0c00c8
 int id nav_polls 0x7f0c00cb
 int id nav_referendums 0x7f0c00cc
-int id nav_send 0x7f0c00ce
-int id nav_share 0x7f0c00cd
 int id nav_user_profile 0x7f0c00c9
 int id nav_view 0x7f0c008c
 int id nav_votings 0x7f0c00ca

@@ -1884,7 +1884,7 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>none</code></td><td>0</td><td></td></tr>
 <tr><td><code>standard</code></td><td>7</td><td></td></tr>
-<tr><td><code>direct</code></td><td>1</td><td></td></tr>
+<tr><td><code>direct</code></td><td>1</td><td> direct, barriers, chains </td></tr>
 <tr><td><code>barrier</code></td><td>2</td><td></td></tr>
 <tr><td><code>chains</code></td><td>4</td><td></td></tr>
 <tr><td><code>dimensions</code></td><td>8</td><td></td></tr>
@@ -3503,8 +3503,6 @@ containing a value of this type.
         public static final int nav_home=0x7f0c00c8;
         public static final int nav_polls=0x7f0c00cb;
         public static final int nav_referendums=0x7f0c00cc;
-        public static final int nav_send=0x7f0c00ce;
-        public static final int nav_share=0x7f0c00cd;
         public static final int nav_user_profile=0x7f0c00c9;
         public static final int nav_view=0x7f0c008c;
         public static final int nav_votings=0x7f0c00ca;
@@ -8514,7 +8512,7 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>none</code></td><td>0</td><td></td></tr>
 <tr><td><code>standard</code></td><td>7</td><td></td></tr>
-<tr><td><code>direct</code></td><td>1</td><td></td></tr>
+<tr><td><code>direct</code></td><td>1</td><td> direct, barriers, chains </td></tr>
 <tr><td><code>barrier</code></td><td>2</td><td></td></tr>
 <tr><td><code>chains</code></td><td>4</td><td></td></tr>
 <tr><td><code>dimensions</code></td><td>8</td><td></td></tr>
