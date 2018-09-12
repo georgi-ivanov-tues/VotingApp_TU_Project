@@ -1,7 +1,9 @@
 package com.votingapp;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.drive.Drive;
@@ -77,21 +80,41 @@ public class HomeActivity extends AppCompatActivity
         loadDataButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String votingPathFile_OLD = "1DJiTUEblvSyaGpgFcxi840ZNyjCLT4X7\"";
-                String votingsPathFile = "1Ee6cBkbY9ohmnA6ewGdrnWLpWVRdHpdn";
-                String referendumsPathFile = "1tUdkU2UJfHY-zM1ZWt-82sT4E3gyoYT7";
-                String pollsPathFile = "1xICuvwRi53Dk5CtGtFryfRElnRnzpjd7";
-
-                loadDataFromFiles(votingsPathFile, Voting.class);
-                loadDataFromFiles(referendumsPathFile, Referendum.class);
-                loadDataFromFiles(pollsPathFile, Poll.class);
+                setUpVotes();
             }
         });
 
-
+        setUpVotes();
 //        GoogleSignInAccount googleSignInAccount = new GoogleSignInAccount()
 //        Task<DriveContents> openFileTask =
 //                getDriveResourceClient(this,).openFile(file, DriveFile.MODE_READ_ONLY);
+    }
+
+    private void setUpVotes(){
+        if(isNetworkConnected()) {
+            AppController.votes.clear();
+            String votingsPathFile = "1Ee6cBkbY9ohmnA6ewGdrnWLpWVRdHpdn";
+            String referendumsPathFile = "1tUdkU2UJfHY-zM1ZWt-82sT4E3gyoYT7";
+            String pollsPathFile = "1xICuvwRi53Dk5CtGtFryfRElnRnzpjd7";
+
+            loadDataFromFiles(votingsPathFile, Voting.class);
+            loadDataFromFiles(referendumsPathFile, Referendum.class);
+            loadDataFromFiles(pollsPathFile, Poll.class);
+
+            CharSequence text = "Успешно зареждане на нови гласувания, анкети и референдуми";
+            Toast toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
+            toast.show();
+        }else{
+            CharSequence text = "Липса на интернет връзка...";
+            Toast toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
+            toast.show();
+        }
+    }
+
+    private boolean isNetworkConnected() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        return cm.getActiveNetworkInfo() != null;
     }
 
     private void loadDataFromFiles(final String votesPathFile, final Class voteType){
