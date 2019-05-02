@@ -3,6 +3,7 @@ package com.votingapp;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Path;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -80,7 +81,7 @@ public class HomeActivity extends AppCompatActivity
         loadDataButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setUpVotes();
+                setUpVotes2();
             }
         });
 
@@ -88,6 +89,44 @@ public class HomeActivity extends AppCompatActivity
 //        GoogleSignInAccount googleSignInAccount = new GoogleSignInAccount()
 //        Task<DriveContents> openFileTask =
 //                getDriveResourceClient(this,).openFile(file, DriveFile.MODE_READ_ONLY);
+    }
+
+    private void setUpVotes2(){
+        ArrayList<Option> voting1Options = new ArrayList<>();
+        voting1Options.add(new Option("Option 1"));
+        voting1Options.add(new Option("Option 2"));
+        voting1Options.add(new Option("Option 3"));
+        Voting voting1 = new Voting("Voting 1", new Question("Voting 1"), voting1Options);
+        AppController.votes.add(voting1);
+
+        // -------------------------------------------------
+
+        ArrayList<Poll> polls = new ArrayList<>();
+        ArrayList<Question> poll1Questions = new ArrayList<>();
+        poll1Questions.add(new Question("Question 1"));
+        poll1Questions.add(new Question("Question 2"));
+
+        ArrayList<Option> poll1Question1Options = new ArrayList<>();
+        poll1Question1Options.add(new Option("Option 1"));
+        poll1Question1Options.add(new Option("Option 2"));
+
+        ArrayList<Option> poll1Question2Options = new ArrayList<>();
+        poll1Question2Options.add(new Option("Option 1"));
+        poll1Question2Options.add(new Option("Option 2"));
+        HashMap<Question, ArrayList<Option>> pollContent = new HashMap<>();
+        pollContent.put(poll1Questions.get(0), poll1Question1Options);
+        pollContent.put(poll1Questions.get(1), poll1Question2Options);
+
+        Poll poll1 = new Poll("Poll 1", pollContent);
+        AppController.votes.add(poll1);
+
+        // -------------------------------------------------
+
+        ArrayList<Referendum> referendums = new ArrayList<>();
+        Referendum referendum = new Referendum("Референдум 2019", new Question("Съгласни ли сте с плана за създаване на нова атомна електроцентрала?"));
+        referendum.getOptionYes().setTimesSelected(1);
+        referendum.getOptionNo().setTimesSelected(1);
+        AppController.votes.add(referendum);
     }
 
     private void setUpVotes(){

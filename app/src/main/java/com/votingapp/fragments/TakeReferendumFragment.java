@@ -4,9 +4,12 @@ import android.app.AlertDialog;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Paint;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.support.annotation.RequiresApi;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,8 +41,27 @@ public class TakeReferendumFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_take_referendum, container, false);
         final Referendum referendum = (Referendum) getArguments().getSerializable(Keys.VOTE_OBJECT);
-        ((TextView) view.findViewById(R.id.referendumТitle)).setText(referendum.getTitle());
+        ((TextView) view.findViewById(R.id.referendumТitle)).setText(referendum.getQuestion().getQuestionText());
         getActivity().setTitle(referendum.getTitle());
+
+        final RadioButton buttonYes = (RadioButton) view.findViewById(R.id.radio_yes);
+        final RadioButton buttonNo = (RadioButton) view.findViewById(R.id.radio_no);
+
+        buttonYes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonYes.setPaintFlags(buttonYes.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+                buttonNo.setPaintFlags(buttonNo.getPaintFlags() & (~ Paint.UNDERLINE_TEXT_FLAG));
+            }
+        });
+
+        buttonNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonNo.setPaintFlags(buttonNo.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+                buttonYes.setPaintFlags(buttonYes.getPaintFlags() & (~ Paint.UNDERLINE_TEXT_FLAG));
+            }
+        });
 
         Button saveButton = (Button) view.findViewById(R.id.save_button);
         saveButton.setOnClickListener(new View.OnClickListener() {

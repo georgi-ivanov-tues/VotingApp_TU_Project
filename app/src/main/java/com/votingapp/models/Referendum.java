@@ -7,8 +7,8 @@ package com.votingapp.models;
 public class Referendum extends Vote {
 
     private Question question;
-    private Option optionYes = new Option("Yes");
-    private Option optionNo = new Option("No");
+    private Option optionYes = new Option("Да");
+    private Option optionNo = new Option("Не");
 
     public Referendum(){}
 

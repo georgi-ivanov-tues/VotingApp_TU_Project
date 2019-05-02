@@ -1954,16 +1954,26 @@
         <enum name="end" value="6"/>
     </attr><attr format="reference|enum" name="layout_constraintEnd_toStartOf">
         <enum name="parent" value="0"/>
-    </attr></file></source></dataSet><dataSet config="main" generated-set="main$Generated"><source path="D:\Projects\GitHub\VotingApp\app\src\main\res"><file name="side_nav_bar" path="D:\Projects\GitHub\VotingApp\app\src\main\res\drawable\side_nav_bar.xml" qualifiers="" type="drawable"/><file name="ic_menu_camera" path="D:\Projects\GitHub\VotingApp\app\src\main\res\drawable-v21\ic_menu_camera.xml" qualifiers="v21" type="drawable"/><file name="ic_menu_gallery" path="D:\Projects\GitHub\VotingApp\app\src\main\res\drawable-v21\ic_menu_gallery.xml" qualifiers="v21" type="drawable"/><file name="ic_menu_manage" path="D:\Projects\GitHub\VotingApp\app\src\main\res\drawable-v21\ic_menu_manage.xml" qualifiers="v21" type="drawable"/><file name="ic_menu_send" path="D:\Projects\GitHub\VotingApp\app\src\main\res\drawable-v21\ic_menu_send.xml" qualifiers="v21" type="drawable"/><file name="ic_menu_share" path="D:\Projects\GitHub\VotingApp\app\src\main\res\drawable-v21\ic_menu_share.xml" qualifiers="v21" type="drawable"/><file name="ic_menu_slideshow" path="D:\Projects\GitHub\VotingApp\app\src\main\res\drawable-v21\ic_menu_slideshow.xml" qualifiers="v21" type="drawable"/><file name="activity_home" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\activity_home.xml" qualifiers="" type="layout"/><file name="activity_user_profile" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\activity_user_profile.xml" qualifiers="" type="layout"/><file name="activity_voting" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\activity_voting.xml" qualifiers="" type="layout"/><file name="app_bar_home" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\app_bar_home.xml" qualifiers="" type="layout"/><file name="content_home" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\content_home.xml" qualifiers="" type="layout"/><file name="fragment_list" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\fragment_list.xml" qualifiers="" type="layout"/><file name="fragment_poll_results" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\fragment_poll_results.xml" qualifiers="" type="layout"/><file name="fragment_referendum_results" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\fragment_referendum_results.xml" qualifiers="" type="layout"/><file name="fragment_take_poll" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\fragment_take_poll.xml" qualifiers="" type="layout"/><file name="fragment_take_referendum" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\fragment_take_referendum.xml" qualifiers="" type="layout"/><file name="fragment_take_voting" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\fragment_take_voting.xml" qualifiers="" type="layout"/><file name="fragment_voting_results" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\fragment_voting_results.xml" qualifiers="" type="layout"/><file name="list_view" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\list_view.xml" qualifiers="" type="layout"/><file name="list_view_item" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\list_view_item.xml" qualifiers="" type="layout"/><file name="nav_header_home" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\nav_header_home.xml" qualifiers="" type="layout"/><file name="activity_home_drawer" path="D:\Projects\GitHub\VotingApp\app\src\main\res\menu\activity_home_drawer.xml" qualifiers="" type="menu"/><file name="home" path="D:\Projects\GitHub\VotingApp\app\src\main\res\menu\home.xml" qualifiers="" type="menu"/><file name="ic_launcher" path="D:\Projects\GitHub\VotingApp\app\src\main\res\mipmap-hdpi\ic_launcher.png" qualifiers="hdpi-v4" type="mipmap"/><file name="ic_launcher" path="D:\Projects\GitHub\VotingApp\app\src\main\res\mipmap-mdpi\ic_launcher.png" qualifiers="mdpi-v4" type="mipmap"/><file name="ic_launcher" path="D:\Projects\GitHub\VotingApp\app\src\main\res\mipmap-xhdpi\ic_launcher.png" qualifiers="xhdpi-v4" type="mipmap"/><file name="ic_launcher" path="D:\Projects\GitHub\VotingApp\app\src\main\res\mipmap-xxhdpi\ic_launcher.png" qualifiers="xxhdpi-v4" type="mipmap"/><file name="ic_launcher" path="D:\Projects\GitHub\VotingApp\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png" qualifiers="xxxhdpi-v4" type="mipmap"/><file path="D:\Projects\GitHub\VotingApp\app\src\main\res\values\colors.xml" qualifiers=""><color name="colorPrimaryDark">#303F9F</color><color name="colorPrimary">#3F51B5</color><color name="atomic">#424d52</color><color name="colorAccent">#FF4081</color><color name="white">#ffffff</color></file><file path="D:\Projects\GitHub\VotingApp\app\src\main\res\values\dimens.xml" qualifiers=""><dimen name="activity_vertical_margin">16dp</dimen><dimen name="nav_header_height">160dp</dimen><dimen name="nav_header_vertical_spacing">16dp</dimen><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="fab_margin">16dp</dimen><dimen name="text_margin">16dp</dimen></file><file path="D:\Projects\GitHub\VotingApp\app\src\main\res\values\drawables.xml" qualifiers=""><item name="ic_menu_share" type="drawable">@android:drawable/ic_menu_share</item><item name="ic_menu_camera" type="drawable">@android:drawable/ic_menu_camera</item><item name="ic_menu_send" type="drawable">@android:drawable/ic_menu_send</item><item name="ic_menu_manage" type="drawable">@android:drawable/ic_menu_manage</item><item name="ic_menu_gallery" type="drawable">@android:drawable/ic_menu_gallery</item><item name="ic_menu_slideshow" type="drawable">@android:drawable/ic_menu_slideshow</item></file><file path="D:\Projects\GitHub\VotingApp\app\src\main\res\values\strings.xml" qualifiers=""><string name="hello_blank_fragment">Hello blank fragment</string><string name="action_settings">Settings</string><string name="app_name">VotingApp</string><string name="navigation_drawer_close">Close navigation drawer</string><string name="navigation_drawer_open">Open navigation drawer</string></file><file path="D:\Projects\GitHub\VotingApp\app\src\main\res\values\styles.xml" qualifiers=""><style name="text_vote_title">
+    </attr></file></source></dataSet><dataSet config="main" generated-set="main$Generated"><source path="D:\Projects\GitHub\VotingApp\app\src\main\res"><file name="side_nav_bar" path="D:\Projects\GitHub\VotingApp\app\src\main\res\drawable\side_nav_bar.xml" qualifiers="" type="drawable"/><file name="ic_menu_camera" path="D:\Projects\GitHub\VotingApp\app\src\main\res\drawable-v21\ic_menu_camera.xml" qualifiers="v21" type="drawable"/><file name="ic_menu_gallery" path="D:\Projects\GitHub\VotingApp\app\src\main\res\drawable-v21\ic_menu_gallery.xml" qualifiers="v21" type="drawable"/><file name="ic_menu_manage" path="D:\Projects\GitHub\VotingApp\app\src\main\res\drawable-v21\ic_menu_manage.xml" qualifiers="v21" type="drawable"/><file name="ic_menu_send" path="D:\Projects\GitHub\VotingApp\app\src\main\res\drawable-v21\ic_menu_send.xml" qualifiers="v21" type="drawable"/><file name="ic_menu_share" path="D:\Projects\GitHub\VotingApp\app\src\main\res\drawable-v21\ic_menu_share.xml" qualifiers="v21" type="drawable"/><file name="ic_menu_slideshow" path="D:\Projects\GitHub\VotingApp\app\src\main\res\drawable-v21\ic_menu_slideshow.xml" qualifiers="v21" type="drawable"/><file name="activity_home" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\activity_home.xml" qualifiers="" type="layout"/><file name="activity_user_profile" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\activity_user_profile.xml" qualifiers="" type="layout"/><file name="activity_voting" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\activity_voting.xml" qualifiers="" type="layout"/><file name="app_bar_home" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\app_bar_home.xml" qualifiers="" type="layout"/><file name="content_home" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\content_home.xml" qualifiers="" type="layout"/><file name="fragment_list" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\fragment_list.xml" qualifiers="" type="layout"/><file name="fragment_poll_results" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\fragment_poll_results.xml" qualifiers="" type="layout"/><file name="fragment_referendum_results" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\fragment_referendum_results.xml" qualifiers="" type="layout"/><file name="fragment_take_poll" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\fragment_take_poll.xml" qualifiers="" type="layout"/><file name="fragment_take_referendum" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\fragment_take_referendum.xml" qualifiers="" type="layout"/><file name="fragment_take_voting" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\fragment_take_voting.xml" qualifiers="" type="layout"/><file name="fragment_voting_results" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\fragment_voting_results.xml" qualifiers="" type="layout"/><file name="list_view" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\list_view.xml" qualifiers="" type="layout"/><file name="list_view_item" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\list_view_item.xml" qualifiers="" type="layout"/><file name="nav_header_home" path="D:\Projects\GitHub\VotingApp\app\src\main\res\layout\nav_header_home.xml" qualifiers="" type="layout"/><file name="activity_home_drawer" path="D:\Projects\GitHub\VotingApp\app\src\main\res\menu\activity_home_drawer.xml" qualifiers="" type="menu"/><file name="home" path="D:\Projects\GitHub\VotingApp\app\src\main\res\menu\home.xml" qualifiers="" type="menu"/><file name="ic_launcher" path="D:\Projects\GitHub\VotingApp\app\src\main\res\mipmap-hdpi\ic_launcher.png" qualifiers="hdpi-v4" type="mipmap"/><file name="ic_launcher" path="D:\Projects\GitHub\VotingApp\app\src\main\res\mipmap-mdpi\ic_launcher.png" qualifiers="mdpi-v4" type="mipmap"/><file name="ic_launcher" path="D:\Projects\GitHub\VotingApp\app\src\main\res\mipmap-xhdpi\ic_launcher.png" qualifiers="xhdpi-v4" type="mipmap"/><file name="ic_launcher" path="D:\Projects\GitHub\VotingApp\app\src\main\res\mipmap-xxhdpi\ic_launcher.png" qualifiers="xxhdpi-v4" type="mipmap"/><file name="ic_launcher" path="D:\Projects\GitHub\VotingApp\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png" qualifiers="xxxhdpi-v4" type="mipmap"/><file path="D:\Projects\GitHub\VotingApp\app\src\main\res\values\colors.xml" qualifiers=""><color name="referendumYesGreen">#66FF00</color><color name="referendumNoRed">#FF0000</color><color name="dodgerBlue">#0091ea</color><color name="colorPrimaryDark">#303F9F</color><color name="colorPrimary">#3F51B5</color><color name="atomic">#424d52</color><color name="pattensBlue">#cfd8dc</color><color name="colorAccent">#FF4081</color><color name="white">#ffffff</color></file><file path="D:\Projects\GitHub\VotingApp\app\src\main\res\values\dimens.xml" qualifiers=""><dimen name="activity_vertical_margin">16dp</dimen><dimen name="nav_header_height">160dp</dimen><dimen name="nav_header_vertical_spacing">16dp</dimen><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="fab_margin">16dp</dimen><dimen name="text_margin">16dp</dimen></file><file path="D:\Projects\GitHub\VotingApp\app\src\main\res\values\drawables.xml" qualifiers=""><item name="ic_menu_share" type="drawable">@android:drawable/ic_menu_share</item><item name="ic_menu_camera" type="drawable">@android:drawable/ic_menu_camera</item><item name="ic_menu_send" type="drawable">@android:drawable/ic_menu_send</item><item name="ic_menu_manage" type="drawable">@android:drawable/ic_menu_manage</item><item name="ic_menu_gallery" type="drawable">@android:drawable/ic_menu_gallery</item><item name="ic_menu_slideshow" type="drawable">@android:drawable/ic_menu_slideshow</item></file><file path="D:\Projects\GitHub\VotingApp\app\src\main\res\values\strings.xml" qualifiers=""><string name="hello_blank_fragment">Hello blank fragment</string><string name="action_settings">Settings</string><string name="app_name">VotingApp</string><string name="navigation_drawer_close">Close navigation drawer</string><string name="navigation_drawer_open">Open navigation drawer</string></file><file path="D:\Projects\GitHub\VotingApp\app\src\main\res\values\styles.xml" qualifiers=""><style name="text_vote_title">
         <item name="android:layout_width">344dp</item>
         <item name="android:layout_height">21dp</item>
-        <item name="android:layout_marginLeft">20dp</item>
         <item name="android:layout_marginTop">20dp</item>
         <item name="android:layout_marginBottom">20dp</item>
         
         <item name="android:textColor">@color/atomic</item>
-        <item name="android:textSize">18dp</item>
+        <item name="android:textSize">25sp</item>
         <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+    </style><style name="referendum_no_button">
+        <item name="android:textSize">25sp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:background">@color/referendumNoRed</item>
+        <item name="android:layout_weight">1</item>
     </style><style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -1972,6 +1982,32 @@
     </style><style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/><style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/><style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style><style name="activity_login_button">
+        <item name="android:layout_width">432px</item>
+        <item name="android:layout_height">96px</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/dodgerBlue</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">153px</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">40px</item>
+        <item name="android:textStyle">bold</item>
+    </style><style name="home_activity_table_rows">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:paddingLeft">0px</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:background">@color/dodgerBlue</item>
+        
+        <item name="android:height">150px</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginBottom">20px</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
     </style><style name="text_vote_title2">
         <item name="android:layout_width">344dp</item>
         <item name="android:layout_height">21dp</item>
@@ -1982,6 +2018,24 @@
         <item name="android:textColor">@color/atomic</item>
         <item name="android:textSize">25dp</item>
         <item name="android:layout_centerVertical">true</item>
+    </style><style name="text_vote_result_option">
+        <item name="android:layout_width">344dp</item>
+        <item name="android:layout_height">21dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        
+        <item name="android:textColor">@color/atomic</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style><style name="referendum_yes_button">
+        <item name="android:textSize">25sp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:background">@color/referendumYesGreen</item>
+        <item name="android:layout_weight">1</item>
     </style></file><file path="D:\Projects\GitHub\VotingApp\app\src\main\res\values-v21\styles.xml" qualifiers="v21"><style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

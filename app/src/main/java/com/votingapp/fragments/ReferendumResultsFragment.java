@@ -8,6 +8,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -42,25 +43,34 @@ public class ReferendumResultsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_referendum_results, container, false);
         final Referendum referendum = (Referendum) getArguments().getSerializable(Keys.VOTE_OBJECT);
-        ((TextView) view.findViewById(R.id.referendumResultsТitle)).setText(referendum.getTitle());
+        ((TextView) view.findViewById(R.id.referendumResultsТitle)).setText(referendum.getQuestion().getQuestionText());
         ArrayList<Option> options = new ArrayList<>();
         options.add(referendum.getOptionYes());
         options.add(referendum.getOptionNo());
 
         int totalNumberOfVotes = AppController.getTotalNumberOfVotes(options);
-        String optionTextPercentageYes = new DecimalFormat("##.##").format(((referendum.getOptionYes().getTimesSelected() / (double) totalNumberOfVotes) * 100)) + "%";
+
+        double percentageYes = (referendum.getOptionYes().getTimesSelected() / (double) totalNumberOfVotes) * 100;
+        String optionTextPercentageYes = new DecimalFormat("##.##").format(percentageYes) + "%";
         TextView optionYesTextView = ((TextView) view.findViewById(R.id.referendumResultsYesOption));
         optionYesTextView.setText(
                 referendum.getOptionYes().getOptionText() + " - " + optionTextPercentageYes + " (" + referendum.getOptionYes().getTimesSelected() + ")");
         if(referendum.getOptionYes().isSelectedByCurrentUser())
             optionYesTextView.setTypeface(null, Typeface.BOLD);
 
-        String optionTextPercentageNo = new DecimalFormat("##.##").format(((referendum.getOptionNo().getTimesSelected() / (double) totalNumberOfVotes) * 100)) + "%";
+        double percentageNo = (referendum.getOptionNo().getTimesSelected() / (double) totalNumberOfVotes) * 100;
+        String optionTextPercentageNo = new DecimalFormat("##.##").format(percentageNo) + "%";
         TextView optionNoTextView = ((TextView) view.findViewById(R.id.referendumResultsNoOption));
         optionNoTextView.setText(
                 referendum.getOptionNo().getOptionText() + " - " + optionTextPercentageNo + " (" + referendum.getOptionNo().getTimesSelected() + ")");
         if(referendum.getOptionNo().isSelectedByCurrentUser())
             optionNoTextView.setTypeface(null, Typeface.BOLD);
+
+        view.findViewById(R.id.optionYesBar).setLayoutParams(new LinearLayout.LayoutParams(0, 15, (float) (percentageYes / 100)));
+        view.findViewById(R.id.optionYesBarHidden).setLayoutParams(new LinearLayout.LayoutParams(0, 15, (float) ((100 - percentageYes) / 100)));
+
+        view.findViewById(R.id.optionNoBar).setLayoutParams(new LinearLayout.LayoutParams(0, 15, (float) (percentageNo / 100)));
+        view.findViewById(R.id.optionNoBarHidden).setLayoutParams(new LinearLayout.LayoutParams(0, 15, (float) ((100 - percentageNo) / 100)));
 
         return view;
     }
