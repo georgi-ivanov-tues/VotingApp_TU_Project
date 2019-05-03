@@ -1,16 +1,22 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.votingapp.fragments.VotingResultsFragment"
-    android:orientation="vertical"
-    android:id="@+id/votingResultsLinearLayout">
+    android:fillViewport="true">
 
-    <TextView
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/votingResultsТitle"
-        style="@style/text_vote_title"/>
+        android:layout_height="wrap_content"
+        tools:context="com.votingapp.fragments.VotingResultsFragment"
+        android:orientation="vertical"
+        android:id="@+id/votingResultsLinearLayout">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/votingResultsТitle"
+            style="@style/text_vote_title"/>
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

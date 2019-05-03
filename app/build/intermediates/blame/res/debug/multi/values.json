@@ -9398,9 +9398,9 @@
                     "startLine": 2360,
                     "startColumn": 4,
                     "startOffset": 169987,
-                    "endLine": 2369,
+                    "endLine": 2364,
                     "endColumn": 12,
-                    "endOffset": 170489
+                    "endOffset": 170205
                 },
                 "from": {
                     "file": "D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\values\\styles.xml"
@@ -9408,12 +9408,12 @@
             },
             {
                 "to": {
-                    "startLine": 2370,
+                    "startLine": 2365,
                     "startColumn": 4,
-                    "startOffset": 170494,
-                    "endLine": 2379,
+                    "startOffset": 170210,
+                    "endLine": 2368,
                     "endColumn": 12,
-                    "endOffset": 171000
+                    "endOffset": 170364
                 },
                 "from": {
                     "file": "D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\values\\styles.xml"
@@ -9421,12 +9421,59 @@
             },
             {
                 "to": {
-                    "startLine": 2380,
+                    "startLine": 2369,
                     "startColumn": 4,
-                    "startOffset": 171005,
-                    "endLine": 2389,
+                    "startOffset": 170369,
+                    "endLine": 2378,
                     "endColumn": 12,
-                    "endOffset": 171525
+                    "endOffset": 170871
+                },
+                "from": {
+                    "file": "D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\values\\styles.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2379,
+                    "startColumn": 4,
+                    "startOffset": 170876,
+                    "endLine": 2388,
+                    "endColumn": 12,
+                    "endOffset": 171382
+                },
+                "from": {
+                    "file": "D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\values\\styles.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2389,
+                    "startColumn": 4,
+                    "startOffset": 171387,
+                    "endLine": 2395,
+                    "endColumn": 12,
+                    "endOffset": 171721
+                },
+                "from": {
+                    "file": "D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 109,
+                        "startColumn": 4,
+                        "startOffset": 5053,
+                        "endLine": 115,
+                        "endColumn": 12,
+                        "endOffset": 5393
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2396,
+                    "startColumn": 4,
+                    "startOffset": 171726,
+                    "endLine": 2405,
+                    "endColumn": 12,
+                    "endOffset": 172246
                 },
                 "from": {
                     "file": "D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\values\\styles.xml",
@@ -9442,12 +9489,12 @@
             },
             {
                 "to": {
-                    "startLine": 2390,
+                    "startLine": 2406,
                     "startColumn": 4,
-                    "startOffset": 171530,
-                    "endLine": 2401,
+                    "startOffset": 172251,
+                    "endLine": 2417,
                     "endColumn": 12,
-                    "endOffset": 172144
+                    "endOffset": 172865
                 },
                 "from": {
                     "file": "D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\values\\styles.xml",
@@ -9463,12 +9510,12 @@
             },
             {
                 "to": {
-                    "startLine": 2402,
+                    "startLine": 2418,
                     "startColumn": 4,
-                    "startOffset": 172149,
-                    "endLine": 2412,
+                    "startOffset": 172870,
+                    "endLine": 2428,
                     "endColumn": 12,
-                    "endOffset": 172721
+                    "endOffset": 173442
                 },
                 "from": {
                     "file": "D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\values\\styles.xml",

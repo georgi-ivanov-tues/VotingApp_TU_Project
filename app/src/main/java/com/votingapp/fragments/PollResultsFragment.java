@@ -1,5 +1,6 @@
 package com.votingapp.fragments;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.net.Uri;
@@ -44,6 +45,7 @@ public class PollResultsFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -57,20 +59,24 @@ public class PollResultsFragment extends Fragment {
             ArrayList<Option> options = (ArrayList) pair.getValue();
             TextView questionTitle = new TextView(getActivity());
             questionTitle.setText(question.getQuestionText());
-            questionTitle.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
+            questionTitle.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             questionTitle.setTextAppearance(getActivity(), R.style.text_vote_title);
             takeVotingLinearLayout.addView(questionTitle);
             int totalNumberOfVotes = AppController.getTotalNumberOfVotes(options);
             for (int i = 0; i < options.size(); i++) {
                 Option option = options.get(i);
                 TextView optionTextView = new TextView(getActivity());
-                optionTextView.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
-                String optionTextPercentage = new DecimalFormat("##.##").format((option.getTimesSelected() / (double) totalNumberOfVotes) * 100) + "%";
-                optionTextView.setText(option.getOptionText() + " - " + optionTextPercentage + " ("  +(options.get(i)).getTimesSelected() + ")");
-                optionTextView.setTextAppearance(getActivity(), R.style.text_vote_title);
+                optionTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+
+                double optionPercentage = AppController.calculateOptionPercentage(option, totalNumberOfVotes);
+                optionTextView.setText(AppController.formatOptionPercentage(option, optionPercentage));
+                optionTextView.setTextAppearance(getActivity(), R.style.text_vote_result_option);
                 if(option.isSelectedByCurrentUser())
                     optionTextView.setTypeface(null, Typeface.BOLD);
                 takeVotingLinearLayout.addView(optionTextView);
+
+                // Add Percentage Bars
+                takeVotingLinearLayout.addView(AppController.createPercentangeBars(getActivity(),optionPercentage));
             }
         }
         return view;

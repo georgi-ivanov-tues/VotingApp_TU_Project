@@ -1,5 +1,6 @@
 package com.votingapp.fragments;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
 import android.content.Context;
@@ -7,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.provider.MediaStore;
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,16 +50,15 @@ public class TakePollFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_take_poll, container, false);
         final Poll poll = (Poll) getArguments().getSerializable(Keys.VOTE_OBJECT);
-        ((TextView) view.findViewById(R.id.pollTitle)).setText(poll.getTitle());
         getActivity().setTitle(poll.getTitle());
 
-        LinearLayout takeVotingLinearLayout = (LinearLayout) view.findViewById(R.id.takePollLinearLayout);
-        takeVotingLinearLayout.addView(new ScrollView(getActivity()));
+        LinearLayout takePollLinearLayout = (LinearLayout) view.findViewById(R.id.takePollLinearLayout);
         final ArrayList<TextView> questions = new ArrayList<>();
         final ArrayList<RadioGroup> radioGroups = new ArrayList<>();
         for (Map.Entry pair : poll.getPollContent().entrySet()) {
@@ -67,25 +68,27 @@ public class TakePollFragment extends Fragment {
             TextView questionTitle = new TextView(getActivity());
             questionTitle.setText(question.getQuestionText());
             questionTitle.setTextAppearance(getActivity(), R.style.text_vote_title);
-            takeVotingLinearLayout.addView(questionTitle);
+            takePollLinearLayout.addView(questionTitle);
             RadioGroup radioGroup = new RadioGroup(getActivity());
             RadioButton[] radioButtonOptions = new RadioButton[options.size()];
             for (int i = 0; i < options.size(); i++) {
-                radioButtonOptions[i] = new RadioButton(getActivity());
-                radioButtonOptions[i].setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
+                ContextThemeWrapper radioButtonContext = new ContextThemeWrapper(getActivity(), R.style.take_voting_radio_button);
+                radioButtonOptions[i] = new RadioButton(radioButtonContext);
+//                radioButtonOptions[i].setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
                 radioButtonOptions[i].setText((options.get(i)).getOptionText());
                 radioGroup.addView(radioButtonOptions[i]);
             }
             Random random = new Random();
             radioGroup.setId(random.nextInt());
-            takeVotingLinearLayout.addView(radioGroup);
+            takePollLinearLayout.addView(radioGroup);
             radioGroups.add(radioGroup);
             questions.add(questionTitle);
         }
-        Button saveButton = new Button(getActivity());
-        saveButton.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
+        ContextThemeWrapper saveButtonContext = new ContextThemeWrapper(getActivity(), R.style.activity_login_button);
+        Button saveButton = new Button(saveButtonContext);
+        saveButton.setBackgroundColor(R.color.dodgerBlue);
         saveButton.setText("Гласуване");
-        takeVotingLinearLayout.addView(saveButton);
+        takePollLinearLayout.addView(saveButton);
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,13 +96,14 @@ public class TakePollFragment extends Fragment {
                 View parentView = (View) view.getParent();
                 int i = 0;
 
+                boolean allQuestionsAnswered = true;
                 for (Map.Entry pair : poll.getPollContent().entrySet()) {
                     RadioGroup radioGroup = radioGroups.get(i);
                     int selectedId = radioGroup.getCheckedRadioButtonId();
 
-
                     if(selectedId == -1) {
                         CharSequence text = "Моля попълнете цялата анкета!";
+                        allQuestionsAnswered = false;
                         Toast toast = Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT);
                         toast.show();
                     }else {
@@ -124,15 +128,17 @@ public class TakePollFragment extends Fragment {
                     }
                 }
 
-                AppController.userProfile.addPoll(poll);
+                if(allQuestionsAnswered) {
+                    AppController.userProfile.addPoll(poll);
 
-                PollResultsFragment pollResultsFragment = new PollResultsFragment();
-                Bundle bundle = new Bundle();
-                bundle.putSerializable(Keys.VOTE_OBJECT, poll);
-                pollResultsFragment.setArguments(bundle);
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.list_content_fragment, pollResultsFragment);
-                transaction.commit();
+                    PollResultsFragment pollResultsFragment = new PollResultsFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable(Keys.VOTE_OBJECT, poll);
+                    pollResultsFragment.setArguments(bundle);
+                    FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                    transaction.replace(R.id.list_content_fragment, pollResultsFragment);
+                    transaction.commit();
+                }
             }
         });
         return view;

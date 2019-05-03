@@ -103,8 +103,27 @@
         <item name="android:layout_marginBottom">20dp</item>
         <!--<item name="android:background">@color/white</item>-->
         <item name="android:textColor">@color/atomic</item>
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="take_voting_radio_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingBottom">10sp</item>
+        <item name="android:paddingTop">10sp</item>
+    </style>
+
+    <style name="percentageBarLeft">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:background">@color/dodgerBlue</item>
+        <item name="android:layout_height">15dp</item>
+    </style>
+
+    <style name="percentageBarRight">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">15dp</item>
     </style>
 
 </resources>

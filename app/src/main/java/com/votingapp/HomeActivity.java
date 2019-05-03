@@ -85,7 +85,7 @@ public class HomeActivity extends AppCompatActivity
             }
         });
 
-        setUpVotes();
+//        setUpVotes2();
 //        GoogleSignInAccount googleSignInAccount = new GoogleSignInAccount()
 //        Task<DriveContents> openFileTask =
 //                getDriveResourceClient(this,).openFile(file, DriveFile.MODE_READ_ONLY);
@@ -93,31 +93,41 @@ public class HomeActivity extends AppCompatActivity
 
     private void setUpVotes2(){
         ArrayList<Option> voting1Options = new ArrayList<>();
-        voting1Options.add(new Option("Option 1"));
-        voting1Options.add(new Option("Option 2"));
-        voting1Options.add(new Option("Option 3"));
-        Voting voting1 = new Voting("Voting 1", new Question("Voting 1"), voting1Options);
+        voting1Options.add(new Option("Георги Иванов"));
+        voting1Options.add(new Option("Иван Георгиев"));
+        voting1Options.add(new Option("Петър Димитров"));
+
+        voting1Options.get(0).setTimesSelected(5);
+        voting1Options.get(1).setTimesSelected(3);
+        voting1Options.get(2).setTimesSelected(4);
+        Voting voting1 = new Voting("Гласуване за нов президент на компанията", new Question("Кой искате да е новият президент на компанията?"), voting1Options);
         AppController.votes.add(voting1);
 
         // -------------------------------------------------
 
         ArrayList<Poll> polls = new ArrayList<>();
         ArrayList<Question> poll1Questions = new ArrayList<>();
-        poll1Questions.add(new Question("Question 1"));
-        poll1Questions.add(new Question("Question 2"));
+        poll1Questions.add(new Question("Любим цвят"));
+        poll1Questions.add(new Question("Любимо животно"));
 
         ArrayList<Option> poll1Question1Options = new ArrayList<>();
-        poll1Question1Options.add(new Option("Option 1"));
-        poll1Question1Options.add(new Option("Option 2"));
+        poll1Question1Options.add(new Option("Зелен"));
+        poll1Question1Options.add(new Option("Червен"));
+        poll1Question1Options.add(new Option("Син"));
+        poll1Question1Options.add(new Option("Жълт"));
 
         ArrayList<Option> poll1Question2Options = new ArrayList<>();
-        poll1Question2Options.add(new Option("Option 1"));
-        poll1Question2Options.add(new Option("Option 2"));
+        poll1Question2Options.add(new Option("Котка"));
+        poll1Question2Options.add(new Option("Куче"));
+        poll1Question2Options.add(new Option("Жираф"));
+        poll1Question2Options.add(new Option("Гущер"));
+        poll1Question2Options.add(new Option("Слон"));
+
         HashMap<Question, ArrayList<Option>> pollContent = new HashMap<>();
         pollContent.put(poll1Questions.get(0), poll1Question1Options);
         pollContent.put(poll1Questions.get(1), poll1Question2Options);
 
-        Poll poll1 = new Poll("Poll 1", pollContent);
+        Poll poll1 = new Poll("Първа анкета", pollContent);
         AppController.votes.add(poll1);
 
         // -------------------------------------------------

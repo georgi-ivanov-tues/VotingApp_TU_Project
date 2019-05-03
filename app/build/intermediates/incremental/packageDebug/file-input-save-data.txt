@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu May 02 17:36:59 EEST 2019
+#Fri May 03 15:59:28 EEST 2019
 210.set=ANDROID_RESOURCE
 282.file=D\:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-v17\\notification_template_big_media_narrow_custom.xml
 14.set=ANDROID_RESOURCE
