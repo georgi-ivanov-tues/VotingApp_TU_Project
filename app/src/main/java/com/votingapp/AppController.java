@@ -19,6 +19,7 @@ import com.votingapp.models.Voting;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 
 /**
  * Created by giivanov on 4.5.2018 г..
@@ -41,6 +42,19 @@ public class AppController extends Application{
 
     public static synchronized AppController getInstance() {
         return mInstance;
+    }
+
+    public static ArrayList<Vote> getVotesByType(Class type) {
+        ArrayList<Vote> votesByType = new ArrayList();
+        AppController.getInstance();
+        Iterator it = AppController.votes.iterator();
+        while (it.hasNext()) {
+            Vote vote = (Vote) it.next();
+            if (vote.getClass().equals(type)) {
+                votesByType.add(vote);
+            }
+        }
+        return votesByType;
     }
 
     public static int getTotalNumberOfVotes(ArrayList<Option> options){

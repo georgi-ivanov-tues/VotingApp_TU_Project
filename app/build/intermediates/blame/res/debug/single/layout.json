@@ -24,6 +24,10 @@
         "source": "D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\layout\\fragment_referendum_results.xml"
     },
     {
+        "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_list_votings.xml",
+        "source": "D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\layout\\fragment_list_votings.xml"
+    },
+    {
         "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
         "source": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\layout\\design_layout_tab_icon.xml"
     },
@@ -126,6 +130,10 @@
     {
         "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_voting.xml",
         "source": "D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\layout\\activity_voting.xml"
+    },
+    {
+        "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\toolbar_layout.xml",
+        "source": "D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\layout\\toolbar_layout.xml"
     },
     {
         "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",

@@ -3,8 +3,10 @@ package com.votingapp;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 
 import com.votingapp.fragments.ListFragment;
 import com.votingapp.fragments.PollResultsFragment;
@@ -23,13 +25,25 @@ public class VotingActivity extends AppCompatActivity implements ListFragment.Se
 
     FragmentTransaction transaction;
 
+    private Toolbar toolbar;
+    private ViewPager viewPager;
+    private ViewPagerAdapter viewPagerAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         System.out.println("Voting Activity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_voting);
 
-        loadListFragment();
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        viewPager = (ViewPager) findViewById(R.id.pager);
+
+        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+
+        viewPager.setAdapter(viewPagerAdapter);
+//        loadListFragment();
     }
 
     private void loadListFragment(){
