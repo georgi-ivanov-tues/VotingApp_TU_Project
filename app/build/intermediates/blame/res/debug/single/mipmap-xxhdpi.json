@@ -1,6 +1,10 @@
 [
     {
-        "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
-        "source": "D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     }
 ]

@@ -3,255 +3,255 @@
 
     <item
         is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\26.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-26.1.0_9226a16931ece492d4bb13826d919330e2d0dfc0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-api-phone\15.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7c9f3ed917984af2e50b56f65f0398c9e5756035">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-api-phone-15.0.1_995c5b85ea10e075e8c7601230c42bdd18e2ab11.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\15.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8d813c05361147f6f515f749df19223cd6256314">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-15.0.1_70cce5eed95a6883ebe2743feb485a5f9ab103b8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\15.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4d4d98a0428b2e620e6b4a228ef9f7cb2f0debd2">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-15.0.1_c035193a8d2fdc8ee6704d313abab9414975835f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\giivanov\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.0.0\a2d487452376193fc8c103dd2b9bd5f2b1b44563\common-1.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\common-1.0.0_55b743a0a3089d679290059a2acbc7f9b3ba5e02.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.0.1_af905f510ca158cac1ee9a4f4d41ad48544772fb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\giivanov\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.7.3\f12e6cd05cbaecd74d16e685d45b627732939e42\jackson-databind-2.7.3.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f12e6cd05cbaecd74d16e685d45b627732939e42">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\jackson-databind-2.7.3_d225ea6f2f275ee4e25b5b7f4f1893b3a770ca28.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\15.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f46e47ff8f7a7170f8acf9d9569646486aad04b8">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-drive-15.0.1_ebc90676cd16021a124bac7b82b99b5751ad8d81.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.0.1_fb70b5debbbe2a81c6a29b8ad7e552ecef727a12.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\giivanov\.gradle\caches\modules-2\files-2.1\com.android.support.constraint\constraint-layout-solver\1.1.3\bde0667d7414c16ed62d3cfe993cff7f9d732373\constraint-layout-solver-1.1.3.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="bde0667d7414c16ed62d3cfe993cff7f9d732373">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.1.3_965b8953be40440f9b41ce07b2cd222d39b7b484.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\26.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-26.1.0_153d5ba3ed2309b45a3b1f5ea107bd67fcf3bb22.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.0.1_486b8d758ba422e9484e5f9855becd9d47b9cc93.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\15.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f03eac74758a738724d98cb4eda0270c1244664a">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-base-15.0.1_c5d368af032edb4db5c9df378040d3399f148224.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\26.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-26.1.0_8fb563e34a2e0f805a89a158c97b8792f084393d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.1.3\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b15c6ded887ad967e20bb335c1a121b253c04dce">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.android.support.constraint-constraint-layout-1.1.3_e4aabcec37ffbfa164e1fcfba4c88faf1ea252e3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\giivanov\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.7.3\e250c11c1329c7b6b62442a9743befad78be553c\jackson-annotations-2.7.3.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e250c11c1329c7b6b62442a9743befad78be553c">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\jackson-annotations-2.7.3_14d56442c37c64fa13ac196a0f9e335d8f955a93.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\giivanov\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\26.1.0\814258103cf26a15fcc26ecce35f5b7d24b73f8\support-annotations-26.1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\support-annotations-26.1.0_5108d34dd92747c77db1de6af4f9a97b79c0d3d7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\android.arch.lifecycle\runtime\1.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\android.arch.lifecycle-runtime-1.0.0_ea67e0bd4d411b9cfb94825738a0f13293025f3e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\15.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="fff6b88f6d7385f1a60a47dbc716b208eef7b0c1">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-15.0.1_5d33f406fd8d53264347b953e4bfbc03041c91d7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.0.1_f51748db80566145a28e9d2bf8c26538c85b37d7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\giivanov\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.7.3\1499b854ae9f370409792db5af1b552dc7d9682f\jackson-core-2.7.3.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1499b854ae9f370409792db5af1b552dc7d9682f">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\jackson-core-2.7.3_499a02f48883af026656bb8358eee5dc5b6cbeee.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\26.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-26.1.0_79da6f54b6af4420c2f6430416b1b67da0d747cf.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\giivanov\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.0.0\e414a4cb28434e25c4f6aa71426eb20cf4874ae9\common-1.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\common-1.0.0_1fe1f7800304f3d9a483b91e8ff7e1e634e74db6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.android.support\design\25.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.0.1_09cf72ec0f7ff8af87968ee07bdf13f920a1f4de.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\26.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-26.1.0_e7a7cea15160aa1911db564f7413adfa12a190e9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c1b6ab157e8e12cb08b9ee82bb5e3c5d22632eb3">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.0.1_4e8e833126968cc147c37cbe2151ffc27655574f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\15.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d8fe6d91310b54734f454dd490c3c869f6290576">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-15.0.1_5325465919564230b3ef548d253e263ae1beb235.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Projects\GitHub\VotingApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\26.1.0\jars\classes.jar"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/26.1.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="508f50705b4fde51a16259f29c854201a3044516">
-        <dex dex="D:\Projects\GitHub\VotingApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-26.1.0_c0e29ab86795762cdedf00c411a0f5f3f4641c37.jar" />
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-26.1.0_1e1901c50cb1e32b19d1e6ec6c3907eb41b9c8ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.0.1_8d97bdcfb178568e693c4962d61a4d4d2e69c749.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/support-compat/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-26.1.0_98f694b33294f53cfab86570d777a3746660c751.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-api-phone/15.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7c9f3ed917984af2e50b56f65f0398c9e5756035">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-api-phone-15.0.1_963d9fd44b3ad3b604f012214dfb6f4ecb95d81d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/android.arch.lifecycle/runtime/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/android.arch.lifecycle-runtime-1.0.0_1f233f6689b6ecd83308d12efb5bc7bfa6d0cd94.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/.gradle/caches/modules-2/files-2.1/com.android.support.constraint/constraint-layout-solver/1.1.3/bde0667d7414c16ed62d3cfe993cff7f9d732373/constraint-layout-solver-1.1.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bde0667d7414c16ed62d3cfe993cff7f9d732373">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.1.3_31ccbfa0a17e3586e280e8f97482b5744e12ae55.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.7.3/e250c11c1329c7b6b62442a9743befad78be553c/jackson-annotations-2.7.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e250c11c1329c7b6b62442a9743befad78be553c">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/jackson-annotations-2.7.3_7afd871017164a01dfae14b6e348e2bcbdb94957.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0/e414a4cb28434e25c4f6aa71426eb20cf4874ae9/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/common-1.0.0_73f84fb00ca330ae764eaf394b66c3aacf6b80c1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/design/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.0.1_dba743b51643074da2d7836ea4bdeba1e95474b6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.0.1_6abab27a3e08f0929dd3ff8c41110f0cd4eba9a8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/15.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fff6b88f6d7385f1a60a47dbc716b208eef7b0c1">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-15.0.1_d18a83ec085d625b3a4b79a260bd84082baf52b9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/15.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d8fe6d91310b54734f454dd490c3c869f6290576">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-15.0.1_0d61f1476a5359bdc7ff56dbbff57325801ecea6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/15.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f03eac74758a738724d98cb4eda0270c1244664a">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-base-15.0.1_bed90ea198cc058d0f1b847a67729783bf61e9d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/common-1.0.0_a3bae25ded3c63a6a8a6be89b83c18e1be9bb798.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.1.3/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b15c6ded887ad967e20bb335c1a121b253c04dce">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.android.support.constraint-constraint-layout-1.1.3_9b292c182c104b970322582813484a4b641c1a23.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-26.1.0_fddd9414dd3b6b9ec95b52cdbbe06d43d3f68fae.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/support-fragment/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-26.1.0_87fb9052688bb01f446af54d31705b582a0ff3d9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/15.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4d4d98a0428b2e620e6b4a228ef9f7cb2f0debd2">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-15.0.1_bb56470efd812484a88eb1464116d9dea91c493f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.7.3/1499b854ae9f370409792db5af1b552dc7d9682f/jackson-core-2.7.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1499b854ae9f370409792db5af1b552dc7d9682f">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/jackson-core-2.7.3_e8016bd1fc0f56423d8a1851c89f7e4183ce7f28.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/26.1.0/814258103cf26a15fcc26ecce35f5b7d24b73f8/support-annotations-26.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/support-annotations-26.1.0_19b2bad22a99af61baac4c785316ed156a7f879f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.0.1_ea5d4564076285bff629708d8c11a395e266db0f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.7.3/f12e6cd05cbaecd74d16e685d45b627732939e42/jackson-databind-2.7.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f12e6cd05cbaecd74d16e685d45b627732939e42">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/jackson-databind-2.7.3_59ed741bcec6c5e3ba03c0c1ee5a93eb896ba676.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-26.1.0_32c34238dafedc2df91c35cc6fb4ace2fd5966be.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/transition/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c1b6ab157e8e12cb08b9ee82bb5e3c5d22632eb3">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.0.1_6e837138daaf98bde49cfc6cd4a06aba5dc2c208.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/15.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8d813c05361147f6f515f749df19223cd6256314">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-15.0.1_cb420bf4c144f21305eb34f616c5484ff6f21236.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/support-v4/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-26.1.0_c19b32230c223480d2446b66e73c9c20e5dcf243.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.0.1_1fa48750ddeafb669f9974616fa90158254a961b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/15.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f46e47ff8f7a7170f8acf9d9569646486aad04b8">
+        <dex dex="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-drive-15.0.1_2760a3f58d7947acea3152d4e8803278bbd2bbb8.jar" />
     </item>
 
 </items>

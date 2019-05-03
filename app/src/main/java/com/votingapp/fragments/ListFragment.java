@@ -1,15 +1,14 @@
 package com.votingapp.fragments;
 
+
 import android.app.Activity;
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -19,39 +18,45 @@ import com.votingapp.models.Poll;
 import com.votingapp.models.Referendum;
 import com.votingapp.models.Vote;
 import com.votingapp.models.Voting;
-import com.votingapp.utils.Keys;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 
-public class ListFragment extends android.app.ListFragment {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class ListFragment extends android.support.v4.app.ListFragment {
+
     private VotesAdapter votesAdapter;
     private List<Vote> votesData;
+
+    public ListFragment() {
+        // Required empty public constructor
+    }
 
     public interface SelectionListener {
         void onItemSelected(Vote vote);
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        String listType = (String) getArguments().getSerializable(Keys.VOTING_ACTIVITY_FRAGMENT);
-        this.votesData = new ArrayList();
-        votesAdapter = new VotesAdapter(getActivity(), votesData);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+//        View view = inflater.inflate(R.layout.fragment_list, container, false);
+        View view = inflater.inflate(R.layout.list_view, null);
+        String tabNum = getArguments().getString("currentTab");
+        ArrayList<Vote> votesByType = new ArrayList<>();
+
+        votesAdapter = new ListFragment.VotesAdapter(getActivity(), votesByType);
         setListAdapter(this.votesAdapter);
         this.votesAdapter.clear();
-        if (Keys.LIST_VOTINGS.equals(listType)) {
-            this.votesAdapter.addAll(getVotesByType(Voting.class));
-            getActivity().setTitle("Списък от гласувания");
-        } else if (Keys.LIST_POOLS.equals(listType)) {
-            this.votesAdapter.addAll(getVotesByType(Poll.class));
-            getActivity().setTitle("Списък от анкети");
-        } else if (Keys.LIST_REFERENDUMS.equals(listType)) {
-            this.votesAdapter.addAll(getVotesByType(Referendum.class));
-            getActivity().setTitle("Списък от референдуми");
+        if("1".equals(tabNum)){
+            votesByType.addAll(AppController.getVotesByType(Voting.class));
+        }else if("2".equals(tabNum)){
+            votesByType.addAll(AppController.getVotesByType(Poll.class));
+        }else if("3".equals(tabNum)){
+            votesByType.addAll(AppController.getVotesByType(Referendum.class));
         }
+        return view;
     }
 
     private SelectionListener mSelectionCallback;
@@ -71,6 +76,12 @@ public class ListFragment extends android.app.ListFragment {
         }
     }
 
+    @Override
+    public void onActivityCreated(Bundle bundle){
+        getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        super.onActivityCreated(bundle);
+    }
+
     // for versions below 23
     @Override
     public void onAttach(Activity context) {
@@ -80,34 +91,6 @@ public class ListFragment extends android.app.ListFragment {
             mSelectionCallback = (SelectionListener) context;
         }
     }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        /** Inflating the layout for this fragment **/
-        View v = inflater.inflate(R.layout.list_view, null);
-        //v.setBackgroundColor(Color.LTGRAY);
-        return v;
-    }
-
-    private ArrayList<Vote> getVotesByType(Class type) {
-        ArrayList<Vote> votesByType = new ArrayList();
-        AppController.getInstance();
-        Iterator it = AppController.votes.iterator();
-        while (it.hasNext()) {
-            Vote vote = (Vote) it.next();
-            if (vote.getClass().equals(type)) {
-                votesByType.add(vote);
-            }
-        }
-        return votesByType;
-    }
-
-    @Override
-    public void onActivityCreated(Bundle bundle){
-        getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-        super.onActivityCreated(bundle);
-    }
-
 
     class VotesAdapter extends ArrayAdapter<Vote> {
 
@@ -155,4 +138,5 @@ public class ListFragment extends android.app.ListFragment {
             return this.values.get(position);
         }
     }
+
 }

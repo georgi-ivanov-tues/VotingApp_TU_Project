@@ -1,4 +1,4 @@
-#Fri May 03 18:02:15 EEST 2019
-base.0=D\:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+#Sat May 04 00:16:17 EEST 2019
+base.0=/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
-file.0=D\:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+file.0=/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

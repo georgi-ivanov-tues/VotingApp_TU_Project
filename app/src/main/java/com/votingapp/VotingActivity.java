@@ -1,13 +1,14 @@
 package com.votingapp;
 
 import android.app.Fragment;
-import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
+import com.votingapp.fragments.ListFragmentOld;
 import com.votingapp.fragments.ListFragment;
 import com.votingapp.fragments.PollResultsFragment;
 import com.votingapp.fragments.ReferendumResultsFragment;
@@ -28,6 +29,7 @@ public class VotingActivity extends AppCompatActivity implements ListFragment.Se
     private Toolbar toolbar;
     private ViewPager viewPager;
     private ViewPagerAdapter viewPagerAdapter;
+    private TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,12 @@ public class VotingActivity extends AppCompatActivity implements ListFragment.Se
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
 
         viewPager.setAdapter(viewPagerAdapter);
+
+        tabLayout = (TabLayout) findViewById(R.id.tabs);
+
+
+        tabLayout.setupWithViewPager(viewPager);
+
 //        loadListFragment();
     }
 
@@ -56,10 +64,10 @@ public class VotingActivity extends AppCompatActivity implements ListFragment.Se
         } else if (Keys.LIST_REFERENDUMS.equals(defaultFragment)) {
             bundle.putSerializable(Keys.VOTING_ACTIVITY_FRAGMENT, Keys.LIST_REFERENDUMS);
         }
-        ListFragment listFragment = new ListFragment();
-        listFragment.setArguments(bundle);
+        ListFragmentOld listFragmentOld = new ListFragmentOld();
+        listFragmentOld.setArguments(bundle);
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.list_content_fragment, listFragment, "listFragment");
+        transaction.replace(R.id.list_content_fragment, listFragmentOld, "listFragmentOld");
         transaction.commit();
     }
 

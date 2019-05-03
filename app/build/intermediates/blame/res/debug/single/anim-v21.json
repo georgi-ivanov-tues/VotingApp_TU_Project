@@ -1,14 +1,26 @@
 [
     {
-        "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_appbar_state_list_animator.xml",
-        "source": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\anim-v21\\design_appbar_state_list_animator.xml"
+        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/design/25.0.1/res/anim-v21/design_bottom_sheet_slide_out.xml"
     },
     {
-        "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/design/25.0.1/res/anim-v21/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_appbar_state_list_animator.xml",
+        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\anim-v21\\design_appbar_state_list_animator.xml"
+    },
+    {
+        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/anim-v21/design_appbar_state_list_animator.xml",
+        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/design/25.0.1/res/anim-v21/design_appbar_state_list_animator.xml"
     }
 ]
