@@ -56,13 +56,15 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 setUpVotes();
 
-                Intent myIntent = new Intent(HomeActivity.this, MainActivity.class);
+                Intent myIntent = new Intent(HomeActivity.this, LoginActivity.class);
                 startActivity(myIntent);
             }
         });
     }
 
     private void setUpVotes(){
+        AppController.votes.clear();
+
         ArrayList<Option> voting1Options = new ArrayList<>();
         voting1Options.add(new Option("Георги Иванов"));
         voting1Options.add(new Option("Иван Георгиев"));

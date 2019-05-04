@@ -807,6 +807,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_voting">VotingActivity</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
@@ -2358,6 +2359,7 @@
         <item name="android:fontFamily">sans-serif-condensed</item>
         <item name="android:textSize">40px</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">55px</item>
     </style>
     <style name="home_activity_table_rows">
         <item name="android:layout_width">0dip</item>

@@ -32,9 +32,11 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
         System.out.println("Voting Activity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("Списък с вотове");
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         viewPager = (ViewPager) findViewById(R.id.pager);
 
