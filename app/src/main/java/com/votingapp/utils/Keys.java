@@ -12,4 +12,9 @@ public interface Keys {
     String VOTING_ACTIVITY_FRAGMENT = "votingActivityFragment";
     String VOTE_OBJECT = "voteObject";
     String ALREADY_VOTED = "alreadyVoted";
+
+    String CURRENT_TAB = "currentTab";
+    String TAB_VOTINGS = "1";
+    String TAB_POLLS = "2";
+    String TAB_REFERENDUMS = "3";
 }

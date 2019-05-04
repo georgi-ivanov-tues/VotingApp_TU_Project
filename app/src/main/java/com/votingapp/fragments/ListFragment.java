@@ -18,6 +18,7 @@ import com.votingapp.models.Poll;
 import com.votingapp.models.Referendum;
 import com.votingapp.models.Vote;
 import com.votingapp.models.Voting;
+import com.votingapp.utils.Keys;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +42,6 @@ public class ListFragment extends android.support.v4.app.ListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-//        View view = inflater.inflate(R.layout.fragment_list, container, false);
         View view = inflater.inflate(R.layout.list_view, null);
         String tabNum = getArguments().getString("currentTab");
         ArrayList<Vote> votesByType = new ArrayList<>();
@@ -49,11 +49,11 @@ public class ListFragment extends android.support.v4.app.ListFragment {
         votesAdapter = new ListFragment.VotesAdapter(getActivity(), votesByType);
         setListAdapter(this.votesAdapter);
         this.votesAdapter.clear();
-        if("1".equals(tabNum)){
+        if(Keys.TAB_VOTINGS.equals(tabNum)){
             votesByType.addAll(AppController.getVotesByType(Voting.class));
-        }else if("2".equals(tabNum)){
+        }else if(Keys.TAB_POLLS.equals(tabNum)){
             votesByType.addAll(AppController.getVotesByType(Poll.class));
-        }else if("3".equals(tabNum)){
+        }else if(Keys.TAB_REFERENDUMS.equals(tabNum)){
             votesByType.addAll(AppController.getVotesByType(Referendum.class));
         }
         return view;

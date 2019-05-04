@@ -5,7 +5,7 @@
     android:id="@+id/activity_voting"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.votingapp.MainActivity"
+    tools:context="com.votingapp.activities.MainActivity"
     android:theme="@style/AppTheme"
     android:orientation="vertical">
 

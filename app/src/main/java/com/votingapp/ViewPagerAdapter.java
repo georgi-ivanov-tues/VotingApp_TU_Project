@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.votingapp.fragments.ListFragment;
+import com.votingapp.utils.Keys;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
@@ -19,7 +20,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         position++;
 
         Bundle bundle = new Bundle();
-        bundle.putString("currentTab", Integer.toString(position));
+        bundle.putString(Keys.CURRENT_TAB, Integer.toString(position));
         listFragment.setArguments(bundle);
 
         return listFragment;

@@ -64,16 +64,16 @@
         "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
-        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/layout/abc_list_menu_item_layout.xml"
+        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_voting_results.xml",
+        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\layout\\fragment_voting_results.xml"
     },
     {
         "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
         "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
-        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_voting_results.xml",
-        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\layout\\fragment_voting_results.xml"
+        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/layout/abc_list_menu_item_layout.xml"
     },
     {
         "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
@@ -274,10 +274,6 @@
     {
         "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
         "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\layout\\design_layout_snackbar.xml"
-    },
-    {
-        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/layout/fragment_list_old.xml",
-        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/res/layout/fragment_list_old.xml"
     },
     {
         "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_home.xml",
