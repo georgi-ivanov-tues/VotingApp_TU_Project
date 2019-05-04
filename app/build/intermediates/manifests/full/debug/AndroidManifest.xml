@@ -28,8 +28,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.votingapp.VotingActivity" />
+        <activity android:name="com.votingapp.MainActivity" />
         <activity android:name="com.votingapp.UserProfileActivity" />
+        <activity
+            android:name="com.votingapp.VotingActivity"
+            android:label="@string/title_activity_voting"
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
             android:excludeFromRecents="true"

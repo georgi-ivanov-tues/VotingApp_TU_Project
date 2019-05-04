@@ -30,6 +30,7 @@ public class AppController extends Application{
     private static AppController mInstance;
     public static UserProfile userProfile;
     public static ArrayList<Vote> votes = new ArrayList<>();
+    public static Vote currentVote;
 
     @Override
     public void onCreate() {
@@ -42,6 +43,14 @@ public class AppController extends Application{
 
     public static synchronized AppController getInstance() {
         return mInstance;
+    }
+
+    public static Vote getCurrentVote() {
+        return currentVote;
+    }
+
+    public static void setCurrentVote(Vote currentVote) {
+        AppController.currentVote = currentVote;
     }
 
     public static ArrayList<Vote> getVotesByType(Class type) {

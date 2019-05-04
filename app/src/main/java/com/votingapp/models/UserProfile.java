@@ -1,5 +1,7 @@
 package com.votingapp.models;
 
+import com.votingapp.AppController;
+
 import java.util.ArrayList;
 
 public class UserProfile {
@@ -29,5 +31,13 @@ public class UserProfile {
 
     public ArrayList<Referendum> getReferendums() {
         return referendums;
+    }
+
+    public ArrayList<Vote> getAllVotes(){
+        ArrayList<Vote> allVotes = new ArrayList<>();
+        allVotes.addAll(getVotings());
+        allVotes.addAll(getPolls());
+        allVotes.addAll(getReferendums());
+        return allVotes;
     }
 }

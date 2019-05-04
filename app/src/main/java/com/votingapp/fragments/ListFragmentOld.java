@@ -2,14 +2,11 @@ package com.votingapp.fragments;
 
 import android.app.Activity;
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -22,7 +19,6 @@ import com.votingapp.models.Voting;
 import com.votingapp.utils.Keys;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -45,7 +41,7 @@ public class ListFragmentOld extends android.app.ListFragment {
         if (Keys.LIST_VOTINGS.equals(listType)) {
             this.votesAdapter.addAll(getVotesByType(Voting.class));
             getActivity().setTitle("Списък от гласувания");
-        } else if (Keys.LIST_POOLS.equals(listType)) {
+        } else if (Keys.LIST_POLLS.equals(listType)) {
             this.votesAdapter.addAll(getVotesByType(Poll.class));
             getActivity().setTitle("Списък от анкети");
         } else if (Keys.LIST_REFERENDUMS.equals(listType)) {

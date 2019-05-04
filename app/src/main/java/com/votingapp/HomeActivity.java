@@ -1,13 +1,9 @@
 package com.votingapp;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Path;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -21,43 +17,26 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.drive.Drive;
-import com.google.android.gms.drive.DriveClient;
-import com.google.android.gms.drive.DriveContents;
-import com.google.android.gms.drive.DriveFile;
-import com.google.android.gms.drive.DriveResourceClient;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.google.android.gms.tasks.Task;
 import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
 import com.votingapp.models.Question;
 import com.votingapp.models.Referendum;
-import com.votingapp.models.UserProfile;
-import com.votingapp.models.Vote;
 import com.votingapp.models.Voting;
 import com.votingapp.utils.Keys;
-
-import org.json.JSONArray;
-import org.json.JSONException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 
 import static com.google.android.gms.drive.Drive.getDriveResourceClient;
 
-public class HomeActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,14 +53,17 @@ public class HomeActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+//        navigationView.setNavigationItemSelectedListener(this);
 
-        Button loadDataButton = (Button) findViewById(R.id.load_data_button);
+        Button loadDataButton = (Button) findViewById(R.id.begin_button);
         loadDataButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setUpVotes2();
+                setUpVotes();
+
+                Intent myIntent = new Intent(HomeActivity.this, MainActivity.class);
+                startActivity(myIntent);
             }
         });
 
@@ -91,7 +73,7 @@ public class HomeActivity extends AppCompatActivity
 //                getDriveResourceClient(this,).openFile(file, DriveFile.MODE_READ_ONLY);
     }
 
-    private void setUpVotes2(){
+    private void setUpVotes(){
         ArrayList<Option> voting1Options = new ArrayList<>();
         voting1Options.add(new Option("Георги Иванов"));
         voting1Options.add(new Option("Иван Георгиев"));
@@ -101,7 +83,9 @@ public class HomeActivity extends AppCompatActivity
         voting1Options.get(1).setTimesSelected(3);
         voting1Options.get(2).setTimesSelected(4);
         Voting voting1 = new Voting("Гласуване за нов президент на компанията", new Question("Кой искате да е новият президент на компанията?"), voting1Options);
+        Voting voting2 = new Voting("Гласуване за нов президент на компанията", new Question("Кой искате да е новият президент на компанията?"), voting1Options);
         AppController.votes.add(voting1);
+        AppController.votes.add(voting2);
 
         // -------------------------------------------------
 
@@ -139,26 +123,26 @@ public class HomeActivity extends AppCompatActivity
         AppController.votes.add(referendum);
     }
 
-    private void setUpVotes(){
-        if(isNetworkConnected()) {
-            AppController.votes.clear();
-            String votingsPathFile = "1Ee6cBkbY9ohmnA6ewGdrnWLpWVRdHpdn";
-            String referendumsPathFile = "1tUdkU2UJfHY-zM1ZWt-82sT4E3gyoYT7";
-            String pollsPathFile = "1xICuvwRi53Dk5CtGtFryfRElnRnzpjd7";
-
-            loadDataFromFiles(votingsPathFile, Voting.class);
-            loadDataFromFiles(referendumsPathFile, Referendum.class);
-            loadDataFromFiles(pollsPathFile, Poll.class);
-
-            CharSequence text = "Успешно зареждане на нови гласувания, анкети и референдуми";
-            Toast toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
-            toast.show();
-        }else{
-            CharSequence text = "Липса на интернет връзка...";
-            Toast toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
-            toast.show();
-        }
-    }
+//    private void setUpVotes(){
+//        if(isNetworkConnected()) {
+//            AppController.votes.clear();
+//            String votingsPathFile = "1Ee6cBkbY9ohmnA6ewGdrnWLpWVRdHpdn";
+//            String referendumsPathFile = "1tUdkU2UJfHY-zM1ZWt-82sT4E3gyoYT7";
+//            String pollsPathFile = "1xICuvwRi53Dk5CtGtFryfRElnRnzpjd7";
+//
+//            loadDataFromFiles(votingsPathFile, Voting.class);
+//            loadDataFromFiles(referendumsPathFile, Referendum.class);
+//            loadDataFromFiles(pollsPathFile, Poll.class);
+//
+//            CharSequence text = "Успешно зареждане на нови гласувания, анкети и референдуми";
+//            Toast toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
+//            toast.show();
+//        }else{
+//            CharSequence text = "Липса на интернет връзка...";
+//            Toast toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
+//            toast.show();
+//        }
+//    }
 
     private boolean isNetworkConnected() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -219,53 +203,53 @@ public class HomeActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.home, menu);
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+////        getMenuInflater().inflate(R.menu.home, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_home) {
-            // Handle the camera action
-        } else if (id == R.id.nav_user_profile) {
-            Intent userProfileActivityIntent = new Intent(HomeActivity.this, UserProfileActivity.class);
-            startActivity(userProfileActivityIntent);
-
-        } else if (id == R.id.nav_votings) {
-            Intent votingActivityIntent = new Intent(HomeActivity.this, VotingActivity.class);
-            votingActivityIntent.putExtra(Keys.VOTING_ACTIVITY_FRAGMENT, Keys.LIST_VOTINGS);
-            startActivity(votingActivityIntent);
-        } else if (id == R.id.nav_polls) {
-            Intent votingActivityIntent = new Intent(HomeActivity.this, VotingActivity.class);
-            votingActivityIntent.putExtra(Keys.VOTING_ACTIVITY_FRAGMENT, Keys.LIST_POOLS);
-            startActivity(votingActivityIntent);
-        } else if (id == R.id.nav_referendums) {
-            Intent votingActivityIntent = new Intent(HomeActivity.this, VotingActivity.class);
-            votingActivityIntent.putExtra(Keys.VOTING_ACTIVITY_FRAGMENT, Keys.LIST_REFERENDUMS);
-            startActivity(votingActivityIntent);
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
+//    @SuppressWarnings("StatementWithEmptyBody")
+//    @Override
+//    public boolean onNavigationItemSelected(MenuItem item) {
+//        // Handle navigation view item clicks here.
+//        int id = item.getItemId();
+//
+//        if (id == R.id.nav_home) {
+//            // Handle the camera action
+//        } else if (id == R.id.nav_user_profile) {
+//            Intent userProfileActivityIntent = new Intent(HomeActivity.this, UserProfileActivity.class);
+//            startActivity(userProfileActivityIntent);
+//
+//        } else if (id == R.id.nav_votings) {
+//            Intent votingActivityIntent = new Intent(HomeActivity.this, MainActivity.class);
+//            votingActivityIntent.putExtra(Keys.VOTING_ACTIVITY_FRAGMENT, Keys.LIST_VOTINGS);
+//            startActivity(votingActivityIntent);
+//        } else if (id == R.id.nav_polls) {
+//            Intent votingActivityIntent = new Intent(HomeActivity.this, MainActivity.class);
+//            votingActivityIntent.putExtra(Keys.VOTING_ACTIVITY_FRAGMENT, Keys.LIST_POLLS);
+//            startActivity(votingActivityIntent);
+//        } else if (id == R.id.nav_referendums) {
+//            Intent votingActivityIntent = new Intent(HomeActivity.this, MainActivity.class);
+//            votingActivityIntent.putExtra(Keys.VOTING_ACTIVITY_FRAGMENT, Keys.LIST_REFERENDUMS);
+//            startActivity(votingActivityIntent);
+//        }
+//
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        drawer.closeDrawer(GravityCompat.START);
+//        return true;
+//    }
 }

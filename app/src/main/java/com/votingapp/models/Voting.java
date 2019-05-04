@@ -1,12 +1,16 @@
 package com.votingapp.models;
 
+import android.annotation.SuppressLint;
+import android.os.Parcel;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by giivanov on 4.5.2018 г..
  */
 
-public class Voting extends Vote {
+public class Voting extends Vote{
 
     private Question question;
     private ArrayList<Option> options;

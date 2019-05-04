@@ -7,8 +7,9 @@ package com.votingapp.utils;
 public interface Keys {
 
     String LIST_VOTINGS = "listVotings";
-    String LIST_POOLS = "listPolls";
+    String LIST_POLLS = "listPolls";
     String LIST_REFERENDUMS = "listReferendums";
     String VOTING_ACTIVITY_FRAGMENT = "votingActivityFragment";
     String VOTE_OBJECT = "voteObject";
+    String ALREADY_VOTED = "alreadyVoted";
 }

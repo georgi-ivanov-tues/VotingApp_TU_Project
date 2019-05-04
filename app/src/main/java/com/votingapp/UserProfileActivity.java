@@ -1,8 +1,6 @@
 package com.votingapp;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +13,6 @@ import com.votingapp.models.Referendum;
 import com.votingapp.models.Voting;
 import com.votingapp.utils.Keys;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class UserProfileActivity extends AppCompatActivity {
@@ -45,7 +42,7 @@ public class UserProfileActivity extends AppCompatActivity {
             votingsTitleTextView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent votingActivityIntent = new Intent(UserProfileActivity.this, VotingActivity.class);
+                    Intent votingActivityIntent = new Intent(UserProfileActivity.this, MainActivity.class);
                     Bundle bundle = new Bundle();
                     bundle.putSerializable(Keys.VOTE_OBJECT, voting);
                     votingActivityIntent.putExtra(Keys.VOTING_ACTIVITY_FRAGMENT, Keys.LIST_VOTINGS);
