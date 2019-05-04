@@ -9,5 +9,6 @@
     <color name="pattensBlue">#cfd8dc</color>
     <color name="referendumYesGreen">#66FF00</color>
     <color name="referendumNoRed">#FF0000</color>
+    <color name="bermudaGrey">#78909c</color>
 
 </resources>

@@ -284,10 +284,6 @@
         "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/res/layout/fragment_poll_results.xml"
     },
     {
-        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/layout/content_home.xml",
-        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/res/layout/content_home.xml"
-    },
-    {
         "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
         "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/layout/select_dialog_multichoice_material.xml"
     },
