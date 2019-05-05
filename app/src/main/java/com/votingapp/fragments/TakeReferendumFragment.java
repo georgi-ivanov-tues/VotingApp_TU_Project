@@ -1,15 +1,11 @@
 package com.votingapp.fragments;
 
-import android.app.AlertDialog;
 import android.app.FragmentTransaction;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.graphics.Paint;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.support.annotation.RequiresApi;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -99,7 +95,7 @@ public class TakeReferendumFragment extends Fragment {
                     System.out.println("REFERENDUM OPTION YES = " + referendum.getOptionYes().getTimesSelected());
                     System.out.println("REFERENDUM OPTION NO = " + referendum.getOptionNo().getTimesSelected());
 
-                    AppController.userProfile.addReferendum(referendum);
+                    AppController.loggedUser.addReferendum(referendum);
 
                     ReferendumResultsFragment referendumResultsFragment = new ReferendumResultsFragment();
                     Bundle bundle = new Bundle();

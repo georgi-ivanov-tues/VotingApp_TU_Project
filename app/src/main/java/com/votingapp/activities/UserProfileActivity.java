@@ -24,9 +24,9 @@ public class UserProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
-        ArrayList<Voting> votings = AppController.userProfile.getVotings();
-        ArrayList<Poll> polls = AppController.userProfile.getPolls();
-        ArrayList<Referendum> referendums = AppController.userProfile.getReferendums();
+        ArrayList<Voting> votings = AppController.loggedUser.getVotings();
+        ArrayList<Poll> polls = AppController.loggedUser.getPolls();
+        ArrayList<Referendum> referendums = AppController.loggedUser.getReferendums();
 
         // Get the widgets reference from XML layout
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.userProfileLinearLayout);

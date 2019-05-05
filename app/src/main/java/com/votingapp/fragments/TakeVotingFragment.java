@@ -9,7 +9,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.annotation.RequiresApi;
-import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +17,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,8 +25,6 @@ import com.votingapp.R;
 import com.votingapp.models.Option;
 import com.votingapp.models.Voting;
 import com.votingapp.utils.Keys;
-
-import static com.votingapp.R.style.activity_login_button;
 
 public class TakeVotingFragment extends Fragment {
 
@@ -104,7 +100,7 @@ public class TakeVotingFragment extends Fragment {
                         System.out.println(option.getOptionText() + " = " + option.getTimesSelected());
                     }
 
-                    AppController.userProfile.addVoting(voting);
+                    AppController.loggedUser.addVoting(voting);
 
                     VotingResultsFragment votingResultsFragment = new VotingResultsFragment();
                     Bundle bundle = new Bundle();

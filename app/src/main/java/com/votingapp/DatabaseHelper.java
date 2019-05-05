@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "Voting.db";
 
-    public static final String TABLE_NAME = "user";
+    public static final String TABLE_NAME = "loggedUser";
     public static final String COL0 = "ID";
     public static final String COL1 = "username";
     public static final String COL2 = "password";

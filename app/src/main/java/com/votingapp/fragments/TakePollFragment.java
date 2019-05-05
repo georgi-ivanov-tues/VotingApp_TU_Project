@@ -1,23 +1,19 @@
 package com.votingapp.fragments;
 
 import android.annotation.SuppressLint;
-import android.app.Dialog;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.provider.MediaStore;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,7 +24,6 @@ import com.votingapp.models.Poll;
 import com.votingapp.models.Question;
 import com.votingapp.utils.Keys;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Random;
@@ -129,7 +124,7 @@ public class TakePollFragment extends Fragment {
                 }
 
                 if(allQuestionsAnswered) {
-                    AppController.userProfile.addPoll(poll);
+                    AppController.loggedUser.addPoll(poll);
 
                     PollResultsFragment pollResultsFragment = new PollResultsFragment();
                     Bundle bundle = new Bundle();

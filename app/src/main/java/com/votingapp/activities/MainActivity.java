@@ -1,6 +1,5 @@
 package com.votingapp.activities;
 
-import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -14,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.votingapp.AppController;
 import com.votingapp.R;
@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
         NavigationView.OnNavigationItemSelectedListener  {
 
     FragmentTransaction transaction;
+
+    DrawerLayout drawer;
 
     private Toolbar toolbar;
     private ViewPager viewPager;
@@ -54,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
 
         tabLayout.setupWithViewPager(viewPager);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_main_drawer_layout);
+        drawer = (DrawerLayout) findViewById(R.id.activity_main_drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -62,6 +64,10 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        if(!AppController.loggedUser.isAdmin()){
+            navigationView.getMenu().findItem(R.id.nav_create_vote).setEnabled(false);
+        }
     }
 
     @Override
@@ -72,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
     @Override
     public void onItemSelected(Vote vote) {
         ArrayList<Vote> alreadyVotedByUser = new ArrayList<>();
-        alreadyVotedByUser.addAll(AppController.userProfile.getAllVotes());
+        alreadyVotedByUser.addAll(AppController.loggedUser.getAllVotes());
 
         boolean alreadyVotedFlag = false;
         for(Vote alreadyVoted : alreadyVotedByUser) {
@@ -99,12 +105,15 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-// Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_create_vote) {
+        if(id == R.id.nav_votes_list){
+            drawer.closeDrawer(GravityCompat.START);
+        } else if (id == R.id.nav_create_vote) {
             Intent myIntent = new Intent(MainActivity.this, CreateVoteActivity.class);
             startActivity(myIntent);
+        }else if(id == R.id.nav_exit){
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_main_drawer_layout);

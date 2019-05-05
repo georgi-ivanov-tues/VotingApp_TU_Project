@@ -1,6 +1,7 @@
 package com.votingapp.activities;
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,6 +20,8 @@ public class CreateVoteActivity extends AppCompatActivity
 
     FragmentTransaction transaction;
 
+    DrawerLayout drawer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +29,7 @@ public class CreateVoteActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_create_vote_drawer_layout);
+        drawer = (DrawerLayout) findViewById(R.id.activity_create_vote_drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -76,9 +79,15 @@ public class CreateVoteActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-//        if (id == R.id.nav_camera) {
-//            // Handle the camera action
-//        }
+        if(id == R.id.nav_votes_list){
+            finish();
+        } else if (id == R.id.nav_create_vote) {
+            drawer.closeDrawer(GravityCompat.START);
+        }else if(id == R.id.nav_exit){
+            Intent myIntent = new Intent(CreateVoteActivity.this, LoginActivity.class);
+            myIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(myIntent);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_create_vote_drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

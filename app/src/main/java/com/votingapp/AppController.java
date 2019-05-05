@@ -3,22 +3,16 @@ package com.votingapp;
 import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
-import android.graphics.Path;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.votingapp.models.Option;
-import com.votingapp.models.Poll;
-import com.votingapp.models.Question;
-import com.votingapp.models.Referendum;
-import com.votingapp.models.UserProfile;
+import com.votingapp.models.User;
 import com.votingapp.models.Vote;
-import com.votingapp.models.Voting;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 
 /**
@@ -28,8 +22,10 @@ import java.util.Iterator;
 public class AppController extends Application{
 
     private static AppController mInstance;
-    public static UserProfile userProfile;
+
+    public static ArrayList<User> allUsers = new ArrayList<>();
     public static ArrayList<Vote> votes = new ArrayList<>();
+    public static User loggedUser;
     public static Vote currentVote;
 
     @Override
@@ -37,7 +33,6 @@ public class AppController extends Application{
         super.onCreate();
         mInstance = this;
 
-        userProfile = new UserProfile();
         System.out.println("Application created!!!");
     }
 

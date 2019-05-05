@@ -26,6 +26,7 @@ import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
 import com.votingapp.models.Question;
 import com.votingapp.models.Referendum;
+import com.votingapp.models.User;
 import com.votingapp.models.Voting;
 
 import java.io.BufferedReader;
@@ -77,7 +78,7 @@ public class HomeActivity extends AppCompatActivity {
         loadDataButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setUpVotes();
+                setUpVotesAndUsers();
 
                 Intent myIntent = new Intent(HomeActivity.this, LoginActivity.class);
                 startActivity(myIntent);
@@ -85,7 +86,13 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
-    private void setUpVotes(){
+    private void setUpVotesAndUsers(){
+        User admin = new User("admin", "1234", true);
+        User test = new User("test", "1234", false);
+
+        AppController.allUsers.add(admin);
+        AppController.allUsers.add(test);
+
         AppController.votes.clear();
 
         ArrayList<Option> voting1Options = new ArrayList<>();
@@ -97,9 +104,7 @@ public class HomeActivity extends AppCompatActivity {
         voting1Options.get(1).setTimesSelected(3);
         voting1Options.get(2).setTimesSelected(4);
         Voting voting1 = new Voting("Гласуване за нов президент на компанията", new Question("Кой искате да е новият президент на компанията?"), voting1Options);
-        Voting voting2 = new Voting("Гласуване за нов президент на компанията", new Question("Кой искате да е новият президент на компанията?"), voting1Options);
         AppController.votes.add(voting1);
-        AppController.votes.add(voting2);
 
         // -------------------------------------------------
 

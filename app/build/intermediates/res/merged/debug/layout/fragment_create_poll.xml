@@ -1,13 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:fillViewport="true">
 
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="CREATE POLL"/>
-</LinearLayout>
+        android:orientation="vertical">
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/create_poll_linear_layout">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/create_poll_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="Заглавие на анкета" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Question Layout -->
+            <LinearLayout
+                android:id="@+id/question_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+                    <EditText android:id="@+id/create_poll_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:hint="Въпрос" />
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- Option Layout -->
+                <LinearLayout
+                    android:id="@+id/question_options_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp">
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:hint="Отговор 1" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:hint="Отговор 2" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+                <Button
+                    android:id="@+id/poll_add_option"
+                    android:layout_width="300px"
+                    android:layout_height="wrap_content"
+                    android:text="Добавяне на отговор"
+                    android:layout_gravity="right"
+                    />
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/poll_add_question"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Добавяне на въпрос"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/create_new_poll_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Създаване на гласуването"
+            style="@style/create_vote_button"/>
+    </LinearLayout>
+</ScrollView>
