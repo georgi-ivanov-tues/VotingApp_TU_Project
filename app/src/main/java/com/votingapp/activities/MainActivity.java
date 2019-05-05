@@ -3,11 +3,17 @@ package com.votingapp.activities;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 import com.votingapp.AppController;
 import com.votingapp.R;
@@ -18,7 +24,8 @@ import com.votingapp.utils.Keys;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements ListFragment.SelectionListener {
+public class MainActivity extends AppCompatActivity implements ListFragment.SelectionListener,
+        NavigationView.OnNavigationItemSelectedListener  {
 
     FragmentTransaction transaction;
 
@@ -37,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         viewPager = (ViewPager) findViewById(R.id.pager);
 
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
@@ -47,6 +53,20 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
         tabLayout = (TabLayout) findViewById(R.id.tabs);
 
         tabLayout.setupWithViewPager(viewPager);
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_main_drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
     @Override
@@ -70,6 +90,25 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
 
     @Override
     public void onBackPressed(){
-        super.onBackPressed();
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_main_drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+// Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_create_vote) {
+            Intent myIntent = new Intent(MainActivity.this, CreateVoteActivity.class);
+            startActivity(myIntent);
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_main_drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 }

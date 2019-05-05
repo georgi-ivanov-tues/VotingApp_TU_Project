@@ -43,6 +43,22 @@ public class ListFragment extends android.support.v4.app.ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.list_view, null);
+
+        loadVotes();
+
+        return view;
+    }
+
+    private SelectionListener mSelectionCallback;
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        loadVotes();
+    }
+
+    private void loadVotes(){
         String tabNum = getArguments().getString("currentTab");
         ArrayList<Vote> votesByType = new ArrayList<>();
 
@@ -56,10 +72,7 @@ public class ListFragment extends android.support.v4.app.ListFragment {
         }else if(Keys.TAB_REFERENDUMS.equals(tabNum)){
             votesByType.addAll(AppController.getVotesByType(Referendum.class));
         }
-        return view;
     }
-
-    private SelectionListener mSelectionCallback;
 
     @Override
     public void onListItemClick(ListView l, View view, int position, long id) {

@@ -46,6 +46,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
+            android:name="com.votingapp.activities.CreateVoteActivity"
+            android:label="@string/title_activity_create_vote"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
             android:excludeFromRecents="true"
             android:exported="false"

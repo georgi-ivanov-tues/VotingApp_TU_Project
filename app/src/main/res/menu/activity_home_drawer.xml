@@ -3,24 +3,16 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Начало" />
-        <item
-            android:id="@+id/nav_user_profile"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Личен профил" />
-        <item
-            android:id="@+id/nav_votings"
+            android:id="@+id/nav_votes_list"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Гласувания" />
+            android:title="Списък с вотове" />
         <item
-            android:id="@+id/nav_polls"
+            android:id="@+id/nav_create_vote"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Анкети" />
+            android:title="Създаване на вот" />
         <item
-            android:id="@+id/nav_referendums"
+            android:id="@+id/nav_exit"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Референдуми" />
+            android:title="Изход" />
     </group>
 </menu>

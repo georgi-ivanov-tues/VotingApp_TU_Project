@@ -42,6 +42,11 @@ public class VotingActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
     private void loadFragment(Fragment fragmentToLoad, Vote vote){
         Bundle bundle = new Bundle();
         bundle.putSerializable(Keys.VOTE_OBJECT, vote);

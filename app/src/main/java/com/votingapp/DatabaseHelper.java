@@ -16,6 +16,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
     }
 
     public DatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version, DatabaseErrorHandler errorHandler) {
@@ -24,11 +25,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
+        sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_NAME +
+                " (ID INTEGER PRIMARY KEY AUTOINCREMENT, USERNAME TEXT, PASSWORD TEXT)");
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        onCreate(sqLiteDatabase);
     }
 }

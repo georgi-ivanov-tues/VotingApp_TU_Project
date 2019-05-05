@@ -4,12 +4,20 @@
         "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/res/menu/activity_home_drawer.xml"
     },
     {
+        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/menu/create_vote.xml",
+        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/res/menu/create_vote.xml"
+    },
+    {
         "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/menu/home.xml",
         "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/res/menu/home.xml"
     },
     {
         "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_home_drawer.xml",
         "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\menu\\activity_home_drawer.xml"
+    },
+    {
+        "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/res/merged/debug/menu/activity_create_vote_drawer.xml",
+        "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/res/menu/activity_create_vote_drawer.xml"
     },
     {
         "merged": "/Users/giivanov/GitHub/VotingApp_TU_Project/D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\home.xml",
