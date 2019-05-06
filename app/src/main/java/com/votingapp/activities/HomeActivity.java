@@ -89,9 +89,11 @@ public class HomeActivity extends AppCompatActivity {
     private void setUpVotesAndUsers(){
         User admin = new User("admin", "1234", true);
         User test = new User("test", "1234", false);
+        User empty = new User("", "", true);
 
         AppController.allUsers.add(admin);
         AppController.allUsers.add(test);
+//        AppController.allUsers.add(empty);
 
         AppController.votes.clear();
 

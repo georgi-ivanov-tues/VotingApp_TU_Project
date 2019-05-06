@@ -15,19 +15,20 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
+import com.votingapp.models.Question;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by giivanov on 5.05.19.
  */
 
 public class CreatePollFragment extends Fragment {
-
-    private Poll newPoll;
 
     public CreatePollFragment(){}
 
@@ -41,8 +42,6 @@ public class CreatePollFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_create_poll, container, false);
         getActivity().setTitle("Създаване на анкета");
 
-        final TextView pollTitle = (TextView) view.findViewById(R.id.create_poll_title);
-        final TextView pollQuestion = (TextView) view.findViewById(R.id.create_poll_question);
         Button createPollButton = (Button) view.findViewById(R.id.create_new_poll_button);
         Button addOptionButton = (Button) view.findViewById(R.id.poll_add_option);
         Button addQuestionButton = (Button) view.findViewById(R.id.poll_add_question);
@@ -124,11 +123,18 @@ public class CreatePollFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 checkIfFieldsEmpty(createPollLinearLayout);
+                Poll newPoll = createPoll(createPollLinearLayout);
+                AppController.votes.add(newPoll);
+
+                CharSequence text = "Анкетата е успешно създадено";
+                Toast toast = Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT);
+                toast.show();
+
+                getActivity().finish();
             }
         });
 
         return view;
-
     }
 
     private void addOptionToQuestion(LinearLayout questionLinearLayout){
@@ -188,5 +194,54 @@ public class CreatePollFragment extends Fragment {
         }
 
         return areAllFieldsFilled;
+    }
+
+    // Lots of sweat and tears down here
+    private Poll createPoll(LinearLayout linearLayout){
+        Poll newPoll = new Poll();
+
+        EditText titleEditText = (EditText) getView().findViewById(R.id.create_poll_title);
+        newPoll.setTitle(titleEditText.getText().toString());
+        boolean callGetOptionsMethod = false;
+
+        Question newQuestion = new Question();
+        int childCount = linearLayout.getChildCount();
+
+        for(int i = 0; i < childCount; i++) {
+            View view = linearLayout.getChildAt(i);
+
+            if(callGetOptionsMethod){
+                newPoll.addQuestion(newQuestion, getOptionsFromLinearLayout((LinearLayout) view));
+                callGetOptionsMethod = false;
+            }else if(view instanceof TextInputLayout){
+                TextInputLayout textInputLayout = (TextInputLayout) view;
+                EditText editText = textInputLayout.getEditText();
+                String fieldHint = textInputLayout.getHint().toString();
+
+                if("Въпрос".equals(fieldHint)){
+                    newQuestion = new Question(editText.getText().toString());
+                    callGetOptionsMethod = true;
+                }
+            }else if(view instanceof LinearLayout){
+                Poll poll = createPoll((LinearLayout) view);
+                newPoll.addQuestions(poll.getPollContent());
+            }
+        }
+
+        return newPoll;
+    }
+
+    private ArrayList<Option> getOptionsFromLinearLayout(LinearLayout linearLayout){
+        ArrayList<Option> newOptions = new ArrayList<>();
+
+        int childCount = linearLayout.getChildCount();
+        for(int i = 0; i < childCount; i++) {
+            View view = linearLayout.getChildAt(i);
+            TextInputLayout textInputLayout = (TextInputLayout) view;
+            EditText editText = textInputLayout.getEditText();
+            newOptions.add(new Option(editText.getText().toString()));
+        }
+
+        return newOptions;
     }
 }
