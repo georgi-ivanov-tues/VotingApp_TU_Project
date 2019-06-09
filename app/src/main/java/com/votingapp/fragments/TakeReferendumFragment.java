@@ -71,17 +71,6 @@ public class TakeReferendumFragment extends Fragment {
                     CharSequence text = "Моля отговорете на референдума!";
                     Toast toast = Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT);
                     toast.show();
-
-                    /*
-                    AlertDialog.Builder builder = new AlertDialog.Builder(VehicleActivity.this);
-                    builder.setTitle(R.string.vehicle_activity_view_on_back_pressed)
-                            .setNegativeButton(R.string.ok, new DialogInterface.OnClickListener(){
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                }
-                            });
-                    builder.show();
-                    */
                 }else {
                     RadioButton radioButton = (RadioButton) parentView.findViewById(selectedId);
                     if ("Да".equals(radioButton.getText())) {
@@ -92,8 +81,8 @@ public class TakeReferendumFragment extends Fragment {
                         referendum.getOptionNo().setSelectedByCurrentUser(true);
                     }
 
-                    System.out.println("REFERENDUM OPTION YES = " + referendum.getOptionYes().getTimesSelected());
-                    System.out.println("REFERENDUM OPTION NO = " + referendum.getOptionNo().getTimesSelected());
+                    // Update record in DB
+                    AppController.databaseHelper.updateReferendum(referendum);
 
                     AppController.loggedUser.addReferendum(referendum);
 

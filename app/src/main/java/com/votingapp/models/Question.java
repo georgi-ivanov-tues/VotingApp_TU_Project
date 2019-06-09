@@ -8,6 +8,17 @@ public class Question {
 
     private String questionText;
 
+    public static final String TABLE_NAME = "questions";
+
+    public static final String COLUMN_ID = "id";
+    public static final String COLUMN_QUESTION_TEXT = "questionText";
+
+    public static final String CREATE_TABLE =
+            "CREATE TABLE " + TABLE_NAME + "("
+                    + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                    + COLUMN_QUESTION_TEXT + " TEXT NOT NULL"
+                    + ");";
+
     public Question(){}
 
     public Question(String questionText) {

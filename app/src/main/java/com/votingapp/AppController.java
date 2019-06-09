@@ -28,10 +28,14 @@ public class AppController extends Application{
     public static User loggedUser;
     public static Vote currentVote;
 
+    public static DatabaseHelper databaseHelper;
+
+
     @Override
     public void onCreate() {
         super.onCreate();
         mInstance = this;
+        databaseHelper = new DatabaseHelper(this);
 
         System.out.println("Application created!!!");
     }

@@ -124,7 +124,8 @@ public class CreatePollFragment extends Fragment {
             public void onClick(View view) {
                 checkIfFieldsEmpty(createPollLinearLayout);
                 Poll newPoll = createPoll(createPollLinearLayout);
-                AppController.votes.add(newPoll);
+//                AppController.votes.add(newPoll);
+                AppController.databaseHelper.insertPoll(newPoll);
 
                 CharSequence text = "Анкетата е успешно създадено";
                 Toast toast = Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT);

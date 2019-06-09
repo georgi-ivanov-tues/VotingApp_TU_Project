@@ -104,7 +104,8 @@ public class CreateVotingFragment extends Fragment {
                     Voting newVoting = new Voting(
                             votingTitle.getText().toString(), new Question(votingQuestion.getText().toString()), options);
 
-                    AppController.votes.add(newVoting);
+//                    AppController.votes.add(newVoting);
+                    AppController.databaseHelper.insertVoting(newVoting);
 
                     CharSequence text = "Гласуването е успешно създадено";
                     Toast toast = Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT);

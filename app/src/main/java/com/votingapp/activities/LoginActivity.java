@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
             return false;
         }
 
-        for(User user : AppController.allUsers){
+        for(User user : AppController.databaseHelper.selectAllUsers()){
             if(userName.equals(user.getUserName())){
                 if(password.equals(user.getPassword())){
                     AppController.loggedUser = user;
@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         }
-        // if AppController.allUsers is empty (no users are found)
+
         showMessage("Няма такъв потребител!");
         return false;
     }

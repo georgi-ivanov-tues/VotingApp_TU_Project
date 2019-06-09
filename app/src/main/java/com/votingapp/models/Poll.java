@@ -1,6 +1,7 @@
 package com.votingapp.models;
 
 import android.annotation.SuppressLint;
+import android.graphics.Path;
 import android.os.Parcel;
 
 import java.util.ArrayList;
@@ -15,6 +16,46 @@ import java.util.Map;
 public class Poll extends Vote {
 
     private HashMap<Question, ArrayList<Option>> pollContent;
+
+    public static final String TABLE_NAME_POLLS = "polls";
+
+    public static final String COLUMN_ID = "id";
+    public static final String COLUMN_TITLE = "title";
+
+    public static final String CREATE_TABLE_POLLS =
+            "CREATE TABLE " + TABLE_NAME_POLLS + "("
+                    + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                    + COLUMN_TITLE + " TEXT NOT NULL"
+                    + ");";
+
+
+    public static final String TABLE_NAME_POLL_QUESTIONS = "poll_questions";
+
+    public static final String COLUMN_POLL_ID = "pollId";
+    public static final String COLUMN_QUESTION_ID = "questionId";
+
+    public static final String CREATE_TABLE_POLL_QUESTIONS =
+            "CREATE TABLE " + TABLE_NAME_POLL_QUESTIONS + "("
+                    + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                    + COLUMN_POLL_ID + " INTEGER NOT NULL,"
+                    + COLUMN_QUESTION_ID + " INTEGER NOT NULL, "
+                    + "FOREIGN KEY ("+COLUMN_POLL_ID+") REFERENCES "+TABLE_NAME_POLLS+"("+COLUMN_ID+"),"
+                    + "FOREIGN KEY ("+COLUMN_QUESTION_ID+") REFERENCES "+Question.TABLE_NAME+"("+Question.COLUMN_ID+")"
+                    + ");";
+
+    public static final String TABLE_NAME_POLL_QUESTION_OPTIONS = "poll_question_options";
+
+    public static final String COLUMN_POLL_QUESTION_ID = "pollQuestionId";
+    public static final String COLUMN_QUESTION_OPTION_ID = "questionOptionId";
+
+    public static final String CREATE_TABLE_POLL_QUESTION_OPTIONS =
+            "CREATE TABLE " + TABLE_NAME_POLL_QUESTION_OPTIONS + "("
+                    + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                    + COLUMN_POLL_QUESTION_ID + " INTEGER NOT NULL,"
+                    + COLUMN_QUESTION_OPTION_ID + " INTEGER NOT NULL, "
+                    + "FOREIGN KEY ("+COLUMN_POLL_QUESTION_ID+") REFERENCES "+Question.TABLE_NAME+"("+Question.COLUMN_ID+"),"
+                    + "FOREIGN KEY ("+COLUMN_QUESTION_OPTION_ID+") REFERENCES "+ Option.TABLE_NAME+"("+Option.COLUMN_ID+")"
+                    + ");";
 
     public Poll(){
         pollContent = new HashMap<>();

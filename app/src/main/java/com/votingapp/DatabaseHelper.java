@@ -1,38 +1,381 @@
 package com.votingapp;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
+import android.database.MatrixCursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.graphics.Path;
+import android.util.Log;
+
+import com.votingapp.models.Option;
+import com.votingapp.models.Poll;
+import com.votingapp.models.Question;
+import com.votingapp.models.Referendum;
+import com.votingapp.models.User;
+import com.votingapp.models.Voting;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "Voting.db";
 
-    public static final String TABLE_NAME = "loggedUser";
-    public static final String COL0 = "ID";
-    public static final String COL1 = "username";
-    public static final String COL2 = "password";
+    private static final int DATABASE_VERSION = 1;
+
+    public static final String DATABASE_NAME = "Votings.db";
+
+    SQLiteDatabase sqLiteDatabase;
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
-        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-    }
-
-    public DatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version, DatabaseErrorHandler errorHandler) {
-        super(context, name, factory, version, errorHandler);
+        sqLiteDatabase = this.getWritableDatabase();
     }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_NAME +
-                " (ID INTEGER PRIMARY KEY AUTOINCREMENT, USERNAME TEXT, PASSWORD TEXT)");
+    public void onCreate(SQLiteDatabase sqLiteDatabase) {}
 
+    public void insertUser(User user){
+        ContentValues values = new ContentValues();
+        values.put(User.COLUMN_USERNAME, user.getUserName());
+        values.put(User.COLUMN_PASSWORD, user.getPassword());
+        values.put(User.COLUMN_ISADMIN, (user.isAdmin() ? 1 : 0));
+        sqLiteDatabase.insert(User.TABLE_NAME, "", values) ;
+    }
+
+    public ArrayList<User> selectAllUsers(){
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM users", null);
+        ArrayList<User> usersList = new ArrayList<>();
+
+        if (cursor.moveToFirst()) {
+            do {
+                User user = new User(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getInt(3) == 1);
+                usersList.add(user);
+            } while (cursor.moveToNext());
+        }
+
+        for(User user : usersList){
+            System.out.println(user.getUserName() + ", " + user.getPassword() + ", " + user.isAdmin());
+        }
+
+        return usersList;
+    }
+
+    private long insertQuestion(Question question){
+        ContentValues values = new ContentValues();
+        values.put(Question.COLUMN_QUESTION_TEXT, question.getQuestionText());
+        return sqLiteDatabase.insert(Question.TABLE_NAME, "", values) ;
+    }
+
+    private Question selectQuestionById(int id){
+        ContentValues values = new ContentValues();
+        values.put(Question.COLUMN_ID, id);
+        Cursor cursor = sqLiteDatabase.rawQuery(
+                "SELECT questionText FROM questions WHERE questions.id = " + id, null);
+        cursor.moveToFirst();
+        String questionText = cursor.getString(0);
+        cursor.close();
+        return new Question(questionText);
+    }
+
+    private int insertOption(Option option){
+        ContentValues values = new ContentValues();
+        values.put(Option.COLUMN_OPTION_TEXT, option.getOptionText());
+        values.put(Option.COLUMN_TIMES_SELECTED, option.getTimesSelected());
+        long optionId = sqLiteDatabase.insert(Option.TABLE_NAME, "", values);
+
+        checkIfInsertIsSuccessful(optionId);
+
+        return (int) optionId;
+    }
+
+    public void selectAllOptions(){
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM poll_questions", null);
+        System.out.println(" \n\n\n= SELECT ALL OPTIONS = \n" + cursorToString(cursor));
+    }
+
+    public void insertReferendum(Referendum referendum) {
+        long insertedId = insertQuestion(referendum.getQuestion());
+        checkIfInsertIsSuccessful(insertedId);
+
+        ContentValues values = new ContentValues();
+        values.put(Referendum.COLUMN_TITLE, referendum.getTitle());
+        values.put(Referendum.COLUMN_QUESTION_ID, (int) insertedId);
+        values.put(Referendum.COLUMN_YES_SELECTED_TIMES, referendum.getOptionYes().getTimesSelected());
+        values.put(Referendum.COLUMN_NO_SELECTED_TIMES, referendum.getOptionNo().getTimesSelected());
+        sqLiteDatabase.insert(Referendum.TABLE_NAME, "", values) ;
+    }
+
+    public ArrayList<Referendum> selectAllReferendums(){
+        Cursor cursor = sqLiteDatabase.rawQuery(
+        "SELECT referendums.id, title, questionText, yesSelectedTimes, noSelectedTimes FROM referendums"
+            + " INNER JOIN questions"
+            + " ON referendums.questionId = questions.id", null);
+        ArrayList<Referendum> referendumsList = new ArrayList<>();
+        System.out.println(cursorToString(cursor));
+
+
+        if (cursor.moveToFirst()) {
+            do {
+                Referendum referendum = new Referendum(cursor.getInt(0),
+                        cursor.getString(1), new Question(cursor.getString(2)));
+                referendum.getOptionYes().setTimesSelected(cursor.getInt(3));
+                referendum.getOptionNo().setTimesSelected(cursor.getInt(4));
+                referendumsList.add(referendum);
+            } while (cursor.moveToNext());
+        }
+
+        return referendumsList;
+    }
+
+    public void updateReferendum(Referendum referendum){
+        ContentValues cv = new ContentValues();
+        cv.put(Referendum.COLUMN_YES_SELECTED_TIMES, referendum.getOptionYes().getTimesSelected());
+        cv.put(Referendum.COLUMN_NO_SELECTED_TIMES, referendum.getOptionNo().getTimesSelected());
+        sqLiteDatabase.update(Referendum.TABLE_NAME, cv, "id=" + referendum.getId(), null);
+    }
+
+    public void insertVoting(Voting voting) {
+        long insertedId = insertQuestion(voting.getQuestion());
+        checkIfInsertIsSuccessful(insertedId);
+
+        ContentValues values = new ContentValues();
+        values.put(Voting.COLUMN_TITLE, voting.getTitle());
+        values.put(Voting.COLUMN_QUESTION_ID, (int) insertedId);
+        long votingId = sqLiteDatabase.insert(Voting.TABLE_NAME_VOTINGS, "", values);
+
+        checkIfInsertIsSuccessful(votingId);
+
+        for(Option option : voting.getOptions()){
+            int optionId = insertOption(option);
+            values = new ContentValues();
+            values.put(Voting.COLUMN_VOTING_ID, votingId);
+            values.put(Voting.COLUMN_OPTION_ID, optionId);
+            long votingOptionId = sqLiteDatabase.insert(Voting.TABLE_NAME_VOTING_OPTIONS, "", values);
+
+            checkIfInsertIsSuccessful(votingOptionId);
+        }
+    }
+
+    public ArrayList<Voting> selectAllVotings(){
+        ArrayList<Voting> votingsList = new ArrayList<>();
+
+        Cursor votingCursor = sqLiteDatabase.rawQuery("SELECT id, title, questionId FROM votings", null);
+        System.out.println(" = SELECT VOTING = \n" + cursorToString(votingCursor));
+
+        if (votingCursor.moveToFirst()) {
+            do {
+                int votingId = votingCursor.getInt(0);
+                String votingTitle = votingCursor.getString(1);
+                int questionId = votingCursor.getInt(2);
+
+                Question question = selectQuestionById(questionId);
+
+                Cursor optionCursor = sqLiteDatabase.rawQuery(
+                    "SELECT options.id, options.optionText, options.timesSelected"
+                    + " FROM voting_options"
+                    + " INNER JOIN options"
+                    + " ON voting_options.optionId = options.id"
+                    + " WHERE voting_options.votingId = " + votingId, null);
+
+                System.out.println(" = SELECT VOTING_OPTIONS = \n" + cursorToString(optionCursor));
+
+                ArrayList<Option> optionList = new ArrayList<>();
+                if (optionCursor.moveToFirst()) {
+                    do {
+                        Option option = new Option(optionCursor.getInt(0), optionCursor.getString(1));
+                        option.setTimesSelected(optionCursor.getInt(2));
+                        optionList.add(option);
+                    } while (optionCursor.moveToNext());
+                }
+                votingsList.add(new Voting(votingTitle,question,optionList));
+            } while (votingCursor.moveToNext());
+        }
+        return votingsList;
+    }
+
+    public void updateOption(Option option){
+        ContentValues cv = new ContentValues();
+        cv.put(Option.COLUMN_TIMES_SELECTED, option.getTimesSelected());
+        sqLiteDatabase.update(Option.TABLE_NAME, cv, "id=" + option.getId(), null);
+    }
+
+    public void insertPoll(Poll poll){
+        ContentValues values = new ContentValues();
+        values.put(Poll.COLUMN_TITLE, poll.getTitle());
+        long pollId = sqLiteDatabase.insert(Poll.TABLE_NAME_POLLS, "", values);
+        checkIfInsertIsSuccessful(pollId);
+
+        for (Map.Entry<Question, ArrayList<Option>> entry : poll.getPollContent().entrySet()) {
+            long insertedQuestionId = insertQuestion(entry.getKey());
+            checkIfInsertIsSuccessful(insertedQuestionId);
+
+            values = new ContentValues();
+            values.put(Poll.COLUMN_POLL_ID, pollId);
+            values.put(Poll.COLUMN_QUESTION_ID, insertedQuestionId);
+            long pollQuestionId = sqLiteDatabase.insert(Poll.TABLE_NAME_POLL_QUESTIONS, "", values);
+            checkIfInsertIsSuccessful(pollQuestionId);
+
+            for(Option option : entry.getValue()) {
+                long insertedOptionId = insertOption(option);
+                checkIfInsertIsSuccessful(insertedOptionId);
+
+                values = new ContentValues();
+                values.put(Poll.COLUMN_POLL_QUESTION_ID, insertedQuestionId);
+                values.put(Poll.COLUMN_QUESTION_OPTION_ID, insertedOptionId);
+                long questionOptionId = sqLiteDatabase.insert(Poll.TABLE_NAME_POLL_QUESTION_OPTIONS, "", values);
+                checkIfInsertIsSuccessful(questionOptionId);
+            }
+
+        }
+    }
+
+    public ArrayList<Poll> selectAllPolls(){
+        ArrayList<Poll> pollsList = new ArrayList<>();
+        HashMap<Question, ArrayList<Option>> questionsAndOptions = new HashMap<>();
+
+        Cursor pollCursor = sqLiteDatabase.rawQuery("SELECT id, title FROM polls", null);
+        System.out.println(" = SELECT POLL = \n" + cursorToString(pollCursor));
+
+        if (pollCursor.moveToFirst()) {
+            do {
+                int pollId = pollCursor.getInt(0);
+                String pollTitle = pollCursor.getString(1);
+
+                Cursor questionCursor = sqLiteDatabase.rawQuery("SELECT questionId, questionText " +
+                        "FROM poll_questions " +
+                        "INNER JOIN questions " +
+                        "ON questions.id = poll_questions.questionId " +
+                        "WHERE pollId = " + pollId, null);
+                System.out.println(" = SELECT VOTING = \n" + cursorToString(questionCursor));
+
+                if (questionCursor.moveToFirst()) {
+                    do {
+                        int questionId = questionCursor.getInt(0);
+                        System.out.println("QUESTION ID = " + questionId);
+                        String questionText = questionCursor.getString(1);
+                        ArrayList<Option> options = new ArrayList<>();
+
+                        Question question = new Question(questionText);
+
+                        Cursor optionCursor = sqLiteDatabase.rawQuery("SELECT options.id, optionText, timesSelected " +
+                                "FROM poll_question_options " +
+                                "INNER JOIN options " +
+                                "ON options.id = poll_question_options.questionOptionId " +
+                                "WHERE poll_question_options.pollQuestionId = " + questionId, null);
+                        System.out.println(" = SELECT VOTING = \n" + cursorToString(optionCursor));
+                        if (optionCursor.moveToFirst()) {
+                            do {
+                                int optionId = optionCursor.getInt(0);
+                                String optionText = optionCursor.getString(1);
+                                int timesSelected = optionCursor.getInt(2);
+                                Option option = new Option(optionId, optionText);
+                                option.setTimesSelected(timesSelected);
+                                options.add(option);
+                           }while (optionCursor.moveToNext());
+                        }
+                        questionsAndOptions.put(question,options);
+                    }while(questionCursor.moveToNext());
+                }
+                pollsList.add(new Poll(pollTitle,questionsAndOptions));
+            } while (pollCursor.moveToNext());
+        }
+        return pollsList;
+    }
+
+    private void checkIfInsertIsSuccessful(long id){
+        if(id == -1){
+            try {
+                throw new Exception("Error when inserting in database...");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void createAllTables(){
+        sqLiteDatabase.execSQL(User.CREATE_TABLE);
+        sqLiteDatabase.execSQL(Question.CREATE_TABLE);
+        sqLiteDatabase.execSQL(Option.CREATE_TABLE);
+        sqLiteDatabase.execSQL(Voting.CREATE_TABLE_VOTINGS);
+        sqLiteDatabase.execSQL(Voting.CREATE_TABLE_VOTING_OPTIONS);
+        sqLiteDatabase.execSQL(Referendum.CREATE_TABLE);
+        sqLiteDatabase.execSQL(Poll.CREATE_TABLE_POLLS);
+        sqLiteDatabase.execSQL(Poll.CREATE_TABLE_POLL_QUESTIONS);
+        sqLiteDatabase.execSQL(Poll.CREATE_TABLE_POLL_QUESTION_OPTIONS);
+
+    }
+
+    public String cursorToString(Cursor cursor){
+        String cursorString = "";
+        if (cursor.moveToFirst() ){
+            String[] columnNames = cursor.getColumnNames();
+            for (String name: columnNames)
+                cursorString += String.format("%s ][ ", name);
+            cursorString += "\n";
+            do {
+                for (String name: columnNames) {
+                    cursorString += String.format("%s ][ ",
+                            cursor.getString(cursor.getColumnIndex(name)));
+                }
+                cursorString += "\n";
+            } while (cursor.moveToNext());
+        }
+        return cursorString;
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(sqLiteDatabase);
     }
+
+    public ArrayList<Cursor> getData(String Query){
+        //get writable database
+        SQLiteDatabase sqlDB = this.getWritableDatabase();
+        String[] columns = new String[] { "message" };
+        //an array list of cursor to save two cursors one has results from the query
+        //other cursor stores error message if any errors are triggered
+        ArrayList<Cursor> alc = new ArrayList<Cursor>(2);
+        MatrixCursor Cursor2= new MatrixCursor(columns);
+        alc.add(null);
+        alc.add(null);
+
+        try{
+            String maxQuery = Query ;
+            //execute the query results will be save in Cursor c
+            Cursor c = sqlDB.rawQuery(maxQuery, null);
+
+            //add value to cursor2
+            Cursor2.addRow(new Object[] { "Success" });
+
+            alc.set(1,Cursor2);
+            if (null != c && c.getCount() > 0) {
+
+                alc.set(0,c);
+                c.moveToFirst();
+
+                return alc ;
+            }
+            return alc;
+        } catch(SQLException sqlEx){
+            Log.d("printing exception", sqlEx.getMessage());
+            //if any exceptions are triggered save the error message to cursor an return the arraylist
+            Cursor2.addRow(new Object[] { ""+sqlEx.getMessage() });
+            alc.set(1,Cursor2);
+            return alc;
+        } catch(Exception ex){
+            Log.d("printing exception", ex.getMessage());
+
+            //if any exceptions are triggered save the error message to cursor an return the arraylist
+            Cursor2.addRow(new Object[] { ""+ex.getMessage() });
+            alc.set(1,Cursor2);
+            return alc;
+        }
+    }
+
 }

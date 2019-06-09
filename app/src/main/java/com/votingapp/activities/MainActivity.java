@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
         setContentView(R.layout.activity_main);
         setTitle("Списък с вотове");
 
+        loadFromDB();
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -68,11 +70,22 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
         if(!AppController.loggedUser.isAdmin()){
             navigationView.getMenu().findItem(R.id.nav_create_vote).setEnabled(false);
         }
+
+
+    }
+
+    private void loadFromDB(){
+//        AppController.databaseHelper.createAllTables();
+        AppController.votes.clear();
+        AppController.votes.addAll(AppController.databaseHelper.selectAllReferendums());
+        AppController.votes.addAll(AppController.databaseHelper.selectAllVotings());
+        AppController.votes.addAll(AppController.databaseHelper.selectAllPolls());
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        loadFromDB();
     }
 
     @Override
@@ -112,6 +125,9 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
         } else if (id == R.id.nav_create_vote) {
             Intent myIntent = new Intent(MainActivity.this, CreateVoteActivity.class);
             startActivity(myIntent);
+        } else if (id == R.id.nav_view_database) {
+            Intent dbmanager = new Intent(MainActivity.this, com.votingapp.activities.AndroidDatabaseManager.class);
+            startActivity(dbmanager);
         }else if(id == R.id.nav_exit){
             finish();
         }

@@ -93,6 +93,9 @@ public class TakeVotingFragment extends Fragment {
                         if (option.getOptionText().equals(radioButton.getText())) {
                             option.increaseTimesSelected();
                             option.setSelectedByCurrentUser(true);
+
+                            // Update record in DB
+                            AppController.databaseHelper.updateOption(option);
                         }
                     }
 
