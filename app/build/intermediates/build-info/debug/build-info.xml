@@ -7,22 +7,22 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.0.1"
-    timestamp="1560078545240"
+    timestamp="1560085320097"
     token="3071472071715550143"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1008" />
+        duration="745" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="29" />
+        duration="17" />
     <task
         name="verifier"
-        duration="1" />
+        duration="3" />
 
     <artifact
         location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
@@ -89,6 +89,12 @@
         <artifact
             location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1560085051435"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/outputs/apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
@@ -96,7 +102,7 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1560078545240"
+        timestamp="1560085320097"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_3.apk"

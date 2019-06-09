@@ -252,7 +252,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         "INNER JOIN questions " +
                         "ON questions.id = poll_questions.questionId " +
                         "WHERE pollId = " + pollId, null);
-                System.out.println(" = SELECT VOTING = \n" + cursorToString(questionCursor));
+                System.out.println(" = SELECT POLL_QUESTIONS = \n" + cursorToString(questionCursor));
 
                 if (questionCursor.moveToFirst()) {
                     do {
@@ -268,7 +268,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                                 "INNER JOIN options " +
                                 "ON options.id = poll_question_options.questionOptionId " +
                                 "WHERE poll_question_options.pollQuestionId = " + questionId, null);
-                        System.out.println(" = SELECT VOTING = \n" + cursorToString(optionCursor));
+                        System.out.println(" = SELECT POLL_QUESTION_OPTIONS = \n" + cursorToString(optionCursor));
                         if (optionCursor.moveToFirst()) {
                             do {
                                 int optionId = optionCursor.getInt(0);
@@ -282,7 +282,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         questionsAndOptions.put(question,options);
                     }while(questionCursor.moveToNext());
                 }
-                pollsList.add(new Poll(pollTitle,questionsAndOptions));
+                pollsList.add(new Poll(pollTitle,new HashMap<>(questionsAndOptions)));
+                questionsAndOptions.clear();
             } while (pollCursor.moveToNext());
         }
         return pollsList;
