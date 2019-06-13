@@ -1,6 +1,5 @@
 package com.votingapp.activities;
 
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -13,8 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
-
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.ViewPagerAdapter;
@@ -26,8 +23,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements ListFragment.SelectionListener,
         NavigationView.OnNavigationItemSelectedListener  {
-
-    FragmentTransaction transaction;
 
     DrawerLayout drawer;
 
@@ -70,12 +65,9 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
         if(!AppController.loggedUser.isAdmin()){
             navigationView.getMenu().findItem(R.id.nav_create_vote).setEnabled(false);
         }
-
-
     }
 
     private void loadFromDB(){
-//        AppController.databaseHelper.createAllTables();
         AppController.votes.clear();
         AppController.votes.addAll(AppController.databaseHelper.selectAllReferendums());
         AppController.votes.addAll(AppController.databaseHelper.selectAllVotings());

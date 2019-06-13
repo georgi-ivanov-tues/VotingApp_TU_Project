@@ -2,15 +2,21 @@ package com.votingapp;
 
 import android.annotation.SuppressLint;
 import android.app.Application;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-
+import com.votingapp.activities.VotingActivity;
 import com.votingapp.models.Option;
+import com.votingapp.models.Poll;
+import com.votingapp.models.Referendum;
 import com.votingapp.models.User;
 import com.votingapp.models.Vote;
-
+import com.votingapp.models.Voting;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -98,5 +104,31 @@ public class AppController extends Application{
         percentageBarLinearLayout.addView(optionPercentageBarRight);
 
         return percentageBarLinearLayout;
+    }
+
+    public static void sendNotificitaion(Vote vote){
+        Intent intent = new Intent(getInstance().getApplicationContext(), VotingActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(getInstance().getApplicationContext(), 1, intent, 0);
+        Notification.Builder builder = new Notification.Builder(getInstance().getApplicationContext());
+
+        String notificationTitle = "";
+        if(vote instanceof Voting) notificationTitle = "Ново гласуване!";
+        else if(vote instanceof Poll) notificationTitle = "Нова анкета!";
+        else if(vote instanceof Referendum) notificationTitle = "Нов референдум!";
+
+        builder.setAutoCancel(true);
+        builder.setTicker(notificationTitle);
+        builder.setContentTitle(notificationTitle);
+        builder.setContentText(vote.getTitle());
+        builder.setSmallIcon(R.drawable.common_google_signin_btn_icon_dark);
+        builder.setContentIntent(pendingIntent);
+        builder.setOngoing(true);
+        builder.build();
+
+        AppController.setCurrentVote(vote);
+
+        Notification myNotication = builder.getNotification();
+        NotificationManager manager = (NotificationManager) getInstance().getApplicationContext().getSystemService(NOTIFICATION_SERVICE);
+        manager.notify(11, myNotication);
     }
 }

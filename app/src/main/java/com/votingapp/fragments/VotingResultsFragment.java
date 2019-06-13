@@ -6,20 +6,16 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
 import com.votingapp.models.Voting;
 import com.votingapp.utils.Keys;
-
-import java.text.DecimalFormat;
 
 public class VotingResultsFragment extends Fragment {
     public VotingResultsFragment() {

@@ -27,9 +27,6 @@
             android:name=".activities.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.UserProfileActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".activities.VotingActivity"
             android:label="@string/title_activity_voting"
             android:screenOrientation="portrait"

@@ -1,9 +1,5 @@
 package com.votingapp.models;
 
-import android.annotation.SuppressLint;
-import android.graphics.Path;
-import android.os.Parcel;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;

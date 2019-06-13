@@ -1,7 +1,6 @@
 package com.votingapp.fragments;
 
 import android.app.Fragment;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.view.Gravity;
@@ -10,19 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
 import com.votingapp.models.Question;
-
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * Created by giivanov on 5.05.19.
@@ -124,8 +118,8 @@ public class CreatePollFragment extends Fragment {
             public void onClick(View view) {
                 checkIfFieldsEmpty(createPollLinearLayout);
                 Poll newPoll = createPoll(createPollLinearLayout);
-//                AppController.votes.add(newPoll);
                 AppController.databaseHelper.insertPoll(newPoll);
+                AppController.sendNotificitaion(newPoll);
 
                 CharSequence text = "Анкетата е успешно създадено";
                 Toast toast = Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT);

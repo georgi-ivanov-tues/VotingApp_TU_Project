@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-be/values-be.xml",
+            "outputFile": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-be\\values-be.xml",
             "map": [
                 {
-                    "source": "/Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/724df06a7b2fc64e9ca784519b6877f4/res/values-be/values.xml",
+                    "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\e3b7a357df8a236ca6fff4d22a975652\\res\\values-be\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/c76db370b816a8d9cb059d7fddae2502/res/values-be/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "204",
-                        "endOffsets": "451"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1267",
-                        "endColumns": "204",
-                        "endOffsets": "1467"
-                    }
-                },
-                {
-                    "source": "/Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/c5484a289b525e4923565ca896545d38/res/values-be/values-be.xml",
+                    "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\83e6d95c4eb3feb2836e6b434794b929\\res\\values-be\\values-be.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -52,6 +35,23 @@
                         "startOffsets": "2826",
                         "endColumns": "108",
                         "endOffsets": "2930"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\238b876880f7b5852db79bff4280e616\\res\\values-be\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "204",
+                        "endOffsets": "451"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1267",
+                        "endColumns": "204",
+                        "endOffsets": "1467"
                     }
                 }
             ]

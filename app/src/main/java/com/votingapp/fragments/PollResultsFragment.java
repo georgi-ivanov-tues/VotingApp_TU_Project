@@ -10,28 +10,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
-
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
 import com.votingapp.models.Question;
 import com.votingapp.utils.Keys;
-
-import org.w3c.dom.Text;
-
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Map;
 
 public class PollResultsFragment extends Fragment {
-    public PollResultsFragment() {
-        // Required empty public constructor
-    }
+    public PollResultsFragment() {}
 
     public static PollResultsFragment newInstance(String param1, String param2) {
         PollResultsFragment fragment = new PollResultsFragment();

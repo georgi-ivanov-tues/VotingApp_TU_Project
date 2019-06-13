@@ -16,14 +16,12 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
 import com.votingapp.models.Question;
 import com.votingapp.utils.Keys;
-
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Random;
@@ -69,7 +67,6 @@ public class TakePollFragment extends Fragment {
             for (int i = 0; i < options.size(); i++) {
                 ContextThemeWrapper radioButtonContext = new ContextThemeWrapper(getActivity(), R.style.take_voting_radio_button);
                 radioButtonOptions[i] = new RadioButton(radioButtonContext);
-//                radioButtonOptions[i].setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
                 radioButtonOptions[i].setText((options.get(i)).getOptionText());
                 radioGroup.addView(radioButtonOptions[i]);
             }

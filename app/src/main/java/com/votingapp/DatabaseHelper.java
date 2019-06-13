@@ -2,26 +2,20 @@ package com.votingapp;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
-import android.database.DatabaseErrorHandler;
 import android.database.MatrixCursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.graphics.Path;
 import android.util.Log;
-
 import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
 import com.votingapp.models.Question;
 import com.votingapp.models.Referendum;
 import com.votingapp.models.User;
 import com.votingapp.models.Voting;
-
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
@@ -39,6 +33,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {}
+
+
 
     public void insertUser(User user){
         ContentValues values = new ContentValues();
@@ -379,4 +375,92 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    public void setUpDatabase(){
+        if(!checkIfTableExists(User.TABLE_NAME)) sqLiteDatabase.execSQL(User.CREATE_TABLE);
+        if(!checkIfTableExists(Question.TABLE_NAME)) sqLiteDatabase.execSQL(Question.CREATE_TABLE);
+        if(!checkIfTableExists(Option.TABLE_NAME)) sqLiteDatabase.execSQL(Option.CREATE_TABLE);
+        if(!checkIfTableExists(Voting.TABLE_NAME_VOTINGS)) sqLiteDatabase.execSQL(Voting.CREATE_TABLE_VOTINGS);
+        if(!checkIfTableExists(Voting.TABLE_NAME_VOTING_OPTIONS)) sqLiteDatabase.execSQL(Voting.CREATE_TABLE_VOTING_OPTIONS);
+        if(!checkIfTableExists(Referendum.TABLE_NAME)) sqLiteDatabase.execSQL(Referendum.CREATE_TABLE);
+        if(!checkIfTableExists(Poll.TABLE_NAME_POLLS)) sqLiteDatabase.execSQL(Poll.CREATE_TABLE_POLLS);
+        if(!checkIfTableExists(Poll.TABLE_NAME_POLL_QUESTIONS)) sqLiteDatabase.execSQL(Poll.CREATE_TABLE_POLL_QUESTIONS);
+        if(!checkIfTableExists(Poll.TABLE_NAME_POLL_QUESTION_OPTIONS)) sqLiteDatabase.execSQL(Poll.CREATE_TABLE_POLL_QUESTION_OPTIONS);
+
+        if(checkIfTableIsEmpty(User.TABLE_NAME)) insertDefaultUsers();
+        if(checkIfTableIsEmpty(Voting.TABLE_NAME_VOTINGS)) insertDefaultVotings();
+        if(checkIfTableIsEmpty(Poll.TABLE_NAME_POLLS)) insertDefaultPolls();
+        if(checkIfTableIsEmpty(Referendum.TABLE_NAME)) insertDefaultReferendums();
+    }
+
+    private boolean checkIfTableIsEmpty(String table){
+        String sqlQuery = "SELECT count(*) FROM '" + table + "'";
+        Cursor mcursor = sqLiteDatabase.rawQuery(sqlQuery, null);
+        mcursor.moveToFirst();
+        int count = mcursor.getInt(0);
+        return count == 0;
+    }
+
+    private boolean checkIfTableExists(String table){
+        String sql = "SELECT name FROM sqlite_master WHERE type='table' AND name='"+table+"'";
+        Cursor mCursor = sqLiteDatabase.rawQuery(sql, null);
+        int count = mCursor.getCount();
+        mCursor.close();
+        return count > 0; // > 0 means table exists
+    }
+
+    private void insertDefaultUsers(){
+        User admin = new User("admin", "1234", true);
+        User test = new User("test", "1234", false);
+
+        AppController.databaseHelper.insertUser(admin);
+        AppController.databaseHelper.insertUser(test);
+    }
+
+    private void insertDefaultVotings(){
+        ArrayList<Option> voting1Options = new ArrayList<>();
+        voting1Options.add(new Option("Георги Иванов"));
+        voting1Options.add(new Option("Иван Георгиев"));
+        voting1Options.add(new Option("Петър Димитров"));
+
+        voting1Options.get(0).setTimesSelected(5);
+        voting1Options.get(1).setTimesSelected(3);
+        voting1Options.get(2).setTimesSelected(4);
+        Voting voting1 = new Voting("Гласуване за нов президент на компанията", new Question("Кой искате да е новият президент на компанията?"), voting1Options);
+        AppController.databaseHelper.insertVoting(voting1);
+    }
+
+    private void insertDefaultPolls(){
+        ArrayList<Poll> polls = new ArrayList<>();
+        ArrayList<Question> poll1Questions = new ArrayList<>();
+        poll1Questions.add(new Question("Любим цвят"));
+        poll1Questions.add(new Question("Любимо животно"));
+
+        ArrayList<Option> poll1Question1Options = new ArrayList<>();
+        poll1Question1Options.add(new Option("Зелен"));
+        poll1Question1Options.add(new Option("Червен"));
+        poll1Question1Options.add(new Option("Син"));
+        poll1Question1Options.add(new Option("Жълт"));
+
+        ArrayList<Option> poll1Question2Options = new ArrayList<>();
+        poll1Question2Options.add(new Option("Котка"));
+        poll1Question2Options.add(new Option("Куче"));
+        poll1Question2Options.add(new Option("Жираф"));
+        poll1Question2Options.add(new Option("Гущер"));
+        poll1Question2Options.add(new Option("Слон"));
+
+        HashMap<Question, ArrayList<Option>> pollContent = new HashMap<>();
+        pollContent.put(poll1Questions.get(0), poll1Question1Options);
+        pollContent.put(poll1Questions.get(1), poll1Question2Options);
+
+        Poll poll1 = new Poll("Първа анкета", pollContent);
+        AppController.databaseHelper.insertPoll(poll1);
+    }
+
+    private void insertDefaultReferendums(){
+        ArrayList<Referendum> referendums = new ArrayList<>();
+        Referendum referendum = new Referendum("Референдум 2019", new Question("Съгласни ли сте с плана за създаване на нова атомна електроцентрала?"));
+        referendum.getOptionYes().setTimesSelected(1);
+        referendum.getOptionNo().setTimesSelected(1);
+        AppController.databaseHelper.insertReferendum(referendum);
+    }
 }

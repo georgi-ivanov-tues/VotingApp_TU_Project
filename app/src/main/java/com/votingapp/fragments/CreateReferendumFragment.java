@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Question;
@@ -46,8 +45,9 @@ public class CreateReferendumFragment extends Fragment {
                 }else{
                     Referendum newReferendum = new Referendum(
                             referendumTitle.getText().toString(), new Question(referendumQuestion.getText().toString()));
-//                    AppController.votes.add(newReferendum);
                     AppController.databaseHelper.insertReferendum(newReferendum);
+                    AppController.sendNotificitaion(newReferendum);
+
 
                     CharSequence text = "Референдумът е успешно създаден";
                     Toast toast = Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT);

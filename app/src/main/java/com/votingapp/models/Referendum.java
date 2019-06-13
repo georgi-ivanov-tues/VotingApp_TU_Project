@@ -1,8 +1,5 @@
 package com.votingapp.models;
 
-import android.annotation.SuppressLint;
-import android.os.Parcel;
-
 /**
  * Created by giivanov on 4.5.2018 г..
  */

@@ -3,12 +3,8 @@ package com.votingapp.activities;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.fragments.TakePollFragment;
@@ -55,5 +51,4 @@ public class VotingActivity extends AppCompatActivity {
         transaction.replace(R.id.list_content_fragment, fragmentToLoad);
         transaction.commit();
     }
-
 }

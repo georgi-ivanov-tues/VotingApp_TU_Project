@@ -11,14 +11,11 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
 import com.votingapp.models.Question;
-import com.votingapp.models.Referendum;
 import com.votingapp.models.Voting;
-
 import java.util.ArrayList;
 
 /**
@@ -104,8 +101,8 @@ public class CreateVotingFragment extends Fragment {
                     Voting newVoting = new Voting(
                             votingTitle.getText().toString(), new Question(votingQuestion.getText().toString()), options);
 
-//                    AppController.votes.add(newVoting);
                     AppController.databaseHelper.insertVoting(newVoting);
+                    AppController.sendNotificitaion(newVoting);
 
                     CharSequence text = "Гласуването е успешно създадено";
                     Toast toast = Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT);

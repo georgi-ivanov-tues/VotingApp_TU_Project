@@ -1,9 +1,5 @@
 package com.votingapp.models;
 
-import android.annotation.SuppressLint;
-import android.os.Parcel;
-
-import java.io.Serializable;
 import java.util.ArrayList;
 
 /**

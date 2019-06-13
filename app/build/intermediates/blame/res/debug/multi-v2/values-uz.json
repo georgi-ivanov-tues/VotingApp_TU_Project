@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uz/values-uz.xml",
+            "outputFile": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uz\\values-uz.xml",
             "map": [
                 {
-                    "source": "/Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/724df06a7b2fc64e9ca784519b6877f4/res/values-uz/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,348,530,657,764,968,1099,1245,1376,1607,1713,1903,2033,2246,2434,2526,2613",
-                        "endColumns": "102,181,126,106,203,130,145,130,230,105,189,129,212,187,91,86,104",
-                        "endOffsets": "347,529,656,763,967,1098,1244,1375,1606,1712,1902,2032,2245,2433,2525,2612,2717"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,212,394,525,636,840,975,1125,1469,1700,1810,2000,2134,2347,2539,2635,2726",
-                        "endColumns": "106,181,130,110,203,134,149,134,230,109,189,133,212,191,95,90,108",
-                        "endOffsets": "207,389,520,631,835,970,1120,1255,1695,1805,1995,2129,2342,2534,2630,2721,2830"
-                    }
-                },
-                {
-                    "source": "/Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/c76db370b816a8d9cb059d7fddae2502/res/values-uz/values.xml",
+                    "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\238b876880f7b5852db79bff4280e616\\res\\values-uz\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "/Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/c5484a289b525e4923565ca896545d38/res/values-uz/values-uz.xml",
+                    "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\e3b7a357df8a236ca6fff4d22a975652\\res\\values-uz\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,348,530,657,764,968,1099,1245,1376,1607,1713,1903,2033,2246,2434,2526,2613",
+                        "endColumns": "102,181,126,106,203,130,145,130,230,105,189,129,212,187,91,86,104",
+                        "endOffsets": "347,529,656,763,967,1098,1244,1375,1606,1712,1902,2032,2245,2433,2525,2612,2717"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,212,394,525,636,840,975,1125,1469,1700,1810,2000,2134,2347,2539,2635,2726",
+                        "endColumns": "106,181,130,110,203,134,149,134,230,109,189,133,212,191,95,90,108",
+                        "endOffsets": "207,389,520,631,835,970,1120,1255,1695,1805,1995,2129,2342,2534,2630,2721,2830"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\83e6d95c4eb3feb2836e6b434794b929\\res\\values-uz\\values-uz.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

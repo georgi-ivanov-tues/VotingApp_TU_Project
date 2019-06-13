@@ -1,4 +1,4 @@
-#Wed May 29 12:08:38 EEST 2019
-base.0=/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/transforms/dexMerger/debug/1
+#Thu Jun 13 13:51:12 EEST 2019
+base.0=D\:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
 path.0=classes.dex
 renamed.0=classes.dex

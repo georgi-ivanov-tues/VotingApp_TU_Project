@@ -7,108 +7,90 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.0.1"
-    timestamp="1560085320097"
-    token="3071472071715550143"
+    timestamp="1560432550587"
+    token="5218470373598567608"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="745" />
+        duration="727" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="17" />
+        duration="24" />
     <task
         name="verifier"
-        duration="3" />
+        duration="4" />
 
     <artifact
-        location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        location="D:\Projects\GitHub\VotingApp\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/outputs/apk/debug/app-debug.apk"
+        location="D:\Projects\GitHub\VotingApp\app\build\outputs\apk\debug\app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1560075665640"
+        timestamp="1560430941816"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="D:\Projects\GitHub\VotingApp\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            location="D:\Projects\GitHub\VotingApp\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            location="D:\Projects\GitHub\VotingApp\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="D:\Projects\GitHub\VotingApp\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="D:\Projects\GitHub\VotingApp\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="D:\Projects\GitHub\VotingApp\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="D:\Projects\GitHub\VotingApp\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            location="D:\Projects\GitHub\VotingApp\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/outputs/apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
-        <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            location="D:\Projects\GitHub\VotingApp\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            location="D:\Projects\GitHub\VotingApp\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            location="D:\Projects\GitHub\VotingApp\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="METHOD_ADDED"
-        timestamp="1560078224635"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1560078414959"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1560085051435"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/outputs/apk/debug/app-debug.apk"
+            location="D:\Projects\GitHub\VotingApp\app\build\outputs\apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1560085320097"
+        timestamp="1560432451383"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="D:\Projects\GitHub\VotingApp\app\build\outputs\apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1560432550587"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\Projects\GitHub\VotingApp\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/outputs/apk/debug/app-debug.apk"
+            location="D:\Projects\GitHub\VotingApp\app\build\outputs\apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
 

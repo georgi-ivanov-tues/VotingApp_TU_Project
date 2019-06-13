@@ -7,11 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
-
 import com.votingapp.R;
-import com.votingapp.models.Referendum;
-import com.votingapp.utils.Keys;
 
 /**
  * Created by giivanov on 5.05.19.
@@ -65,9 +61,6 @@ public class CreateVoteMainFragment extends Fragment {
             }
         });
 
-
         return view;
     }
-
-
 }

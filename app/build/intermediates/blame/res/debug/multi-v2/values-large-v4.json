@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
+            "outputFile": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
-                    "source": "/Users/giivanov/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/c0c6ebf99e41b276de4e953958627f7b/res/values-large-v4/values-large-v4.xml",
+                    "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\a6629d8b636cb80cfe06b3c303665f70\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

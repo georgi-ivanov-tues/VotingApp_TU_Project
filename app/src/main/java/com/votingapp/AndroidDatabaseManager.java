@@ -1,4 +1,4 @@
-package com.votingapp.activities;
+package com.votingapp;
 
 //all required import files
 import java.util.ArrayList;
@@ -29,8 +29,6 @@ import android.widget.TableRow;
 import android.widget.TableRow.LayoutParams;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.votingapp.DatabaseHelper;
 
 public class AndroidDatabaseManager extends Activity implements OnItemClickListener {
 

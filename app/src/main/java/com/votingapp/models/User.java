@@ -1,7 +1,5 @@
 package com.votingapp.models;
 
-import com.votingapp.AppController;
-
 import java.util.ArrayList;
 
 public class User {
