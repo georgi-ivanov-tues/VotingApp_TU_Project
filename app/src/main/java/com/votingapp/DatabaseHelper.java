@@ -35,7 +35,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {}
 
 
-
     public void insertUser(User user){
         ContentValues values = new ContentValues();
         values.put(User.COLUMN_USERNAME, user.getUserName());

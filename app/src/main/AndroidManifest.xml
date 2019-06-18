@@ -41,7 +41,7 @@
             android:label="@string/title_activity_create_vote"
             android:theme="@style/AppTheme"/>
         <activity
-            android:name=".activities.AndroidDatabaseManager"
+            android:name=".AndroidDatabaseManager"
             android:label="AndroidDatabaseManager"
             android:theme="@style/AppTheme"/>
     </application>

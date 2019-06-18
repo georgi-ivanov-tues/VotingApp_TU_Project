@@ -12,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+
+import com.votingapp.AndroidDatabaseManager;
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.ViewPagerAdapter;
@@ -38,8 +40,6 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
         setContentView(R.layout.activity_main);
         setTitle("Списък с вотове");
 
-        loadFromDB();
-
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -64,6 +64,8 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
 
         if(!AppController.loggedUser.isAdmin()){
             navigationView.getMenu().findItem(R.id.nav_create_vote).setEnabled(false);
+            navigationView.getMenu().findItem(R.id.nav_view_database).setEnabled(false);
+
         }
     }
 
@@ -118,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
             Intent myIntent = new Intent(MainActivity.this, CreateVoteActivity.class);
             startActivity(myIntent);
         } else if (id == R.id.nav_view_database) {
-            Intent dbmanager = new Intent(MainActivity.this, com.votingapp.activities.AndroidDatabaseManager.class);
+            Intent dbmanager = new Intent(MainActivity.this, AndroidDatabaseManager.class);
             startActivity(dbmanager);
         }else if(id == R.id.nav_exit){
             finish();

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\83e6d95c4eb3feb2836e6b434794b929\\res\\values-v21\\values-v21.xml",
+                    "source": "/Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/c5484a289b525e4923565ca896545d38/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4",
@@ -23,26 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\bc0358ae53cb95bf887aad65117ed83f\\res\\values-v21\\values-v21.xml",
-                    "from": {
-                        "startLines": "2,5,8,11",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,223,386,554",
-                        "endLines": "4,7,10,13",
-                        "endColumns": "12,12,12,12",
-                        "endOffsets": "218,381,549,716"
-                    },
-                    "to": {
-                        "startLines": "287,290,294,298",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "20994,21162,21451,21747",
-                        "endLines": "289,292,296,300",
-                        "endColumns": "12,12,12,12",
-                        "endOffsets": "21157,21320,21614,21909"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\a6629d8b636cb80cfe06b3c303665f70\\res\\values-v21\\values-v21.xml",
+                    "source": "/Users/giivanov/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/c0c6ebf99e41b276de4e953958627f7b/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,23,24,25,26,28,30,31,32,33,34,36,38,40,42,44,46,47,52,54,56,57,58,60,62,63,64,65,66,67,111,114,158,161,164,166,168,170,173,175,178,179,180,183,184,185,186,187,188,191,192,194,196,198,200,204,206,207,208,209,211,215,217,219,220,221,222,223,225,226,227,237,238,239,251,263,264,265,268,271,272,275,276,279,282",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -61,14 +42,14 @@
                     }
                 },
                 {
-                    "source": "D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\values-v21\\styles.xml",
+                    "source": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/res/values-v21/styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
-                        "startOffsets": "19",
+                        "startOffsets": "17",
                         "endLines": "7",
                         "endColumns": "12",
-                        "endOffsets": "320"
+                        "endOffsets": "313"
                     },
                     "to": {
                         "startLines": "6",
@@ -80,7 +61,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.0.1.aar\\b87f2df408a1b1366ac05108a2b7e181\\res\\values-v21\\values-v21.xml",
+                    "source": "/Users/giivanov/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/a2177f333801d5223b19b105fdb90c06/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -96,6 +77,25 @@
                         "endLines": "319",
                         "endColumns": "12",
                         "endOffsets": "23129"
+                    }
+                },
+                {
+                    "source": "/Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/e905f9ffd0596b019d6fd455cc9c5f12/res/values-v21/values-v21.xml",
+                    "from": {
+                        "startLines": "2,5,8,11",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,223,386,554",
+                        "endLines": "4,7,10,13",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "218,381,549,716"
+                    },
+                    "to": {
+                        "startLines": "287,290,294,298",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "20994,21162,21451,21747",
+                        "endLines": "289,292,296,300",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "21157,21320,21614,21909"
                     }
                 }
             ]

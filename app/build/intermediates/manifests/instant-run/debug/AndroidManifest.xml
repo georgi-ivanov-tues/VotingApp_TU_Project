@@ -35,9 +35,6 @@
             android:name="com.votingapp.activities.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.votingapp.activities.UserProfileActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="com.votingapp.activities.VotingActivity"
             android:label="@string/title_activity_voting"
             android:screenOrientation="portrait"
@@ -52,7 +49,7 @@
             android:label="@string/title_activity_create_vote"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.votingapp.activities.AndroidDatabaseManager"
+            android:name="com.votingapp.AndroidDatabaseManager"
             android:label="AndroidDatabaseManager"
             android:theme="@style/AppTheme" />
         <activity

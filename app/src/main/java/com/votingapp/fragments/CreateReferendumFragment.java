@@ -48,7 +48,6 @@ public class CreateReferendumFragment extends Fragment {
                     AppController.databaseHelper.insertReferendum(newReferendum);
                     AppController.sendNotificitaion(newReferendum);
 
-
                     CharSequence text = "Референдумът е успешно създаден";
                     Toast toast = Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT);
                     toast.show();
