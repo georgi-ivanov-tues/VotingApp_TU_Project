@@ -8,11 +8,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.User;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 public class LoginActivity extends AppCompatActivity {
+
+    public static DatabaseReference firebaseDatabase = FirebaseDatabase.getInstance().getReference();
+
+    EditText userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final EditText userName = (EditText) findViewById(R.id.input_username);
+        userName = (EditText) findViewById(R.id.input_username);
         final EditText password = (EditText) findViewById(R.id.input_password);
 
         Button loginButton = (Button) findViewById(R.id.login_button);
@@ -36,6 +50,11 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
     private boolean loginUser(String userName, String password){
         if("".equals(userName)){
             showMessage("Моля въведете потребителско име!");
@@ -46,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
             return false;
         }
 
-        for(User user : AppController.databaseHelper.selectAllUsers()){
+        for(User user : AppController.allUsers){
             if(userName.equals(user.getUserName())){
                 if(password.equals(user.getPassword())){
                     AppController.loggedUser = user;

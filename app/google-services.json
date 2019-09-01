@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "757262424040",
+    "firebase_url": "https://votingapp-b8220.firebaseio.com",
+    "project_id": "votingapp-b8220",
+    "storage_bucket": "votingapp-b8220.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757262424040:android:b0d227b15feb0fcf",
+        "android_client_info": {
+          "package_name": "com.votingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757262424040-o0t1823aq0ctnk56ha70em779eajn2g8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCviNRlPWnC7eULV7VssWQVrl21qwT3cos"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757262424040-o0t1823aq0ctnk56ha70em779eajn2g8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

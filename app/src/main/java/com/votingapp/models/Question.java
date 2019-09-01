@@ -6,6 +6,7 @@ package com.votingapp.models;
 
 public class Question {
 
+    private String id;
     private String questionText;
 
     public static final String TABLE_NAME = "questions";
@@ -23,6 +24,14 @@ public class Question {
 
     public Question(String questionText) {
         this.questionText = questionText;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getQuestionText() {

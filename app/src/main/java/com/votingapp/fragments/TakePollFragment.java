@@ -22,6 +22,7 @@ import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
 import com.votingapp.models.Question;
 import com.votingapp.utils.Keys;
+
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Random;
@@ -110,7 +111,7 @@ public class TakePollFragment extends Fragment {
                                 option.setSelectedByCurrentUser(true);
 
                                 // Update record in DB
-                                AppController.databaseHelper.updateOption(option);
+                                AppController.firebaseHelper.updatePoll(poll, question, option);
                             }
                         }
 

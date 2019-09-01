@@ -118,7 +118,11 @@ public class CreatePollFragment extends Fragment {
             public void onClick(View view) {
                 checkIfFieldsEmpty(createPollLinearLayout);
                 Poll newPoll = createPoll(createPollLinearLayout);
-                AppController.databaseHelper.insertPoll(newPoll);
+//                AppController.databaseHelper.insertPoll(newPoll);
+
+                AppController.firebaseHelper.createPoll(newPoll);
+
+
                 AppController.sendNotificitaion(newPoll);
 
                 CharSequence text = "Анкетата е успешно създадено";

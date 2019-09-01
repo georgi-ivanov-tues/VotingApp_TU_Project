@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        if(!AppController.loggedUser.isAdmin()){
+        if(!AppController.loggedUser.getIsAdmin()){
             navigationView.getMenu().findItem(R.id.nav_create_vote).setEnabled(false);
             navigationView.getMenu().findItem(R.id.nav_view_database).setEnabled(false);
 
@@ -71,15 +71,15 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
 
     private void loadFromDB(){
         AppController.votes.clear();
-        AppController.votes.addAll(AppController.databaseHelper.selectAllReferendums());
-        AppController.votes.addAll(AppController.databaseHelper.selectAllVotings());
-        AppController.votes.addAll(AppController.databaseHelper.selectAllPolls());
+//        AppController.votes.addAll(AppController.databaseHelper.selectAllReferendums());
+//        AppController.votes.addAll(AppController.databaseHelper.selectAllVotings());
+//        AppController.votes.addAll(AppController.databaseHelper.selectAllPolls());
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        loadFromDB();
+//        loadFromDB();
     }
 
     @Override

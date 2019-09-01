@@ -10,6 +10,9 @@ import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.votingapp.activities.VotingActivity;
 import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
@@ -36,12 +39,14 @@ public class AppController extends Application{
 
     public static DatabaseHelper databaseHelper;
 
+    public static FirebaseHelper firebaseHelper;
 
     @Override
     public void onCreate() {
         super.onCreate();
         mInstance = this;
         databaseHelper = new DatabaseHelper(this);
+        firebaseHelper = new FirebaseHelper();
 
         System.out.println("Application created!!!");
     }

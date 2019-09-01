@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 public abstract class Vote implements Serializable {
 
-    private int id;
+    private String id;
     private String title;
 
     public Vote(){}
@@ -17,16 +17,16 @@ public abstract class Vote implements Serializable {
         this.title = title;
     }
 
-    public Vote(int id, String title) {
+    public Vote(String id, String title) {
         this.id = id;
         this.title = title;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

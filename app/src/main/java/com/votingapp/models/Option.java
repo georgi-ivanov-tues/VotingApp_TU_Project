@@ -6,7 +6,7 @@ package com.votingapp.models;
 
 public class Option {
 
-    private int id;
+    private String id;
     private String optionText;
     private int timesSelected;
     private boolean selectedByCurrentUser = false;
@@ -32,17 +32,17 @@ public class Option {
         this.timesSelected = 0;
     }
 
-    public Option(int id, String optionText) {
+    public Option(String id, String optionText) {
         this.id = id;
         this.optionText = optionText;
         this.timesSelected = 0;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

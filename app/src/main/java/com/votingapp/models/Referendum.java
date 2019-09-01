@@ -31,7 +31,7 @@ public class Referendum extends Vote {
 
     public Referendum(){}
 
-    public Referendum(int id, String title, Question question) {
+    public Referendum(String id, String title, Question question) {
         super(id, title);
         this.question = question;
     }

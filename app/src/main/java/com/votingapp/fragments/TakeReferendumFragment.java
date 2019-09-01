@@ -80,10 +80,10 @@ public class TakeReferendumFragment extends Fragment {
                         referendum.getOptionNo().setSelectedByCurrentUser(true);
                     }
 
-                    // Update record in DB
-                    AppController.databaseHelper.updateReferendum(referendum);
+//                    AppController.loggedUser.addReferendum(referendum);
 
-                    AppController.loggedUser.addReferendum(referendum);
+                    // Update record in DB
+                    AppController.firebaseHelper.updateReferendum(referendum);
 
                     ReferendumResultsFragment referendumResultsFragment = new ReferendumResultsFragment();
                     Bundle bundle = new Bundle();

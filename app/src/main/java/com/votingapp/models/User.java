@@ -3,7 +3,7 @@ package com.votingapp.models;
 import java.util.ArrayList;
 
 public class User {
-    private int id;
+    private String id;
     private String userName;
     private String password;
     private boolean isAdmin;
@@ -13,7 +13,7 @@ public class User {
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_USERNAME = "userName";
     public static final String COLUMN_PASSWORD = "password";
-    public static final String COLUMN_ISADMIN = "isAdmin";
+    public static final String COLUMN_ISADMIN = "getIsAdmin";
 
     public static final String CREATE_TABLE =
             "CREATE TABLE " + TABLE_NAME + "("
@@ -23,12 +23,13 @@ public class User {
                     + COLUMN_ISADMIN + " INTEGER NOT NULL"
                     + ");";
 
-
     private ArrayList<Voting> votings = new ArrayList<>();
     private ArrayList<Poll> polls = new ArrayList<>();
     private ArrayList<Referendum> referendums = new ArrayList<>();
 
-    public User(int id, String userName, String password, boolean isAdmin){
+    public User(){}
+
+    public User(String id, String userName, String password, boolean isAdmin){
         this.id = id;
         this.userName = userName;
         this.password = password;
@@ -51,11 +52,11 @@ public class User {
         referendums.add(referendum);
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -75,11 +76,11 @@ public class User {
         this.password = password;
     }
 
-    public boolean isAdmin() {
+    public boolean getIsAdmin() {
         return isAdmin;
     }
 
-    public void setAdmin(boolean admin) {
+    public void setIsAdmin(boolean admin) {
         isAdmin = admin;
     }
 

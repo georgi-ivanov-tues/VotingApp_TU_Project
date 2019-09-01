@@ -94,7 +94,7 @@ public class TakeVotingFragment extends Fragment {
                             option.setSelectedByCurrentUser(true);
 
                             // Update record in DB
-                            AppController.databaseHelper.updateOption(option);
+                            AppController.firebaseHelper.updateVoting(voting, option);
                         }
                     }
 

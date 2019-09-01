@@ -101,7 +101,10 @@ public class CreateVotingFragment extends Fragment {
                     Voting newVoting = new Voting(
                             votingTitle.getText().toString(), new Question(votingQuestion.getText().toString()), options);
 
-                    AppController.databaseHelper.insertVoting(newVoting);
+//                    AppController.databaseHelper.insertVoting(newVoting);
+
+                    AppController.firebaseHelper.createVoting(newVoting);
+
                     AppController.sendNotificitaion(newVoting);
 
                     CharSequence text = "Гласуването е успешно създадено";

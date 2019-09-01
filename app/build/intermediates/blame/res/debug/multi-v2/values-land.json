@@ -4,7 +4,7 @@
             "outputFile": "/Users/giivanov/GitHub/VotingApp_TU_Project/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/giivanov/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/c0c6ebf99e41b276de4e953958627f7b/res/values-land/values-land.xml",
+                    "source": "/Users/giivanov/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/659759b552f4c6fb8fef6979dc821e90/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/giivanov/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/a2177f333801d5223b19b105fdb90c06/res/values-land/values-land.xml",
+                    "source": "/Users/giivanov/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/95df9978bf09b2bc07208926acdc7687/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

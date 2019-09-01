@@ -45,7 +45,10 @@ public class CreateReferendumFragment extends Fragment {
                 }else{
                     Referendum newReferendum = new Referendum(
                             referendumTitle.getText().toString(), new Question(referendumQuestion.getText().toString()));
-                    AppController.databaseHelper.insertReferendum(newReferendum);
+//                    AppController.databaseHelper.insertReferendum(newReferendum);
+
+                    AppController.firebaseHelper.createReferendum(newReferendum);
+
                     AppController.sendNotificitaion(newReferendum);
 
                     CharSequence text = "Референдумът е успешно създаден";

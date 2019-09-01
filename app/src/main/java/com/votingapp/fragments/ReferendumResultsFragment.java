@@ -14,6 +14,7 @@ import com.votingapp.R;
 import com.votingapp.models.Option;
 import com.votingapp.models.Referendum;
 import com.votingapp.utils.Keys;
+
 import java.util.ArrayList;
 
 public class ReferendumResultsFragment extends Fragment {
