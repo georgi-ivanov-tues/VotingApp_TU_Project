@@ -29,6 +29,7 @@ public class FirebaseHelper {
         FirebaseDatabase.getInstance().getReference().addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                System.out.println("LOAD DATABASE!!!");
                 getUsers(dataSnapshot.child("users"));
 
                 getReferendums(dataSnapshot.child("referendums"));

@@ -11,10 +11,6 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Създаване на вот" />
         <item
-            android:id="@+id/nav_view_database"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Преглед на база данни" />
-        <item
             android:id="@+id/nav_exit"
             android:icon="@drawable/ic_menu_manage"
             android:title="Изход" />

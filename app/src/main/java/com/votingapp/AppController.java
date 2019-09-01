@@ -37,7 +37,6 @@ public class AppController extends Application{
     public static User loggedUser;
     public static Vote currentVote;
 
-    public static DatabaseHelper databaseHelper;
 
     public static FirebaseHelper firebaseHelper;
 
@@ -45,7 +44,6 @@ public class AppController extends Application{
     public void onCreate() {
         super.onCreate();
         mInstance = this;
-        databaseHelper = new DatabaseHelper(this);
         firebaseHelper = new FirebaseHelper();
 
         System.out.println("Application created!!!");

@@ -13,7 +13,11 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.votingapp.AndroidDatabaseManager;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.ViewPagerAdapter;
@@ -64,22 +68,49 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
 
         if(!AppController.loggedUser.getIsAdmin()){
             navigationView.getMenu().findItem(R.id.nav_create_vote).setEnabled(false);
-            navigationView.getMenu().findItem(R.id.nav_view_database).setEnabled(false);
-
         }
-    }
 
-    private void loadFromDB(){
-        AppController.votes.clear();
-//        AppController.votes.addAll(AppController.databaseHelper.selectAllReferendums());
-//        AppController.votes.addAll(AppController.databaseHelper.selectAllVotings());
-//        AppController.votes.addAll(AppController.databaseHelper.selectAllPolls());
+
+//        \
+//        FirebaseDatabase.getInstance().getReference().getRoot().addChildEventListener(new ChildEventListener() {
+//            @Override
+//            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+////                AppController.votes.clear();
+////                AppController.firebaseHelper.getReferendums(dataSnapshot.child("referendums"));
+////                AppController.firebaseHelper.getVotings(dataSnapshot.child("votings"));
+////                AppController.firebaseHelper.getPolls(dataSnapshot.child("polls"));
+////                finish();
+////                startActivity(getIntent());
+//                System.out.println("ON CHILD ADDED = " + s);
+//            }
+//
+//            @Override
+//            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+//                System.out.println("ON CHILD CHANGED = " + s);
+//            }
+//
+//            @Override
+//            public void onChildRemoved(DataSnapshot dataSnapshot) {
+//
+//            }
+//
+//            @Override
+//            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-//        loadFromDB();
+//        AppController.votes.clear();
+//        AppController.firebaseHelper.loadDatabase();
     }
 
     @Override
@@ -119,9 +150,6 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
         } else if (id == R.id.nav_create_vote) {
             Intent myIntent = new Intent(MainActivity.this, CreateVoteActivity.class);
             startActivity(myIntent);
-        } else if (id == R.id.nav_view_database) {
-            Intent dbmanager = new Intent(MainActivity.this, AndroidDatabaseManager.class);
-            startActivity(dbmanager);
         }else if(id == R.id.nav_exit){
             finish();
         }
