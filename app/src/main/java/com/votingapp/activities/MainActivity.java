@@ -17,7 +17,6 @@ import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.ViewPagerAdapter;
@@ -70,40 +69,92 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
             navigationView.getMenu().findItem(R.id.nav_create_vote).setEnabled(false);
         }
 
+        FirebaseDatabase.getInstance().getReference().child("votings").addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                System.out.println("LOAD VOTING!!!");
+                AppController.firebaseHelper.getVoting(dataSnapshot);
+                viewPager.setAdapter(viewPagerAdapter);
+            }
 
-//        \
-//        FirebaseDatabase.getInstance().getReference().getRoot().addChildEventListener(new ChildEventListener() {
-//            @Override
-//            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-////                AppController.votes.clear();
-////                AppController.firebaseHelper.getReferendums(dataSnapshot.child("referendums"));
-////                AppController.firebaseHelper.getVotings(dataSnapshot.child("votings"));
-////                AppController.firebaseHelper.getPolls(dataSnapshot.child("polls"));
-////                finish();
-////                startActivity(getIntent());
-//                System.out.println("ON CHILD ADDED = " + s);
-//            }
-//
-//            @Override
-//            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-//                System.out.println("ON CHILD CHANGED = " + s);
-//            }
-//
-//            @Override
-//            public void onChildRemoved(DataSnapshot dataSnapshot) {
-//
-//            }
-//
-//            @Override
-//            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        });
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        FirebaseDatabase.getInstance().getReference().child("polls").addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                System.out.println("LOAD POLL!!!");
+                AppController.firebaseHelper.getPoll(dataSnapshot);
+                viewPager.setAdapter(viewPagerAdapter);
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        FirebaseDatabase.getInstance().getReference().child("referendums").addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                System.out.println("LOAD REFERENDUM!!!");
+                AppController.firebaseHelper.getReferendum(dataSnapshot);
+                viewPager.setAdapter(viewPagerAdapter);
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     @Override
@@ -116,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
     @Override
     public void onItemSelected(Vote vote) {
         ArrayList<Vote> alreadyVotedByUser = new ArrayList<>();
-        alreadyVotedByUser.addAll(AppController.loggedUser.getAllVotes());
+//        alreadyVotedByUser.addAll(AppController.loggedUser.getAllVotes());
 
         boolean alreadyVotedFlag = false;
         for(Vote alreadyVoted : alreadyVotedByUser) {
@@ -138,8 +189,10 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
+            FirebaseDatabase.getInstance().getReference().child("users").child(AppController.loggedUser.getId()).child("isLoggedIn").setValue(false);
             super.onBackPressed();
-        }    }
+        }
+    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {

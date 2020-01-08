@@ -97,9 +97,9 @@
 
         <Button
             android:id="@+id/create_new_poll_button"
+            style="@style/create_vote_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Създаване на гласуването"
-            style="@style/create_vote_button"/>
+            android:text="Създаване на анкета" />
     </LinearLayout>
 </ScrollView>

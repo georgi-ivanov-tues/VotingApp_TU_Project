@@ -1,5 +1,7 @@
 package com.votingapp.models;
 
+import com.google.firebase.database.Exclude;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -62,8 +64,21 @@ public class Poll extends Vote {
         this.pollContent = pollContent;
     }
 
+    @Exclude
     public HashMap<Question, ArrayList<Option>> getPollContent() {
         return pollContent;
+    }
+
+    public HashMap<String, ArrayList<Option>> getContent() {
+        HashMap<String, ArrayList<Option>> result = new HashMap<>();
+
+        Iterator it = pollContent.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            System.out.println(pair.getKey() + " = " + pair.getValue());
+            result.put(((Question)pair.getKey()).getQuestionText(), (ArrayList<Option>) pair.getValue());
+        }
+        return result;
     }
 
     public void setPollContent(HashMap<Question, ArrayList<Option>> pollContent) {

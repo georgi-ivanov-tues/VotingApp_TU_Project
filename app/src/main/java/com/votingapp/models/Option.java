@@ -1,5 +1,7 @@
 package com.votingapp.models;
 
+import com.google.firebase.database.Exclude;
+
 /**
  * Created by giivanov on 4.5.2018 г..
  */
@@ -66,6 +68,7 @@ public class Option {
         timesSelected++;
     }
 
+    @Exclude
     public boolean isSelectedByCurrentUser() {
         return selectedByCurrentUser;
     }

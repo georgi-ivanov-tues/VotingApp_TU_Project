@@ -43,9 +43,24 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(loginUser(userName.getText().toString(), password.getText().toString())) {
+                    AppController.votes.clear();
                     Intent myIntent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(myIntent);
                 }
+            }
+        });
+
+        FirebaseDatabase.getInstance().getReference().child("users").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                System.out.println("RELOAD USERS!!!");
+                AppController.allUsers.clear();
+                AppController.firebaseHelper.getUsers(dataSnapshot);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
             }
         });
     }
@@ -68,8 +83,14 @@ public class LoginActivity extends AppCompatActivity {
         for(User user : AppController.allUsers){
             if(userName.equals(user.getUserName())){
                 if(password.equals(user.getPassword())){
-                    AppController.loggedUser = user;
-                    return true;
+                    if(user.isLoggedIn()){
+                        showMessage("Потребителят вече е в системата!");
+                        return false;
+                    }else {
+                        AppController.loggedUser = user;
+                        FirebaseDatabase.getInstance().getReference().child("users").child(user.getId()).child("isLoggedIn").setValue(true);
+                        return true;
+                    }
                 }else{
                     showMessage("Грешна парола!");
                     return false;

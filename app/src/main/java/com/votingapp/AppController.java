@@ -37,7 +37,6 @@ public class AppController extends Application{
     public static User loggedUser;
     public static Vote currentVote;
 
-
     public static FirebaseHelper firebaseHelper;
 
     @Override

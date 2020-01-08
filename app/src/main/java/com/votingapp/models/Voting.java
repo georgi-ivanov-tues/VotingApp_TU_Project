@@ -62,4 +62,6 @@ public class Voting extends Vote{
     public void setOptions(ArrayList<Option> options) {
         this.options = options;
     }
+
+    public String getTitle(){ return super.getTitle(); }
 }

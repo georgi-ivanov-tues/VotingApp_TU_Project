@@ -25,6 +25,8 @@ import com.votingapp.models.Option;
 import com.votingapp.models.Voting;
 import com.votingapp.utils.Keys;
 
+import java.util.ArrayList;
+
 public class TakeVotingFragment extends Fragment {
 
     public TakeVotingFragment() {
@@ -88,10 +90,13 @@ public class TakeVotingFragment extends Fragment {
                 }else {
                     RadioButton radioButton = (RadioButton) parentView.findViewById(selectedId);
 
+                    ArrayList<String> selectedByCurrentUserOptionsId = new ArrayList<>();
+
                     for (Option option : voting.getOptions()) {
                         if (option.getOptionText().equals(radioButton.getText())) {
                             option.increaseTimesSelected();
                             option.setSelectedByCurrentUser(true);
+                            selectedByCurrentUserOptionsId.add(option.getId());
 
                             // Update record in DB
                             AppController.firebaseHelper.updateVoting(voting, option);
@@ -102,7 +107,8 @@ public class TakeVotingFragment extends Fragment {
                         System.out.println(option.getOptionText() + " = " + option.getTimesSelected());
                     }
 
-                    AppController.loggedUser.addVoting(voting);
+                    AppController.loggedUser.addVote(voting);
+                    AppController.loggedUser.addUserVote(voting, selectedByCurrentUserOptionsId);
 
                     VotingResultsFragment votingResultsFragment = new VotingResultsFragment();
                     Bundle bundle = new Bundle();

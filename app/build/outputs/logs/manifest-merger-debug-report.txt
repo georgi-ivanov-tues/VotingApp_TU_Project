@@ -1,369 +1,369 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:2:1-45:12
-MERGED from [com.google.firebase:firebase-core:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-core-9.0.0.aar/324bd240fc8181663dccc46197dbbc29/AndroidManifest.xml:2:1-6:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/9b661d6c20fdeb7a1d873364a704aa51/AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.firebase:firebase-database:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-database-9.0.0.aar/49d27f7aaf31c3cb99cf2abb82ffa726/AndroidManifest.xml:2:1-6:12
-MERGED from [com.android.support:design:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/95df9978bf09b2bc07208926acdc7687/AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:appcompat-v7:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/659759b552f4c6fb8fef6979dc821e90/AndroidManifest.xml:17:1-27:12
-MERGED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:16:1-42:12
-MERGED from [com.google.firebase:firebase-database-connection:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-9.0.0.aar/b992f3dc962e03dca036d62ddde5e34d/AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-9.0.0.aar/8d102e5c752983cc2d4c839bd57fa18d/AndroidManifest.xml:16:1-42:12
-MERGED from [com.google.android.gms:play-services-base:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-base-9.0.0.aar/41f0d593b87474467d7303a989e22260/AndroidManifest.xml:16:1-24:12
-MERGED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:16:1-60:12
-MERGED from [com.google.firebase:firebase-common:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-common-9.0.0.aar/8d7b28b6b8bc01b819898afd01ed55b5/AndroidManifest.xml:2:1-13:12
-MERGED from [com.google.android.gms:play-services-tasks:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.0.0.aar/90ba617470d03c3f0a541c14f9574eb0/AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-basement:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.0.0.aar/b29da1c1ec41c92268207ec88174adf2/AndroidManifest.xml:16:1-26:12
-MERGED from [com.android.support:transition:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/transition-25.0.1.aar/872326fa6fa24508e5d917793cbdb498/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:support-v4:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-v4-25.0.1.aar/abc6a88398c3bb6838626450142176d2/AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:recyclerview-v7:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.0.1.aar/4d62d409e74c033af573936620c1b20b/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.volley:volley:1.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/volley-1.0.0.aar/67ba7ee6f69dd19169ded933cfe4aded/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:animated-vector-drawable:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.0.1.aar/c9a0eb2b78c2df7b44187a3dbb5d5f21/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:support-vector-drawable:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.0.1.aar/eaebec06bd7372dfdacc3b790392ac3e/AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:support-fragment:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-fragment-25.0.1.aar/db48a472ffc01ce72f5290789033e7bb/AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:support-core-ui:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.0.1.aar/dfdc553af09bcbf28a8864c7dc22a7ae/AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:support-media-compat:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.0.1.aar/933d08bc76274a855a3db07a11d72106/AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:support-core-utils:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.0.1.aar/5f6b724e038c4382e2d63f48a6a97190/AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:support-compat:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-compat-25.0.1.aar/13657f02aa5660a0f5c2c0d9692b63d3/AndroidManifest.xml:17:1-27:12
-INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:2:1-45:12
+ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-core-9.0.0.aar\c0e010c572b6bb79c12a35a24dec6028\AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\18f49d0c744644b05962814a3826b297\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:firebase-database:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-database-9.0.0.aar\ded2a932cf75848be08c8c21a04012e3\AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:design:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\design-25.0.1.aar\f50ab19b3f2bde8d996c6c5e9d4560de\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:appcompat-v7:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.0.1.aar\0d18b2f0bb4b81d703376d30c52111bb\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:16:1-42:12
+MERGED from [com.google.firebase:firebase-database-connection:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-9.0.0.aar\70248d462b1f3d800544d7cf62ae524f\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\c69675d8d7b15431556bf4e2027195ab\AndroidManifest.xml:16:1-42:12
+MERGED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\b3fb0284c694de1a7ac40334b48886bb\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:16:1-60:12
+MERGED from [com.google.firebase:firebase-common:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\9c860a2da23b2d5ddfe911752b72dd6c\AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.gms:play-services-tasks:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.0.0.aar\e7edbad58931eb06727693cc640fbaa1\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.0.0.aar\95804883ed14012dd7a05e18e5945a8d\AndroidManifest.xml:16:1-26:12
+MERGED from [com.android.support:transition:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\transition-25.0.1.aar\a694bc02bd14e032d41d5164bbe4ca08\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-v4:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-v4-25.0.1.aar\f8a2a5a9ed8a0fd973c955fef0bee792\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:recyclerview-v7:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.0.1.aar\2890536375e349bb126de4803f0f8369\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.volley:volley:1.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\84830a35341a135267ede39b10d22f8a\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.0.1.aar\09fbdf74167c184045420ccddd1576da\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-vector-drawable:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.0.1.aar\056ef9191fcc2886660d109dfd72bd6b\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:support-fragment:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-fragment-25.0.1.aar\70a80031d48cd9abf7400ff0a26e49a3\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-ui:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.0.1.aar\b358637e25f40419ec3d4b7196e86d01\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-media-compat:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.0.1.aar\4839747fd5a88a185afb97df83b8782e\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-utils:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.0.1.aar\3d99005da7514fef7b926351f9e6bb85\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-compat:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-compat-25.0.1.aar\3383d450272d9ea2ed1e409075e658d0\AndroidManifest.xml:17:1-27:12
+INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:2:1-45:12
 	package
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:3:5-28
-		INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:3:5-28
+		INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:2:1-45:12
-		INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml
+		INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+		INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:2:1-45:12
-		INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml
+		INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:2:1-45:12
+		INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:5:5-79
-MERGED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-9.0.0.aar/8d102e5c752983cc2d4c839bd57fa18d/AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-9.0.0.aar/8d102e5c752983cc2d4c839bd57fa18d/AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:20:5-79
-MERGED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:20:5-79
+ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:5:5-79
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\c69675d8d7b15431556bf4e2027195ab\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\c69675d8d7b15431556bf4e2027195ab\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:20:5-79
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:20:5-79
 	android:name
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:5:22-76
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:5:22-76
 uses-permission#android.permission.INTERNET
-ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:6:5-67
-MERGED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:21:5-67
-MERGED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:21:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-9.0.0.aar/8d102e5c752983cc2d4c839bd57fa18d/AndroidManifest.xml:21:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-9.0.0.aar/8d102e5c752983cc2d4c839bd57fa18d/AndroidManifest.xml:21:5-67
-MERGED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:21:5-67
-MERGED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:21:5-67
+ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:6:5-67
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\c69675d8d7b15431556bf4e2027195ab\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\c69675d8d7b15431556bf4e2027195ab\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:21:5-67
 	android:name
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:6:22-64
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:8:5-43:19
-MERGED from [com.google.firebase:firebase-core:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-core-9.0.0.aar/324bd240fc8181663dccc46197dbbc29/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-core:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-core-9.0.0.aar/324bd240fc8181663dccc46197dbbc29/AndroidManifest.xml:5:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/9b661d6c20fdeb7a1d873364a704aa51/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/9b661d6c20fdeb7a1d873364a704aa51/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:design:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/95df9978bf09b2bc07208926acdc7687/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:design:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/95df9978bf09b2bc07208926acdc7687/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/659759b552f4c6fb8fef6979dc821e90/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/659759b552f4c6fb8fef6979dc821e90/AndroidManifest.xml:25:5-20
-MERGED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:26:5-41:19
-MERGED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:26:5-41:19
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-9.0.0.aar/8d102e5c752983cc2d4c839bd57fa18d/AndroidManifest.xml:26:5-41:19
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-9.0.0.aar/8d102e5c752983cc2d4c839bd57fa18d/AndroidManifest.xml:26:5-41:19
-MERGED from [com.google.android.gms:play-services-base:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-base-9.0.0.aar/41f0d593b87474467d7303a989e22260/AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-base:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-base-9.0.0.aar/41f0d593b87474467d7303a989e22260/AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:30:5-59:19
-MERGED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:30:5-59:19
-MERGED from [com.google.firebase:firebase-common:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-common-9.0.0.aar/8d7b28b6b8bc01b819898afd01ed55b5/AndroidManifest.xml:5:5-12:19
-MERGED from [com.google.firebase:firebase-common:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-common-9.0.0.aar/8d7b28b6b8bc01b819898afd01ed55b5/AndroidManifest.xml:5:5-12:19
-MERGED from [com.google.android.gms:play-services-tasks:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.0.0.aar/90ba617470d03c3f0a541c14f9574eb0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.0.0.aar/90ba617470d03c3f0a541c14f9574eb0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.0.0.aar/b29da1c1ec41c92268207ec88174adf2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.google.android.gms:play-services-basement:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.0.0.aar/b29da1c1ec41c92268207ec88174adf2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:transition:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/transition-25.0.1.aar/872326fa6fa24508e5d917793cbdb498/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:transition:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/transition-25.0.1.aar/872326fa6fa24508e5d917793cbdb498/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-v4-25.0.1.aar/abc6a88398c3bb6838626450142176d2/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-v4-25.0.1.aar/abc6a88398c3bb6838626450142176d2/AndroidManifest.xml:25:5-20
-MERGED from [com.android.volley:volley:1.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/volley-1.0.0.aar/67ba7ee6f69dd19169ded933cfe4aded/AndroidManifest.xml:9:5-20
-MERGED from [com.android.volley:volley:1.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/volley-1.0.0.aar/67ba7ee6f69dd19169ded933cfe4aded/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.0.1.aar/c9a0eb2b78c2df7b44187a3dbb5d5f21/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.0.1.aar/c9a0eb2b78c2df7b44187a3dbb5d5f21/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.0.1.aar/eaebec06bd7372dfdacc3b790392ac3e/AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:support-vector-drawable:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.0.1.aar/eaebec06bd7372dfdacc3b790392ac3e/AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:support-fragment:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-fragment-25.0.1.aar/db48a472ffc01ce72f5290789033e7bb/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-fragment-25.0.1.aar/db48a472ffc01ce72f5290789033e7bb/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.0.1.aar/dfdc553af09bcbf28a8864c7dc22a7ae/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.0.1.aar/dfdc553af09bcbf28a8864c7dc22a7ae/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.0.1.aar/933d08bc76274a855a3db07a11d72106/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.0.1.aar/933d08bc76274a855a3db07a11d72106/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.0.1.aar/5f6b724e038c4382e2d63f48a6a97190/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.0.1.aar/5f6b724e038c4382e2d63f48a6a97190/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-compat-25.0.1.aar/13657f02aa5660a0f5c2c0d9692b63d3/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-compat-25.0.1.aar/13657f02aa5660a0f5c2c0d9692b63d3/AndroidManifest.xml:25:5-20
+ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:8:5-43:19
+MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-core-9.0.0.aar\c0e010c572b6bb79c12a35a24dec6028\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-core-9.0.0.aar\c0e010c572b6bb79c12a35a24dec6028\AndroidManifest.xml:5:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\18f49d0c744644b05962814a3826b297\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\18f49d0c744644b05962814a3826b297\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\design-25.0.1.aar\f50ab19b3f2bde8d996c6c5e9d4560de\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:design:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\design-25.0.1.aar\f50ab19b3f2bde8d996c6c5e9d4560de\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.0.1.aar\0d18b2f0bb4b81d703376d30c52111bb\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.0.1.aar\0d18b2f0bb4b81d703376d30c52111bb\AndroidManifest.xml:25:5-20
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:26:5-41:19
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:26:5-41:19
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\c69675d8d7b15431556bf4e2027195ab\AndroidManifest.xml:26:5-41:19
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\c69675d8d7b15431556bf4e2027195ab\AndroidManifest.xml:26:5-41:19
+MERGED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\b3fb0284c694de1a7ac40334b48886bb\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\b3fb0284c694de1a7ac40334b48886bb\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:30:5-59:19
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:30:5-59:19
+MERGED from [com.google.firebase:firebase-common:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\9c860a2da23b2d5ddfe911752b72dd6c\AndroidManifest.xml:5:5-12:19
+MERGED from [com.google.firebase:firebase-common:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\9c860a2da23b2d5ddfe911752b72dd6c\AndroidManifest.xml:5:5-12:19
+MERGED from [com.google.android.gms:play-services-tasks:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.0.0.aar\e7edbad58931eb06727693cc640fbaa1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.0.0.aar\e7edbad58931eb06727693cc640fbaa1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.0.0.aar\95804883ed14012dd7a05e18e5945a8d\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.0.0.aar\95804883ed14012dd7a05e18e5945a8d\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:transition:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\transition-25.0.1.aar\a694bc02bd14e032d41d5164bbe4ca08\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:transition:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\transition-25.0.1.aar\a694bc02bd14e032d41d5164bbe4ca08\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-v4-25.0.1.aar\f8a2a5a9ed8a0fd973c955fef0bee792\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-v4-25.0.1.aar\f8a2a5a9ed8a0fd973c955fef0bee792\AndroidManifest.xml:25:5-20
+MERGED from [com.android.volley:volley:1.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\84830a35341a135267ede39b10d22f8a\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\84830a35341a135267ede39b10d22f8a\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.0.1.aar\09fbdf74167c184045420ccddd1576da\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.0.1.aar\09fbdf74167c184045420ccddd1576da\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.0.1.aar\056ef9191fcc2886660d109dfd72bd6b\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-vector-drawable:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.0.1.aar\056ef9191fcc2886660d109dfd72bd6b\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-fragment:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-fragment-25.0.1.aar\70a80031d48cd9abf7400ff0a26e49a3\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-fragment-25.0.1.aar\70a80031d48cd9abf7400ff0a26e49a3\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.0.1.aar\b358637e25f40419ec3d4b7196e86d01\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.0.1.aar\b358637e25f40419ec3d4b7196e86d01\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.0.1.aar\4839747fd5a88a185afb97df83b8782e\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.0.1.aar\4839747fd5a88a185afb97df83b8782e\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.0.1.aar\3d99005da7514fef7b926351f9e6bb85\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.0.1.aar\3d99005da7514fef7b926351f9e6bb85\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-compat-25.0.1.aar\3383d450272d9ea2ed1e409075e658d0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-compat-25.0.1.aar\3383d450272d9ea2ed1e409075e658d0\AndroidManifest.xml:25:5-20
 	android:supportsRtl
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:13:9-35
 	android:label
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:12:9-41
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:12:9-41
 	android:icon
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:11:9-43
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:14:9-40
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:14:9-40
 	android:name
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:9:9-38
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:9:9-38
 activity#com.votingapp.activities.HomeActivity
-ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:15:9-25:20
+ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:15:9-25:20
 	android:screenOrientation
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:18:13-49
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:18:13-49
 	android:label
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:17:13-45
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:17:13-45
 	android:theme
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:19:13-56
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:19:13-56
 	android:name
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:16:13-52
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:16:13-52
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:20:13-24:29
+ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
-ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:21:17-69
+ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:21:25-66
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:23:17-77
+ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:23:27-74
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:23:27-74
 activity#com.votingapp.activities.MainActivity
-ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:26:9-28:52
+ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:26:9-28:52
 	android:screenOrientation
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:28:13-49
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:28:13-49
 	android:name
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:27:13-52
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:27:13-52
 activity#com.votingapp.activities.VotingActivity
-ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:29:9-33:47
+ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:29:9-33:47
 	android:screenOrientation
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:32:13-49
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:32:13-49
 	android:label
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:31:13-58
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:31:13-58
 	android:theme
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:33:13-44
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:33:13-44
 	android:name
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:30:13-54
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:30:13-54
 activity#com.votingapp.activities.LoginActivity
-ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:34:9-38:47
+ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:34:9-38:47
 	android:screenOrientation
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:37:13-49
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:37:13-49
 	android:label
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:36:13-57
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:36:13-57
 	android:theme
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:38:13-44
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:38:13-44
 	android:name
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:35:13-53
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:35:13-53
 activity#com.votingapp.activities.CreateVoteActivity
-ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:39:9-42:46
+ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:39:9-42:46
 	android:label
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:41:13-63
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:41:13-63
 	android:theme
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:42:13-44
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:42:13-44
 	android:name
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml:40:13-58
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml:40:13-58
 uses-sdk
-INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml
-INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml
-MERGED from [com.google.firebase:firebase-core:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-core-9.0.0.aar/324bd240fc8181663dccc46197dbbc29/AndroidManifest.xml:4:5-42
-MERGED from [com.google.firebase:firebase-core:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-core-9.0.0.aar/324bd240fc8181663dccc46197dbbc29/AndroidManifest.xml:4:5-42
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/9b661d6c20fdeb7a1d873364a704aa51/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/9b661d6c20fdeb7a1d873364a704aa51/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-database:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-database-9.0.0.aar/49d27f7aaf31c3cb99cf2abb82ffa726/AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-database:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-database-9.0.0.aar/49d27f7aaf31c3cb99cf2abb82ffa726/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:design:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/95df9978bf09b2bc07208926acdc7687/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:design:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/95df9978bf09b2bc07208926acdc7687/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/659759b552f4c6fb8fef6979dc821e90/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/659759b552f4c6fb8fef6979dc821e90/AndroidManifest.xml:21:5-23:78
-MERGED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-database-connection:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-9.0.0.aar/b992f3dc962e03dca036d62ddde5e34d/AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-database-connection:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-9.0.0.aar/b992f3dc962e03dca036d62ddde5e34d/AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-9.0.0.aar/8d102e5c752983cc2d4c839bd57fa18d/AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-9.0.0.aar/8d102e5c752983cc2d4c839bd57fa18d/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-base:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-base-9.0.0.aar/41f0d593b87474467d7303a989e22260/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-base:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-base-9.0.0.aar/41f0d593b87474467d7303a989e22260/AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-common:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-common-9.0.0.aar/8d7b28b6b8bc01b819898afd01ed55b5/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-common:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-common-9.0.0.aar/8d7b28b6b8bc01b819898afd01ed55b5/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.0.0.aar/90ba617470d03c3f0a541c14f9574eb0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.0.0.aar/90ba617470d03c3f0a541c14f9574eb0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.0.0.aar/b29da1c1ec41c92268207ec88174adf2/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.0.0.aar/b29da1c1ec41c92268207ec88174adf2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:transition:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/transition-25.0.1.aar/872326fa6fa24508e5d917793cbdb498/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/transition-25.0.1.aar/872326fa6fa24508e5d917793cbdb498/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-v4-25.0.1.aar/abc6a88398c3bb6838626450142176d2/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-v4-25.0.1.aar/abc6a88398c3bb6838626450142176d2/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:recyclerview-v7:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.0.1.aar/4d62d409e74c033af573936620c1b20b/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.0.1.aar/4d62d409e74c033af573936620c1b20b/AndroidManifest.xml:20:5-43
-MERGED from [com.android.volley:volley:1.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/volley-1.0.0.aar/67ba7ee6f69dd19169ded933cfe4aded/AndroidManifest.xml:7:5-43
-MERGED from [com.android.volley:volley:1.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/volley-1.0.0.aar/67ba7ee6f69dd19169ded933cfe4aded/AndroidManifest.xml:7:5-43
-MERGED from [com.android.support:animated-vector-drawable:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.0.1.aar/c9a0eb2b78c2df7b44187a3dbb5d5f21/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.0.1.aar/c9a0eb2b78c2df7b44187a3dbb5d5f21/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.0.1.aar/eaebec06bd7372dfdacc3b790392ac3e/AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-vector-drawable:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.0.1.aar/eaebec06bd7372dfdacc3b790392ac3e/AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-fragment:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-fragment-25.0.1.aar/db48a472ffc01ce72f5290789033e7bb/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-fragment-25.0.1.aar/db48a472ffc01ce72f5290789033e7bb/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-ui:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.0.1.aar/dfdc553af09bcbf28a8864c7dc22a7ae/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.0.1.aar/dfdc553af09bcbf28a8864c7dc22a7ae/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-media-compat:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.0.1.aar/933d08bc76274a855a3db07a11d72106/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.0.1.aar/933d08bc76274a855a3db07a11d72106/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-utils:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.0.1.aar/5f6b724e038c4382e2d63f48a6a97190/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.0.1.aar/5f6b724e038c4382e2d63f48a6a97190/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-compat-25.0.1.aar/13657f02aa5660a0f5c2c0d9692b63d3/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/support-compat-25.0.1.aar/13657f02aa5660a0f5c2c0d9692b63d3/AndroidManifest.xml:21:5-23:58
-INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml
-INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml
+INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml
+INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml
+MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-core-9.0.0.aar\c0e010c572b6bb79c12a35a24dec6028\AndroidManifest.xml:4:5-42
+MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-core-9.0.0.aar\c0e010c572b6bb79c12a35a24dec6028\AndroidManifest.xml:4:5-42
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\18f49d0c744644b05962814a3826b297\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\18f49d0c744644b05962814a3826b297\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-database-9.0.0.aar\ded2a932cf75848be08c8c21a04012e3\AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-database:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-database-9.0.0.aar\ded2a932cf75848be08c8c21a04012e3\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:design:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\design-25.0.1.aar\f50ab19b3f2bde8d996c6c5e9d4560de\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\design-25.0.1.aar\f50ab19b3f2bde8d996c6c5e9d4560de\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.0.1.aar\0d18b2f0bb4b81d703376d30c52111bb\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.0.1.aar\0d18b2f0bb4b81d703376d30c52111bb\AndroidManifest.xml:21:5-23:78
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-database-connection:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-9.0.0.aar\70248d462b1f3d800544d7cf62ae524f\AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-database-connection:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-9.0.0.aar\70248d462b1f3d800544d7cf62ae524f\AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\c69675d8d7b15431556bf4e2027195ab\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\c69675d8d7b15431556bf4e2027195ab\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\b3fb0284c694de1a7ac40334b48886bb\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\b3fb0284c694de1a7ac40334b48886bb\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-common:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\9c860a2da23b2d5ddfe911752b72dd6c\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-common:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\9c860a2da23b2d5ddfe911752b72dd6c\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.0.0.aar\e7edbad58931eb06727693cc640fbaa1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.0.0.aar\e7edbad58931eb06727693cc640fbaa1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.0.0.aar\95804883ed14012dd7a05e18e5945a8d\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.0.0.aar\95804883ed14012dd7a05e18e5945a8d\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:transition:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\transition-25.0.1.aar\a694bc02bd14e032d41d5164bbe4ca08\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\transition-25.0.1.aar\a694bc02bd14e032d41d5164bbe4ca08\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-v4-25.0.1.aar\f8a2a5a9ed8a0fd973c955fef0bee792\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-v4-25.0.1.aar\f8a2a5a9ed8a0fd973c955fef0bee792\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:recyclerview-v7:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.0.1.aar\2890536375e349bb126de4803f0f8369\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.0.1.aar\2890536375e349bb126de4803f0f8369\AndroidManifest.xml:20:5-43
+MERGED from [com.android.volley:volley:1.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\84830a35341a135267ede39b10d22f8a\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\84830a35341a135267ede39b10d22f8a\AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:animated-vector-drawable:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.0.1.aar\09fbdf74167c184045420ccddd1576da\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.0.1.aar\09fbdf74167c184045420ccddd1576da\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.0.1.aar\056ef9191fcc2886660d109dfd72bd6b\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-vector-drawable:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.0.1.aar\056ef9191fcc2886660d109dfd72bd6b\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-fragment:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-fragment-25.0.1.aar\70a80031d48cd9abf7400ff0a26e49a3\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-fragment-25.0.1.aar\70a80031d48cd9abf7400ff0a26e49a3\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.0.1.aar\b358637e25f40419ec3d4b7196e86d01\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.0.1.aar\b358637e25f40419ec3d4b7196e86d01\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.0.1.aar\4839747fd5a88a185afb97df83b8782e\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.0.1.aar\4839747fd5a88a185afb97df83b8782e\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.0.1.aar\3d99005da7514fef7b926351f9e6bb85\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.0.1.aar\3d99005da7514fef7b926351f9e6bb85\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-compat-25.0.1.aar\3383d450272d9ea2ed1e409075e658d0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\support-compat-25.0.1.aar\3383d450272d9ea2ed1e409075e658d0\AndroidManifest.xml:21:5-23:58
+INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml
+INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.0.1] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/95df9978bf09b2bc07208926acdc7687/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.0.1] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\design-25.0.1.aar\f50ab19b3f2bde8d996c6c5e9d4560de\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml
+		INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml
-		ADDED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml
+		INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml
+		ADDED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Projects\GitHub\VotingApp\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-9.0.0.aar/8d102e5c752983cc2d4c839bd57fa18d/AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-9.0.0.aar/8d102e5c752983cc2d4c839bd57fa18d/AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:22:5-68
-MERGED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:22:5-68
+ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\c69675d8d7b15431556bf4e2027195ab\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\c69675d8d7b15431556bf4e2027195ab\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:22:5-68
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:22:5-68
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:24:22-65
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:24:22-65
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:28:7-34:18
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-9.0.0.aar/8d102e5c752983cc2d4c839bd57fa18d/AndroidManifest.xml:28:7-34:18
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-9.0.0.aar/8d102e5c752983cc2d4c839bd57fa18d/AndroidManifest.xml:28:7-34:18
+ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:28:7-34:18
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\c69675d8d7b15431556bf4e2027195ab\AndroidManifest.xml:28:7-34:18
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\c69675d8d7b15431556bf4e2027195ab\AndroidManifest.xml:28:7-34:18
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:30:11-33
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:30:11-33
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:29:11-83
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:29:11-83
 intent-filter#com.google.android.gms.measurement.UPLOAD
-ADDED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:31:9-33:25
+ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:31:9-33:25
 action#com.google.android.gms.measurement.UPLOAD
-ADDED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:32:11-77
+ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:32:11-77
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:32:19-75
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:32:19-75
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:36:7-39:37
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-9.0.0.aar/8d102e5c752983cc2d4c839bd57fa18d/AndroidManifest.xml:36:7-39:37
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-9.0.0.aar/8d102e5c752983cc2d4c839bd57fa18d/AndroidManifest.xml:36:7-39:37
+ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:36:7-39:37
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\c69675d8d7b15431556bf4e2027195ab\AndroidManifest.xml:36:7-39:37
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\c69675d8d7b15431556bf4e2027195ab\AndroidManifest.xml:36:7-39:37
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:38:11-33
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:38:11-33
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:39:11-35
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:39:11-35
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-analytics-9.0.0.aar/8db1372df6efd6abb50b6d6628d144e1/AndroidManifest.xml:37:11-82
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\a06e647015769ae6353cba5fc365ff73\AndroidManifest.xml:37:11-82
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-base-9.0.0.aar/41f0d593b87474467d7303a989e22260/AndroidManifest.xml:20:9-22:45
+ADDED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\b3fb0284c694de1a7ac40334b48886bb\AndroidManifest.xml:20:9-22:45
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-base-9.0.0.aar/41f0d593b87474467d7303a989e22260/AndroidManifest.xml:22:19-43
+		ADDED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\b3fb0284c694de1a7ac40334b48886bb\AndroidManifest.xml:22:19-43
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-base-9.0.0.aar/41f0d593b87474467d7303a989e22260/AndroidManifest.xml:21:19-78
+		ADDED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\b3fb0284c694de1a7ac40334b48886bb\AndroidManifest.xml:21:19-78
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-base-9.0.0.aar/41f0d593b87474467d7303a989e22260/AndroidManifest.xml:20:19-85
+		ADDED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\b3fb0284c694de1a7ac40334b48886bb\AndroidManifest.xml:20:19-85
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:23:5-82
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:23:5-82
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:23:22-79
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:23:22-79
 permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:25:5-26:47
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:25:5-26:47
 	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:26:9-44
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:26:9-44
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:25:17-71
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:25:17-71
 permission#com.votingapp.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:25:5-26:47
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:25:5-26:47
 	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:26:9-44
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:26:9-44
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:25:17-71
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:25:17-71
 uses-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:28:5-79
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:28:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:28:22-76
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:28:22-76
 uses-permission#com.votingapp.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:28:5-79
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:28:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:28:22-76
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:28:22-76
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:32:9-41:20
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:32:9-41:20
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:34:13-36
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:34:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:35:13-73
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:35:13-73
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:33:13-78
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:33:13-78
 intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
-ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:36:13-40:29
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:36:13-40:29
 intent-filter#com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION+com.votingapp
-ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:36:13-40:29
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:36:13-40:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:37:17-81
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:37:17-81
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:37:25-78
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:37:25-78
 action#com.google.android.c2dm.intent.REGISTRATION
-ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:38:17-86
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:38:17-86
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:38:25-83
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:38:25-83
 category#${applicationId}
-ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:39:17-61
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:39:17-61
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:39:27-58
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:39:27-58
 category#com.votingapp
-ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:39:17-61
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:39:17-61
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:39:27-58
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:39:27-58
 receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
-ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:45:9-47:40
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:45:9-47:40
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:47:13-37
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:47:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:46:13-86
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:46:13-86
 service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:51:9-57:19
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:51:9-57:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:53:13-36
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:53:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:52:13-77
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:52:13-77
 intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:54:13-56:29
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:54:13-56:29
 	android:priority
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:54:28-51
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:54:28-51
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:55:17-80
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:55:17-80
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-iid-9.0.0.aar/83eb3a5be05c2f152f769db8eb570b9f/AndroidManifest.xml:55:25-77
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\ffb84cc12ba4355f47a3704bd94ccd8e\AndroidManifest.xml:55:25-77
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-common-9.0.0.aar/8d7b28b6b8bc01b819898afd01ed55b5/AndroidManifest.xml:7:9-11:39
+ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\9c860a2da23b2d5ddfe911752b72dd6c\AndroidManifest.xml:7:9-11:39
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-common-9.0.0.aar/8d7b28b6b8bc01b819898afd01ed55b5/AndroidManifest.xml:8:13-72
+		ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\9c860a2da23b2d5ddfe911752b72dd6c\AndroidManifest.xml:8:13-72
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-common-9.0.0.aar/8d7b28b6b8bc01b819898afd01ed55b5/AndroidManifest.xml:10:13-37
+		ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\9c860a2da23b2d5ddfe911752b72dd6c\AndroidManifest.xml:10:13-37
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-common-9.0.0.aar/8d7b28b6b8bc01b819898afd01ed55b5/AndroidManifest.xml:11:13-36
+		ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\9c860a2da23b2d5ddfe911752b72dd6c\AndroidManifest.xml:11:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-common:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/firebase-common-9.0.0.aar/8d7b28b6b8bc01b819898afd01ed55b5/AndroidManifest.xml:9:13-58
+		ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\9c860a2da23b2d5ddfe911752b72dd6c\AndroidManifest.xml:9:13-58
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.0.0.aar/b29da1c1ec41c92268207ec88174adf2/AndroidManifest.xml:21:9-23:69
+ADDED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.0.0.aar\95804883ed14012dd7a05e18e5945a8d\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.0.0.aar/b29da1c1ec41c92268207ec88174adf2/AndroidManifest.xml:23:13-66
+		ADDED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.0.0.aar\95804883ed14012dd7a05e18e5945a8d\AndroidManifest.xml:23:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:9.0.0] /Users/giivanov/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.0.0.aar/b29da1c1ec41c92268207ec88174adf2/AndroidManifest.xml:22:13-58
+		ADDED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\giivanov\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.0.0.aar\95804883ed14012dd7a05e18e5945a8d\AndroidManifest.xml:22:13-58

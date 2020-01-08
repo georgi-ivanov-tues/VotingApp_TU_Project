@@ -1,12 +1,14 @@
 package com.votingapp.models;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class User {
     private String id;
     private String userName;
     private String password;
     private boolean isAdmin;
+    private boolean isLoggedIn;
 
     public static final String TABLE_NAME = "users";
 
@@ -23,17 +25,29 @@ public class User {
                     + COLUMN_ISADMIN + " INTEGER NOT NULL"
                     + ");";
 
-    private ArrayList<Voting> votings = new ArrayList<>();
-    private ArrayList<Poll> polls = new ArrayList<>();
-    private ArrayList<Referendum> referendums = new ArrayList<>();
+    private ArrayList<Vote> votes = new ArrayList<>();
+
+    private ArrayList<UserVote> userVotes = new ArrayList<>();
+
+    public void addUserVote(Vote vote, ArrayList<String> selectedByCurrentUserOptionsId){
+        UserVote userVote = new UserVote();
+        userVote.setVoteId(vote.getId());
+        userVote.setOptionsId(selectedByCurrentUserOptionsId);
+        userVotes.add(userVote);
+    }
+
+    public ArrayList<UserVote> getUserVotes(){
+        return userVotes;
+    }
 
     public User(){}
 
-    public User(String id, String userName, String password, boolean isAdmin){
+    public User(String id, String userName, String password, boolean isAdmin, boolean isLoggedIn){
         this.id = id;
         this.userName = userName;
         this.password = password;
         this.isAdmin = isAdmin;
+        this.isLoggedIn = isLoggedIn;
     }
 
     public User(String userName, String password, boolean isAdmin){
@@ -42,15 +56,7 @@ public class User {
         this.isAdmin = isAdmin;
     }
 
-    public void addVoting(Voting voting){
-        votings.add(voting);
-    }
-    public void addPoll(Poll poll) {
-        polls.add(poll);
-    }
-    public void addReferendum(Referendum referendum){
-        referendums.add(referendum);
-    }
+    public void addVote(Vote vote) { this.votes.add(vote); }
 
     public String getId() {
         return id;
@@ -84,23 +90,38 @@ public class User {
         isAdmin = admin;
     }
 
-    public ArrayList<Voting> getVotings() {
-        return votings;
+    public boolean isLoggedIn() {
+        return isLoggedIn;
     }
 
-    public ArrayList<Poll> getPolls() {
-        return polls;
+    public void setLoggedIn(boolean loggedIn) {
+        isLoggedIn = loggedIn;
     }
 
-    public ArrayList<Referendum> getReferendums() {
-        return referendums;
+    public ArrayList<Vote> getVotes() {
+        return votes;
     }
 
-    public ArrayList<Vote> getAllVotes(){
-        ArrayList<Vote> allVotes = new ArrayList<>();
-        allVotes.addAll(getVotings());
-        allVotes.addAll(getPolls());
-        allVotes.addAll(getReferendums());
-        return allVotes;
+    private class UserVote{
+        private String voteId;
+        private ArrayList<String> optionsId;
+
+        UserVote(){}
+
+        public String getVoteId() {
+            return voteId;
+        }
+
+        public void setVoteId(String vote_Id) {
+            this.voteId = vote_Id;
+        }
+
+        public ArrayList<String> getOptionsId() {
+            return optionsId;
+        }
+
+        public void setOptionsId(ArrayList<String> optionsId) {
+            this.optionsId = optionsId;
+        }
     }
 }

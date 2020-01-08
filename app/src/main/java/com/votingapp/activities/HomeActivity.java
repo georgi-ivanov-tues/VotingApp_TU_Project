@@ -31,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 AppController.votes.clear();
 
-                AppController.firebaseHelper.loadDatabase();
+//                AppController.firebaseHelper.loadDatabase();
 
                 Intent myIntent = new Intent(HomeActivity.this, LoginActivity.class);
                 startActivity(myIntent);

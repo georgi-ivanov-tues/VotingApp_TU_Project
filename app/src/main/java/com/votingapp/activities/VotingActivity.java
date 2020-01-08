@@ -5,11 +5,19 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.votingapp.AppController;
 import com.votingapp.R;
+import com.votingapp.fragments.PollResultsFragment;
+import com.votingapp.fragments.ReferendumResultsFragment;
 import com.votingapp.fragments.TakePollFragment;
 import com.votingapp.fragments.TakeReferendumFragment;
 import com.votingapp.fragments.TakeVotingFragment;
+import com.votingapp.fragments.VotingResultsFragment;
 import com.votingapp.models.Poll;
 import com.votingapp.models.Referendum;
 import com.votingapp.models.Vote;
@@ -28,13 +36,24 @@ public class VotingActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Vote vote = AppController.getCurrentVote();
+        boolean alreadyVoted = false;
+
+        for(Vote voted : AppController.loggedUser.getVotes()){
+            if(voted.getId().equals(vote.getId())){
+                alreadyVoted = true;
+                break;
+            }
+        }
 
         if(vote instanceof Voting){
-            loadFragment(new TakeVotingFragment(), vote);
+            if(alreadyVoted) loadFragment(new VotingResultsFragment(), (Voting) vote);
+            else loadFragment(new TakeVotingFragment(), vote);
         }else if(vote instanceof Poll){
-            loadFragment(new TakePollFragment(), vote);
+            if(alreadyVoted) loadFragment(new PollResultsFragment(), (Poll) vote);
+            else loadFragment(new TakePollFragment(), vote);
         }else if(vote instanceof Referendum){
-            loadFragment(new TakeReferendumFragment(), vote);
+            if(alreadyVoted) loadFragment(new ReferendumResultsFragment(), (Referendum) vote);
+            else loadFragment(new TakeReferendumFragment(), vote);
         }
     }
 

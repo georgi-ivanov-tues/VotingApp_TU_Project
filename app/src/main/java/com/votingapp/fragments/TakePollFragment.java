@@ -89,6 +89,8 @@ public class TakePollFragment extends Fragment {
                 View parentView = (View) view.getParent();
                 int i = 0;
 
+                ArrayList<String> selectedByCurrentUserOptionsId = new ArrayList<>();
+
                 boolean allQuestionsAnswered = true;
                 for (Map.Entry pair : poll.getPollContent().entrySet()) {
                     RadioGroup radioGroup = radioGroups.get(i);
@@ -109,6 +111,7 @@ public class TakePollFragment extends Fragment {
                             if (option.getOptionText().equals(radioButton.getText())) {
                                 option.increaseTimesSelected();
                                 option.setSelectedByCurrentUser(true);
+                                selectedByCurrentUserOptionsId.add(option.getId());
 
                                 // Update record in DB
                                 AppController.firebaseHelper.updatePoll(poll, question, option);
@@ -125,7 +128,8 @@ public class TakePollFragment extends Fragment {
                 }
 
                 if(allQuestionsAnswered) {
-                    AppController.loggedUser.addPoll(poll);
+                    AppController.loggedUser.addVote(poll);
+                    AppController.loggedUser.addUserVote(poll, selectedByCurrentUserOptionsId);
 
                     PollResultsFragment pollResultsFragment = new PollResultsFragment();
                     Bundle bundle = new Bundle();

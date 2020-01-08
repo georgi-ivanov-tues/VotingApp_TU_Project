@@ -19,6 +19,8 @@ import com.votingapp.R;
 import com.votingapp.models.Referendum;
 import com.votingapp.utils.Keys;
 
+import java.util.ArrayList;
+
 public class TakeReferendumFragment extends Fragment {
 
     // TODO: Rename and change types of parameters
@@ -66,6 +68,8 @@ public class TakeReferendumFragment extends Fragment {
                 RadioGroup radioGroup = (RadioGroup) parentView.findViewById(R.id.referendum_radio_group);
                 int selectedId = radioGroup.getCheckedRadioButtonId();
 
+                ArrayList<String> selectedByCurrentUserOptionsId = new ArrayList<>();
+
                 if(selectedId == -1){
                     CharSequence text = "Моля отговорете на референдума!";
                     Toast toast = Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT);
@@ -75,12 +79,15 @@ public class TakeReferendumFragment extends Fragment {
                     if ("Да".equals(radioButton.getText())) {
                         referendum.getOptionYes().increaseTimesSelected();
                         referendum.getOptionYes().setSelectedByCurrentUser(true);
+                        selectedByCurrentUserOptionsId.add(referendum.getOptionYes().getId());
                     }else if ("Не".equals(radioButton.getText())) {
                         referendum.getOptionNo().increaseTimesSelected();
                         referendum.getOptionNo().setSelectedByCurrentUser(true);
+                        selectedByCurrentUserOptionsId.add(referendum.getOptionNo().getId());
                     }
 
-//                    AppController.loggedUser.addReferendum(referendum);
+                    AppController.loggedUser.addVote(referendum);
+                    AppController.loggedUser.addUserVote(referendum, selectedByCurrentUserOptionsId);
 
                     // Update record in DB
                     AppController.firebaseHelper.updateReferendum(referendum);
