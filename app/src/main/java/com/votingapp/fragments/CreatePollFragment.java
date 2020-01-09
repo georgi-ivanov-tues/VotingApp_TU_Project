@@ -15,7 +15,6 @@ import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
-import com.votingapp.models.Question;
 import java.util.ArrayList;
 
 /**
@@ -118,10 +117,8 @@ public class CreatePollFragment extends Fragment {
             public void onClick(View view) {
                 checkIfFieldsEmpty(createPollLinearLayout);
                 Poll newPoll = createPoll(createPollLinearLayout);
-//                AppController.databaseHelper.insertPoll(newPoll);
 
                 AppController.firebaseHelper.createPoll(newPoll);
-
 
                 AppController.sendNotificitaion(newPoll);
 
@@ -203,7 +200,7 @@ public class CreatePollFragment extends Fragment {
         newPoll.setTitle(titleEditText.getText().toString());
         boolean callGetOptionsMethod = false;
 
-        Question newQuestion = new Question();
+        String newQuestion = "";
         int childCount = linearLayout.getChildCount();
 
         for(int i = 0; i < childCount; i++) {
@@ -218,12 +215,12 @@ public class CreatePollFragment extends Fragment {
                 String fieldHint = textInputLayout.getHint().toString();
 
                 if("Въпрос".equals(fieldHint)){
-                    newQuestion = new Question(editText.getText().toString());
+                    newQuestion = editText.getText().toString();
                     callGetOptionsMethod = true;
                 }
             }else if(view instanceof LinearLayout){
                 Poll poll = createPoll((LinearLayout) view);
-                newPoll.addQuestions(poll.getPollContent());
+                newPoll.addQuestions(poll.getContent());
             }
         }
 

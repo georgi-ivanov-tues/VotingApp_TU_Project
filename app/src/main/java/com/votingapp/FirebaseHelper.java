@@ -1,19 +1,15 @@
 package com.votingapp;
 
 import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
-import com.votingapp.models.Question;
 import com.votingapp.models.Referendum;
 import com.votingapp.models.User;
 import com.votingapp.models.Voting;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 
 /**
  * Created by giivanov on 31.08.19.
@@ -22,34 +18,6 @@ import java.util.Iterator;
 public class FirebaseHelper {
 
     public FirebaseHelper(){}
-
-    public void loadDatabase(){
-        FirebaseDatabase.getInstance().getReference().addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                System.out.println("LOAD DATABASE!!!");
-                Iterator iterator;
-
-                iterator = dataSnapshot.child("referendums").getChildren().iterator();
-                while(iterator.hasNext()) {
-                    getReferendum((DataSnapshot) iterator.next());
-                }
-
-                iterator = dataSnapshot.child("votings").getChildren().iterator();
-                while(iterator.hasNext()) {
-                    getVoting((DataSnapshot) iterator.next());
-                }
-                iterator = dataSnapshot.child("polls").getChildren().iterator();
-                while(iterator.hasNext()) {
-                    getPoll((DataSnapshot) iterator.next());
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-            }
-        });
-    }
 
     public void getUsers(DataSnapshot dataSnapshot){
         for(DataSnapshot activitySnapShot: dataSnapshot.getChildren()){
@@ -65,7 +33,7 @@ public class FirebaseHelper {
         referendumFromDB.setTitle(dataSnapshot.child("title").getValue(String.class));
         referendumFromDB.getOptionNo().setTimesSelected(dataSnapshot.child("noSelectedTimes").getValue(Integer.class));
         referendumFromDB.getOptionYes().setTimesSelected(dataSnapshot.child("yesSelectedTimes").getValue(Integer.class));
-        referendumFromDB.setQuestion(new Question(dataSnapshot.child("question").child("questionText").getValue(String.class)));
+        referendumFromDB.setQuestion(dataSnapshot.child("question").getValue(String.class));
 
         AppController.votes.add(referendumFromDB);
     }
@@ -74,7 +42,7 @@ public class FirebaseHelper {
         Voting votingFromDB = new Voting();
         votingFromDB.setId(dataSnapshot.getKey());
         votingFromDB.setTitle(dataSnapshot.child("title").getValue(String.class));
-        votingFromDB.setQuestion(new Question(dataSnapshot.child("question").child("questionText").getValue(String.class)));
+        votingFromDB.setQuestion(dataSnapshot.child("question").getValue(String.class));
 
         ArrayList<Option> options = new ArrayList<>();
         for(DataSnapshot optionSnapshot : dataSnapshot.child("options").getChildren()){
@@ -95,18 +63,17 @@ public class FirebaseHelper {
         pollFromDB.setId(dataSnapshot.getKey());
         pollFromDB.setTitle(dataSnapshot.child("title").getValue(String.class));
 
-        HashMap<Question, ArrayList<Option>> pollContent = new HashMap<>();
+        HashMap<String, ArrayList<Option>> pollContent = new HashMap<>();
         for(DataSnapshot contentSnapshot : dataSnapshot.child("content").getChildren()){
-            Question question = new Question();
-            question.setId(contentSnapshot.getKey());
-            question.setQuestionText(contentSnapshot.child("questionText").getValue(String.class));
+            String question = contentSnapshot.getKey();
 
             ArrayList<Option> options = new ArrayList<>();
-            for(DataSnapshot optionsSnapshot : contentSnapshot.child("options").getChildren()){
+
+            for(DataSnapshot optionSnapshot : contentSnapshot.getChildren()){
                 Option option = new Option();
-                option.setId(optionsSnapshot.getKey());
-                option.setOptionText(optionsSnapshot.child("optionText").getValue(String.class));
-                option.setTimesSelected(optionsSnapshot.child("timesSelected").getValue(Integer.class));
+                option.setId(optionSnapshot.getKey());
+                option.setOptionText(optionSnapshot.child("optionText").getValue(String.class));
+                option.setTimesSelected(optionSnapshot.child("timesSelected").getValue(Integer.class));
 
                 options.add(option);
             }
@@ -135,10 +102,10 @@ public class FirebaseHelper {
                 setValue(option.getTimesSelected());
     }
 
-    public void updatePoll(Poll poll, Question question, Option option){
+    public void updatePoll(Poll poll, String question, Option option){
         FirebaseDatabase.getInstance().getReference().
-                child("polls").child(poll.getId()).child("content").child(question.getId()).
-                child("options").child(option.getId()).child("timesSelected").
+                child("polls").child(poll.getId()).child("content").child(question).
+                child(option.getId()).child("timesSelected").
                 setValue(option.getTimesSelected());
     }
 

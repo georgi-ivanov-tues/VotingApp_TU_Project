@@ -13,20 +13,6 @@ public class Option {
     private int timesSelected;
     private boolean selectedByCurrentUser = false;
 
-    public static final String TABLE_NAME = "options";
-
-    public static final String COLUMN_ID = "id";
-    public static final String COLUMN_OPTION_TEXT = "optionText";
-    public static final String COLUMN_TIMES_SELECTED = "timesSelected";
-
-    public static final String CREATE_TABLE =
-            "CREATE TABLE " + TABLE_NAME + "("
-                    + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-                    + COLUMN_OPTION_TEXT + " TEXT NOT NULL,"
-                    + COLUMN_TIMES_SELECTED + " INTEGER NOT NULL"
-                    + ");";
-
-
     public Option(){}
 
     public Option(String optionText) {

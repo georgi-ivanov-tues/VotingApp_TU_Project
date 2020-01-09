@@ -12,7 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -160,14 +159,11 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
     @Override
     protected void onResume() {
         super.onResume();
-//        AppController.votes.clear();
-//        AppController.firebaseHelper.loadDatabase();
     }
 
     @Override
     public void onItemSelected(Vote vote) {
         ArrayList<Vote> alreadyVotedByUser = new ArrayList<>();
-//        alreadyVotedByUser.addAll(AppController.loggedUser.getAllVotes());
 
         boolean alreadyVotedFlag = false;
         for(Vote alreadyVoted : alreadyVotedByUser) {

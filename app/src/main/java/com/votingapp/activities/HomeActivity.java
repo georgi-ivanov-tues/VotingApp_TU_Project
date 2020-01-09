@@ -6,11 +6,6 @@ import android.view.View;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.Button;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.votingapp.AppController;
 import com.votingapp.R;
 
@@ -30,8 +25,6 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AppController.votes.clear();
-
-//                AppController.firebaseHelper.loadDatabase();
 
                 Intent myIntent = new Intent(HomeActivity.this, LoginActivity.class);
                 startActivity(myIntent);

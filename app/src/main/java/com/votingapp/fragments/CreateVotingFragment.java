@@ -14,7 +14,6 @@ import android.widget.Toast;
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
-import com.votingapp.models.Question;
 import com.votingapp.models.Voting;
 import java.util.ArrayList;
 
@@ -99,9 +98,7 @@ public class CreateVotingFragment extends Fragment {
 
                 if(areAllFieldFilled){
                     Voting newVoting = new Voting(
-                            votingTitle.getText().toString(), new Question(votingQuestion.getText().toString()), options);
-
-//                    AppController.databaseHelper.insertVoting(newVoting);
+                            votingTitle.getText().toString(), votingQuestion.getText().toString(), options);
 
                     AppController.firebaseHelper.createVoting(newVoting);
 

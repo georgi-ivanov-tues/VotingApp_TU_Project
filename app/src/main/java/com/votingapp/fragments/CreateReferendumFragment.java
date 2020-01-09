@@ -10,7 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.votingapp.AppController;
 import com.votingapp.R;
-import com.votingapp.models.Question;
 import com.votingapp.models.Referendum;
 
 /**
@@ -44,8 +43,7 @@ public class CreateReferendumFragment extends Fragment {
                     toast.show();
                 }else{
                     Referendum newReferendum = new Referendum(
-                            referendumTitle.getText().toString(), new Question(referendumQuestion.getText().toString()));
-//                    AppController.databaseHelper.insertReferendum(newReferendum);
+                            referendumTitle.getText().toString(), referendumQuestion.getText().toString());
 
                     AppController.firebaseHelper.createReferendum(newReferendum);
 
@@ -61,6 +59,5 @@ public class CreateReferendumFragment extends Fragment {
         });
 
         return view;
-
     }
 }

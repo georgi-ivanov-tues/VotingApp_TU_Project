@@ -1,7 +1,6 @@
 package com.votingapp.models;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class User {
     private String id;
@@ -9,21 +8,6 @@ public class User {
     private String password;
     private boolean isAdmin;
     private boolean isLoggedIn;
-
-    public static final String TABLE_NAME = "users";
-
-    public static final String COLUMN_ID = "id";
-    public static final String COLUMN_USERNAME = "userName";
-    public static final String COLUMN_PASSWORD = "password";
-    public static final String COLUMN_ISADMIN = "getIsAdmin";
-
-    public static final String CREATE_TABLE =
-            "CREATE TABLE " + TABLE_NAME + "("
-                    + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-                    + COLUMN_USERNAME + " TEXT NOT NULL,"
-                    + COLUMN_PASSWORD + " TEXT NOT NULL,"
-                    + COLUMN_ISADMIN + " INTEGER NOT NULL"
-                    + ");";
 
     private ArrayList<Vote> votes = new ArrayList<>();
 

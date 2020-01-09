@@ -53,7 +53,7 @@ public class TakeVotingFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_take_voting, container, false);
         final Voting voting = (Voting) getArguments().getSerializable(Keys.VOTE_OBJECT);
-        ((TextView) view.findViewById(R.id.votingТitle)).setText(voting.getQuestion().getQuestionText());
+        ((TextView) view.findViewById(R.id.votingТitle)).setText(voting.getQuestion());
         getActivity().setTitle(voting.getTitle());
 
         LinearLayout takeVotingLinearLayout = (LinearLayout) view.findViewById(R.id.takeVotingLinearLayout);

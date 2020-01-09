@@ -17,7 +17,6 @@ import com.votingapp.models.Referendum;
 import com.votingapp.models.Vote;
 import com.votingapp.models.Voting;
 import com.votingapp.utils.Keys;
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -16,9 +16,7 @@ import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
-import com.votingapp.models.Question;
 import com.votingapp.utils.Keys;
-
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -46,11 +44,15 @@ public class PollResultsFragment extends Fragment {
         ((TextView) view.findViewById(R.id.pollResultsТitle)).setText(poll.getTitle());
         LinearLayout takeVotingLinearLayout = (LinearLayout) view.findViewById(R.id.pollResultsLinearLayout);
         takeVotingLinearLayout.addView(new ScrollView(getActivity()));
-        for (Map.Entry pair : poll.getPollContent().entrySet()) {
-            Question question = (Question) pair.getKey();
+        for (Map.Entry pair : poll.getContent().entrySet()) {
+            String question = (String) pair.getKey();
+            if(question.charAt(0) == '"' && question.charAt(question.length()-1) == '"') {
+                question = question.substring(1, question.length() - 1);
+            }
+
             ArrayList<Option> options = (ArrayList) pair.getValue();
             TextView questionTitle = new TextView(getActivity());
-            questionTitle.setText(question.getQuestionText());
+            questionTitle.setText(question);
             questionTitle.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             questionTitle.setTextAppearance(getActivity(), R.style.text_vote_title);
             takeVotingLinearLayout.addView(questionTitle);

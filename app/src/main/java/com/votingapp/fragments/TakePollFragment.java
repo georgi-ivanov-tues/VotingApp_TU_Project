@@ -20,9 +20,7 @@ import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
-import com.votingapp.models.Question;
 import com.votingapp.utils.Keys;
-
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Random;
@@ -55,12 +53,16 @@ public class TakePollFragment extends Fragment {
         LinearLayout takePollLinearLayout = (LinearLayout) view.findViewById(R.id.takePollLinearLayout);
         final ArrayList<TextView> questions = new ArrayList<>();
         final ArrayList<RadioGroup> radioGroups = new ArrayList<>();
-        for (Map.Entry pair : poll.getPollContent().entrySet()) {
-            Question question = (Question) pair.getKey();
+        for (Map.Entry pair : poll.getContent().entrySet()) {
+            String question = (String) pair.getKey();
+            if(question.charAt(0) == '"' && question.charAt(question.length()-1) == '"') {
+                question = question.substring(1, question.length() - 1);
+            }
+
             ArrayList<Option> options = (ArrayList) pair.getValue();
             System.out.println(pair.getKey() + " = " + pair.getValue());
             TextView questionTitle = new TextView(getActivity());
-            questionTitle.setText(question.getQuestionText());
+            questionTitle.setText(question);
             questionTitle.setTextAppearance(getActivity(), R.style.text_vote_title);
             takePollLinearLayout.addView(questionTitle);
             RadioGroup radioGroup = new RadioGroup(getActivity());
@@ -92,7 +94,7 @@ public class TakePollFragment extends Fragment {
                 ArrayList<String> selectedByCurrentUserOptionsId = new ArrayList<>();
 
                 boolean allQuestionsAnswered = true;
-                for (Map.Entry pair : poll.getPollContent().entrySet()) {
+                for (Map.Entry pair : poll.getContent().entrySet()) {
                     RadioGroup radioGroup = radioGroups.get(i);
                     int selectedId = radioGroup.getCheckedRadioButtonId();
 
@@ -102,7 +104,7 @@ public class TakePollFragment extends Fragment {
                         Toast toast = Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT);
                         toast.show();
                     }else {
-                        Question question = (Question) pair.getKey();
+                        String question = (String) pair.getKey();
                         ArrayList<Option> options = (ArrayList) pair.getValue();
 
                         RadioButton radioButton = (RadioButton) parentView.findViewById(selectedId);
@@ -118,7 +120,7 @@ public class TakePollFragment extends Fragment {
                             }
                         }
 
-                        System.out.println(question.getQuestionText());
+                        System.out.println(question);
                         for (Option option : options) {
                             System.out.println(option.getOptionText() + " = " + option.getTimesSelected());
                         }

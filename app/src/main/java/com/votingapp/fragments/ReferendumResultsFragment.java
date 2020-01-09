@@ -14,7 +14,6 @@ import com.votingapp.R;
 import com.votingapp.models.Option;
 import com.votingapp.models.Referendum;
 import com.votingapp.utils.Keys;
-
 import java.util.ArrayList;
 
 public class ReferendumResultsFragment extends Fragment {
@@ -37,7 +36,7 @@ public class ReferendumResultsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_referendum_results, container, false);
         final Referendum referendum = (Referendum) getArguments().getSerializable(Keys.VOTE_OBJECT);
-        ((TextView) view.findViewById(R.id.referendumResultsТitle)).setText(referendum.getQuestion().getQuestionText());
+        ((TextView) view.findViewById(R.id.referendumResultsТitle)).setText(referendum.getQuestion());
         ArrayList<Option> options = new ArrayList<>();
         options.add(referendum.getOptionYes());
         options.add(referendum.getOptionNo());

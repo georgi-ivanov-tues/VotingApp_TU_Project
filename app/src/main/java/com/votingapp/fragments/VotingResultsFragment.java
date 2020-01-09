@@ -39,7 +39,7 @@ public class VotingResultsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_voting_results, container, false);
         final Voting voting = (Voting) getArguments().getSerializable(Keys.VOTE_OBJECT);
-        ((TextView) view.findViewById(R.id.votingResultsТitle)).setText(voting.getQuestion().getQuestionText());
+        ((TextView) view.findViewById(R.id.votingResultsТitle)).setText(voting.getQuestion());
         LinearLayout votingResultsLinearLayout = (LinearLayout) view.findViewById(R.id.votingResultsLinearLayout);
 
         int totalNumberOfVotes = AppController.getTotalNumberOfVotes(voting.getOptions());
