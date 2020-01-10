@@ -127,10 +127,25 @@ public class ListFragment extends android.support.v4.app.ListFragment {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            final Vote currRowVeh = values.get(position);
 
             View rowView = inflater.inflate(R.layout.list_view_item, parent, false);
+//            rowView.setOnLongClickListener(new View.OnLongClickListener() {
+//                @Override
+//                public boolean onLongClick(View view) {
+//                    System.out.println("LONG CLICK!!!!");
+//                    System.out.println(currRowVeh.getTitle());
+//                    return false;
+//                }
+//            });
+
+//            rowView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//
+//                }
+//            });
             TextView vote_title = (TextView) rowView.findViewById(R.id.vote_title);
-            Vote currRowVeh = values.get(position);
             vote_title.setText(currRowVeh.getTitle());
 
             return rowView;

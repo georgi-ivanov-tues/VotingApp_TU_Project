@@ -105,7 +105,7 @@ public class AppController extends Application{
         return percentageBarLinearLayout;
     }
 
-    public static void sendNotificitaion(Vote vote){
+    public static void sendNotification(Vote vote){
         Intent intent = new Intent(getInstance().getApplicationContext(), VotingActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(getInstance().getApplicationContext(), 1, intent, 0);
         Notification.Builder builder = new Notification.Builder(getInstance().getApplicationContext());

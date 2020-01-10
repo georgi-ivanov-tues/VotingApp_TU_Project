@@ -12,15 +12,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.ViewPagerAdapter;
 import com.votingapp.fragments.ListFragment;
+import com.votingapp.models.Poll;
+import com.votingapp.models.Referendum;
 import com.votingapp.models.Vote;
+import com.votingapp.models.Voting;
 import com.votingapp.utils.Keys;
 
 import java.util.ArrayList;
@@ -72,8 +78,10 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 System.out.println("LOAD VOTING!!!");
-                AppController.firebaseHelper.getVoting(dataSnapshot);
+                Voting votingFromDB = AppController.firebaseHelper.getVoting(dataSnapshot);
                 viewPager.setAdapter(viewPagerAdapter);
+
+                AppController.sendNotification(votingFromDB);
             }
 
             @Override
@@ -101,8 +109,10 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 System.out.println("LOAD POLL!!!");
-                AppController.firebaseHelper.getPoll(dataSnapshot);
+                Poll pollFromDB = AppController.firebaseHelper.getPoll(dataSnapshot);
                 viewPager.setAdapter(viewPagerAdapter);
+
+                AppController.sendNotification(pollFromDB);
             }
 
             @Override
@@ -130,8 +140,10 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 System.out.println("LOAD REFERENDUM!!!");
-                AppController.firebaseHelper.getReferendum(dataSnapshot);
+                Referendum referendumFromDB = AppController.firebaseHelper.getReferendum(dataSnapshot);
                 viewPager.setAdapter(viewPagerAdapter);
+
+                AppController.sendNotification(referendumFromDB);
             }
 
             @Override
@@ -147,6 +159,20 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
             @Override
             public void onChildMoved(DataSnapshot dataSnapshot, String s) {
 
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        FirebaseDatabase.getInstance().getReference().child("referendums").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                System.out.println("REFERENDUM VALUE CHANGED!!!");
+
+//                dataSnapshot.getChildren().iterator().next().getKey();
             }
 
             @Override

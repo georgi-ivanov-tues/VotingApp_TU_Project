@@ -11,6 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
@@ -57,6 +62,34 @@ public class VotingResultsFragment extends Fragment {
 
             votingResultsLinearLayout.addView(AppController.createPercentangeBars(getActivity(), optionPercentage));
         }
+
+
+//        FirebaseDatabase.getInstance().getReference().child("votings").child(voting.getId()).addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                Voting votingFromDB = AppController.firebaseHelper.getVoting(dataSnapshot);
+//
+//                int totalNumberOfVotes = AppController.getTotalNumberOfVotes(votingFromDB.getOptions());
+//                for(Option option : votingFromDB.getOptions()){
+//                    TextView optionTextView = new TextView(getActivity());
+//                    optionTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+//
+//                    double optionPercentage = AppController.calculateOptionPercentage(option, totalNumberOfVotes);
+//                    optionTextView.setText(AppController.formatOptionPercentage(option, optionPercentage));
+//                    optionTextView.setTextAppearance(getActivity(), R.style.text_vote_result_option);
+//                    if(option.isSelectedByCurrentUser())
+//                        optionTextView.setTypeface(null, Typeface.BOLD);
+//
+//                    votingResultsLinearLayout.addView(optionTextView);
+//
+//                    votingResultsLinearLayout.addView(AppController.createPercentangeBars(getActivity(), optionPercentage));
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//            }
+//        });
 
         return view;
     }

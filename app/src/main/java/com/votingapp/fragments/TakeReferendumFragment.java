@@ -14,6 +14,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Referendum;
@@ -76,21 +79,29 @@ public class TakeReferendumFragment extends Fragment {
                     toast.show();
                 }else {
                     RadioButton radioButton = (RadioButton) parentView.findViewById(selectedId);
+                    String selectedOption = "";
                     if ("Да".equals(radioButton.getText())) {
                         referendum.getOptionYes().increaseTimesSelected();
                         referendum.getOptionYes().setSelectedByCurrentUser(true);
                         selectedByCurrentUserOptionsId.add(referendum.getOptionYes().getId());
+
+                        selectedOption = "yesSelectedTimes";
                     }else if ("Не".equals(radioButton.getText())) {
                         referendum.getOptionNo().increaseTimesSelected();
                         referendum.getOptionNo().setSelectedByCurrentUser(true);
                         selectedByCurrentUserOptionsId.add(referendum.getOptionNo().getId());
+
+                        selectedOption = "noSelectedTimes";
                     }
 
                     AppController.loggedUser.addVote(referendum);
                     AppController.loggedUser.addUserVote(referendum, selectedByCurrentUserOptionsId);
 
                     // Update record in DB
-                    AppController.firebaseHelper.updateReferendum(referendum);
+                    DatabaseReference selectedOptionDatabaseReference =
+                            FirebaseDatabase.getInstance().getReference().child("referendums").child(referendum.getId()).child(selectedOption);
+
+                    AppController.firebaseHelper.castVote(selectedOptionDatabaseReference);
 
                     ReferendumResultsFragment referendumResultsFragment = new ReferendumResultsFragment();
                     Bundle bundle = new Bundle();

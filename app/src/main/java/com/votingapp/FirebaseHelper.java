@@ -1,12 +1,15 @@
 package com.votingapp;
 
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
 import com.votingapp.models.Referendum;
 import com.votingapp.models.User;
+import com.votingapp.models.Vote;
 import com.votingapp.models.Voting;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,7 +30,7 @@ public class FirebaseHelper {
         }
     }
 
-    public void getReferendum(DataSnapshot dataSnapshot){
+    public Referendum getReferendum(DataSnapshot dataSnapshot){
         Referendum referendumFromDB = new Referendum();
         referendumFromDB.setId(dataSnapshot.getKey());
         referendumFromDB.setTitle(dataSnapshot.child("title").getValue(String.class));
@@ -36,9 +39,11 @@ public class FirebaseHelper {
         referendumFromDB.setQuestion(dataSnapshot.child("question").getValue(String.class));
 
         AppController.votes.add(referendumFromDB);
+
+        return referendumFromDB;
     }
 
-    public void getVoting(DataSnapshot dataSnapshot){
+    public Voting getVoting(DataSnapshot dataSnapshot){
         Voting votingFromDB = new Voting();
         votingFromDB.setId(dataSnapshot.getKey());
         votingFromDB.setTitle(dataSnapshot.child("title").getValue(String.class));
@@ -56,9 +61,11 @@ public class FirebaseHelper {
 
         votingFromDB.setOptions(options);
         AppController.votes.add(votingFromDB);
+
+        return votingFromDB;
     }
 
-    public void getPoll(DataSnapshot dataSnapshot){
+    public Poll getPoll(DataSnapshot dataSnapshot){
         Poll pollFromDB = new Poll();
         pollFromDB.setId(dataSnapshot.getKey());
         pollFromDB.setTitle(dataSnapshot.child("title").getValue(String.class));
@@ -84,81 +91,54 @@ public class FirebaseHelper {
         pollFromDB.setPollContent(pollContent);
 
         AppController.votes.add(pollFromDB);
+
+        return pollFromDB;
     }
 
-    public void updateReferendum(Referendum referendum){
-        FirebaseDatabase.getInstance().getReference().
-                child("referendums").child(referendum.getId()).child("yesSelectedTimes").
-                setValue(referendum.getOptionYes().getTimesSelected());
+    public void castVote(DatabaseReference selectedOptionDatabaseReference){
+        selectedOptionDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                long timesSelected = (long) dataSnapshot.getValue();
+                dataSnapshot.getRef().setValue(timesSelected + 1);
+            }
 
-        FirebaseDatabase.getInstance().getReference().
-                child("referendums").child(referendum.getId()).child("noSelectedTimes").
-                setValue(referendum.getOptionNo().getTimesSelected());
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
     }
 
-    public void updateVoting(Voting voting, Option option){
-        FirebaseDatabase.getInstance().getReference().
-                child("votings").child(voting.getId()).child("options").child(option.getId()).child("timesSelected").
-                setValue(option.getTimesSelected());
-    }
-
-    public void updatePoll(Poll poll, String question, Option option){
-        FirebaseDatabase.getInstance().getReference().
-                child("polls").child(poll.getId()).child("content").child(question).
-                child(option.getId()).child("timesSelected").
-                setValue(option.getTimesSelected());
-    }
-
-   public void createReferendum(Referendum newReferendum){
+   public String createReferendum(Referendum newReferendum){
        DatabaseReference newFirebaseReferendum =
                FirebaseDatabase.getInstance().getReference().child("referendums").push();
 
        newFirebaseReferendum.setValue(newReferendum);
-//
-//       newFirebaseReferendum.child("title").setValue(newReferendum.getTitle());
-//       newFirebaseReferendum.child("noSelectedTimes").setValue(0);
-//       newFirebaseReferendum.child("yesSelectedTimes").setValue(0);
-//       newFirebaseReferendum.child("question").child("questionText").setValue(newReferendum.getQuestion().getQuestionText());
+
+       return newFirebaseReferendum.getKey();
    }
 
-    public void createVoting(Voting newVoting){
+    public String createVoting(Voting newVoting){
         DatabaseReference newFirebaseVoting =
                 FirebaseDatabase.getInstance().getReference().child("votings").push();
 
         newFirebaseVoting.setValue(newVoting);
 
-
-//        newFirebaseVoting.child("title").setValue(newVoting.getTitle());
-//        newFirebaseVoting.child("question").child("questionText").setValue(newVoting.getQuestion().getQuestionText());
-//
-//        for(Option option : newVoting.getOptions()) {
-//            DatabaseReference newFirebaseOption = newFirebaseVoting.child("options").push();
-//            newFirebaseOption.child("optionText").setValue(option.getOptionText());
-//            newFirebaseOption.child("timesSelected").setValue(option.getTimesSelected());
-//        }
+        return newFirebaseVoting.getKey();
     }
 
-    public void createPoll(Poll newPoll){
+    public String createPoll(Poll newPoll){
         DatabaseReference newFirebasePoll =
                 FirebaseDatabase.getInstance().getReference().child("polls").push();
 
         newFirebasePoll.setValue(newPoll);
 
-//        newFirebasePoll.child("title").setValue(newPoll.getTitle());
-//        DatabaseReference newFirebaseContent = newFirebasePoll.child("content");
-//
-//        for (Map.Entry<Question, ArrayList<Option>> entry : newPoll.getPollContent().entrySet()) {
-//            DatabaseReference newFirebaseQuestion = newFirebaseContent.push();
-//            newFirebaseQuestion.child("questionText").setValue(entry.getKey().getQuestionText());
-//
-//            DatabaseReference newFirebaseOptions = newFirebaseQuestion.child("options");
-//
-//            for(Option option : entry.getValue()) {
-//                DatabaseReference newFirebaseOption = newFirebaseOptions.push();
-//
-//                newFirebaseOption.child("optionText").setValue(option.getOptionText());
-//                newFirebaseOption.child("timesSelected").setValue(option.getTimesSelected());
-//            }
-//        }
+        return newFirebasePoll.getKey();
+    }
+
+    public void createNotification(Vote vote){
+        DatabaseReference newFirebaseNotification =
+                FirebaseDatabase.getInstance().getReference().child("notifications").push();
+
     }
 }

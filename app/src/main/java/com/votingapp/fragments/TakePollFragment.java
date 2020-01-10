@@ -16,6 +16,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
@@ -116,7 +119,11 @@ public class TakePollFragment extends Fragment {
                                 selectedByCurrentUserOptionsId.add(option.getId());
 
                                 // Update record in DB
-                                AppController.firebaseHelper.updatePoll(poll, question, option);
+                                DatabaseReference selectedOptionDatabaseReference =
+                                        FirebaseDatabase.getInstance().getReference().child("polls").child(poll.getId()).
+                                                child("content").child(question).child(option.getId()).child("timesSelected");
+
+                                AppController.firebaseHelper.castVote(selectedOptionDatabaseReference);
                             }
                         }
 

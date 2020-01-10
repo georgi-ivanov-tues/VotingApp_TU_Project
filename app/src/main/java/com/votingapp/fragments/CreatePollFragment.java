@@ -118,9 +118,10 @@ public class CreatePollFragment extends Fragment {
                 checkIfFieldsEmpty(createPollLinearLayout);
                 Poll newPoll = createPoll(createPollLinearLayout);
 
-                AppController.firebaseHelper.createPoll(newPoll);
+                String newPollId = AppController.firebaseHelper.createPoll(newPoll);
+                newPoll.setId(newPollId);
 
-                AppController.sendNotificitaion(newPoll);
+//                AppController.sendNotification(newPoll);
 
                 CharSequence text = "Анкетата е успешно създадено";
                 Toast toast = Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT);

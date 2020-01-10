@@ -9,6 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
@@ -40,6 +45,23 @@ public class ReferendumResultsFragment extends Fragment {
         ArrayList<Option> options = new ArrayList<>();
         options.add(referendum.getOptionYes());
         options.add(referendum.getOptionNo());
+
+        FirebaseDatabase.getInstance().getReference().child(referendum.getId());
+//        AppController.firebaseHelper.getReferendum(referendum.getId());
+
+//        FirebaseDatabase.getInstance().getReference().child("referendums").child(referendum.getId()).addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                System.out.println("asdasdsd");
+//
+//                referendum.getOptionNo().setTimesSelected((int) dataSnapshot.child("noSelectedTimes").getValue());
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
 
         int totalNumberOfVotes = AppController.getTotalNumberOfVotes(options);
 
