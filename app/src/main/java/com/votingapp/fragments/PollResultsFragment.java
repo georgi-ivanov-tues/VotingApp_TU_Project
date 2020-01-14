@@ -12,6 +12,11 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.models.Option;
@@ -42,37 +47,56 @@ public class PollResultsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_poll_results, container, false);
         final Poll poll = (Poll) getArguments().getSerializable(Keys.VOTE_OBJECT);
         ((TextView) view.findViewById(R.id.pollResultsТitle)).setText(poll.getTitle());
-        LinearLayout takeVotingLinearLayout = (LinearLayout) view.findViewById(R.id.pollResultsLinearLayout);
+        final LinearLayout takeVotingLinearLayout = (LinearLayout) view.findViewById(R.id.pollResultsOptionsLinearLayout);
         takeVotingLinearLayout.addView(new ScrollView(getActivity()));
-        for (Map.Entry pair : poll.getContent().entrySet()) {
-            String question = (String) pair.getKey();
-            if(question.charAt(0) == '"' && question.charAt(question.length()-1) == '"') {
-                question = question.substring(1, question.length() - 1);
+
+        FirebaseDatabase.getInstance().getReference().child("polls").child(poll.getId()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                takeVotingLinearLayout.removeAllViews();
+
+                for (Map.Entry pair : poll.getContent().entrySet()) {
+                    String question = (String) pair.getKey();
+                    if(question.charAt(0) == '"' && question.charAt(question.length()-1) == '"') {
+                        question = question.substring(1, question.length() - 1);
+                    }
+
+                    ArrayList<Option> options = (ArrayList) pair.getValue();
+                    if(getActivity() != null) {
+                        TextView questionTitle = new TextView(getActivity());
+                        questionTitle.setText(question);
+                        questionTitle.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                        questionTitle.setTextAppearance(getActivity(), R.style.text_vote_title);
+                        takeVotingLinearLayout.addView(questionTitle);
+                        int totalNumberOfVotes = AppController.getTotalNumberOfVotes(options);
+                        for (int i = 0; i < options.size(); i++) {
+                            Option option = options.get(i);
+
+                            option.setTimesSelected(((Long) dataSnapshot.child("content").child((String) pair.getKey()).child(option.getId()).child("timesSelected").getValue()).intValue());
+
+                            TextView optionTextView = new TextView(getActivity());
+                            optionTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+
+                            double optionPercentage = AppController.calculateOptionPercentage(option, totalNumberOfVotes);
+                            optionTextView.setText(AppController.formatOptionPercentage(option, optionPercentage));
+                            optionTextView.setTextAppearance(getActivity(), R.style.text_vote_result_option);
+                            if (option.isSelectedByCurrentUser())
+                                optionTextView.setTypeface(null, Typeface.BOLD);
+                            takeVotingLinearLayout.addView(optionTextView);
+
+                            // Add Percentage Bars
+                            takeVotingLinearLayout.addView(AppController.createPercentangeBars(getActivity(), optionPercentage));
+                        }
+                    }
+                }
             }
 
-            ArrayList<Option> options = (ArrayList) pair.getValue();
-            TextView questionTitle = new TextView(getActivity());
-            questionTitle.setText(question);
-            questionTitle.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            questionTitle.setTextAppearance(getActivity(), R.style.text_vote_title);
-            takeVotingLinearLayout.addView(questionTitle);
-            int totalNumberOfVotes = AppController.getTotalNumberOfVotes(options);
-            for (int i = 0; i < options.size(); i++) {
-                Option option = options.get(i);
-                TextView optionTextView = new TextView(getActivity());
-                optionTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
 
-                double optionPercentage = AppController.calculateOptionPercentage(option, totalNumberOfVotes);
-                optionTextView.setText(AppController.formatOptionPercentage(option, optionPercentage));
-                optionTextView.setTextAppearance(getActivity(), R.style.text_vote_result_option);
-                if(option.isSelectedByCurrentUser())
-                    optionTextView.setTypeface(null, Typeface.BOLD);
-                takeVotingLinearLayout.addView(optionTextView);
-
-                // Add Percentage Bars
-                takeVotingLinearLayout.addView(AppController.createPercentangeBars(getActivity(),optionPercentage));
             }
-        }
+        });
+
         return view;
     }
 

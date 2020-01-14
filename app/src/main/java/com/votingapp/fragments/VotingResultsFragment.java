@@ -42,54 +42,42 @@ public class VotingResultsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_voting_results, container, false);
+        final View view = inflater.inflate(R.layout.fragment_voting_results, container, false);
         final Voting voting = (Voting) getArguments().getSerializable(Keys.VOTE_OBJECT);
         ((TextView) view.findViewById(R.id.votingResultsТitle)).setText(voting.getQuestion());
-        LinearLayout votingResultsLinearLayout = (LinearLayout) view.findViewById(R.id.votingResultsLinearLayout);
+        final LinearLayout votingResultsLinearLayout = (LinearLayout) view.findViewById(R.id.votingResultsOptionsLinearLayout);
 
-        int totalNumberOfVotes = AppController.getTotalNumberOfVotes(voting.getOptions());
-        for(Option option : voting.getOptions()){
-            TextView optionTextView = new TextView(getActivity());
-            optionTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        FirebaseDatabase.getInstance().getReference().child("votings").child(voting.getId()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                int totalNumberOfVotes = AppController.getTotalNumberOfVotes(voting.getOptions());
+                votingResultsLinearLayout.removeAllViews();
 
-            double optionPercentage = AppController.calculateOptionPercentage(option, totalNumberOfVotes);
-            optionTextView.setText(AppController.formatOptionPercentage(option, optionPercentage));
-            optionTextView.setTextAppearance(getActivity(), R.style.text_vote_result_option);
-            if(option.isSelectedByCurrentUser())
-                optionTextView.setTypeface(null, Typeface.BOLD);
+                for(Option option : voting.getOptions()){
+                    option.setTimesSelected(((Long) dataSnapshot.child("options").child(option.getId()).child("timesSelected").getValue()).intValue());
 
-            votingResultsLinearLayout.addView(optionTextView);
+                    if(getActivity() != null) {
+                        TextView optionTextView = new TextView(getActivity());
+                        optionTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 
-            votingResultsLinearLayout.addView(AppController.createPercentangeBars(getActivity(), optionPercentage));
-        }
+                        double optionPercentage = AppController.calculateOptionPercentage(option, totalNumberOfVotes);
+                        optionTextView.setText(AppController.formatOptionPercentage(option, optionPercentage));
+                        optionTextView.setTextAppearance(getActivity(), R.style.text_vote_result_option);
+                        if (option.isSelectedByCurrentUser())
+                            optionTextView.setTypeface(null, Typeface.BOLD);
 
+                        votingResultsLinearLayout.addView(optionTextView);
 
-//        FirebaseDatabase.getInstance().getReference().child("votings").child(voting.getId()).addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                Voting votingFromDB = AppController.firebaseHelper.getVoting(dataSnapshot);
-//
-//                int totalNumberOfVotes = AppController.getTotalNumberOfVotes(votingFromDB.getOptions());
-//                for(Option option : votingFromDB.getOptions()){
-//                    TextView optionTextView = new TextView(getActivity());
-//                    optionTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-//
-//                    double optionPercentage = AppController.calculateOptionPercentage(option, totalNumberOfVotes);
-//                    optionTextView.setText(AppController.formatOptionPercentage(option, optionPercentage));
-//                    optionTextView.setTextAppearance(getActivity(), R.style.text_vote_result_option);
-//                    if(option.isSelectedByCurrentUser())
-//                        optionTextView.setTypeface(null, Typeface.BOLD);
-//
-//                    votingResultsLinearLayout.addView(optionTextView);
-//
-//                    votingResultsLinearLayout.addView(AppController.createPercentangeBars(getActivity(), optionPercentage));
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//            }
-//        });
+                        votingResultsLinearLayout.addView(AppController.createPercentangeBars(getActivity(), optionPercentage));
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
 
         return view;
     }
