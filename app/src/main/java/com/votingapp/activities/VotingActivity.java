@@ -19,6 +19,11 @@ import com.votingapp.models.Vote;
 import com.votingapp.models.Voting;
 import com.votingapp.utils.Keys;
 
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
 public class VotingActivity extends AppCompatActivity {
 
     FragmentTransaction transaction;
@@ -33,22 +38,44 @@ public class VotingActivity extends AppCompatActivity {
         Vote vote = AppController.getCurrentVote();
         boolean alreadyVoted = false;
 
-        for(Vote voted : AppController.loggedUser.getVotes()){
-            if(voted.getId().equals(vote.getId())){
-                alreadyVoted = true;
-                break;
-            }
-        }
-
         if(vote instanceof Voting){
-            if(alreadyVoted) loadFragment(new VotingResultsFragment(), (Voting) vote);
-            else loadFragment(new TakeVotingFragment(), vote);
+            String optionVotedByUser = null;
+            for (Map.Entry<String, String> pair : AppController.loggedUser.getVotingsVotedByUser().entrySet()) {
+                if(pair.getKey().equals(vote.getId())) {
+                    alreadyVoted = true;
+                    optionVotedByUser = pair.getValue();
+                    break;
+                }
+            }
+
+            if(alreadyVoted) loadFragment(new VotingResultsFragment(), (Voting) vote, optionVotedByUser);
+            else loadFragment(new TakeVotingFragment(), vote, null);
         }else if(vote instanceof Poll){
-            if(alreadyVoted) loadFragment(new PollResultsFragment(), (Poll) vote);
-            else loadFragment(new TakePollFragment(), vote);
+            HashMap<String, String> optionsVotedByUser = null;
+            for(Map.Entry<String, HashMap<String, String>> poll : AppController.loggedUser.getPollsVotedByUser().entrySet()) {
+                for (Map.Entry<String, String> pair : poll.getValue().entrySet()) {
+                    if (poll.getKey().equals(vote.getId())) {
+                        alreadyVoted = true;
+                        optionsVotedByUser = poll.getValue();
+                        break;
+                    }
+                }
+            }
+
+            if(alreadyVoted) loadFragment(new PollResultsFragment(), (Poll) vote, optionsVotedByUser);
+            else loadFragment(new TakePollFragment(), vote, null);
         }else if(vote instanceof Referendum){
-            if(alreadyVoted) loadFragment(new ReferendumResultsFragment(), (Referendum) vote);
-            else loadFragment(new TakeReferendumFragment(), vote);
+            String optionVotedByUser = null;
+            for (Map.Entry<String, String> pair : AppController.loggedUser.getReferendumsVotedByUser().entrySet()) {
+                if(pair.getKey().equals(vote.getId())) {
+                    alreadyVoted = true;
+                    optionVotedByUser = pair.getValue();
+                    break;
+                }
+            }
+
+            if(alreadyVoted) loadFragment(new ReferendumResultsFragment(), (Referendum) vote, optionVotedByUser);
+            else loadFragment(new TakeReferendumFragment(), vote, null);
         }
     }
 
@@ -57,9 +84,10 @@ public class VotingActivity extends AppCompatActivity {
         super.onResume();
     }
 
-    private void loadFragment(Fragment fragmentToLoad, Vote vote){
+    private void loadFragment(Fragment fragmentToLoad, Vote vote, Serializable optionVotedByUser){
         Bundle bundle = new Bundle();
         bundle.putSerializable(Keys.VOTE_OBJECT, vote);
+        bundle.putSerializable(Keys.VOTED_OPTION, optionVotedByUser);
         fragmentToLoad.setArguments(bundle);
         transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.list_content_fragment, fragmentToLoad);

@@ -1,4 +1,4 @@
-#Tue Jan 14 12:31:59 EET 2020
-base.0=D\:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\105
+#Wed Jan 15 16:23:49 EET 2020
+base.0=D\:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\124
 path.0=classes.dex
 renamed.0=classes.dex

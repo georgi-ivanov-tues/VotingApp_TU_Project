@@ -25,6 +25,7 @@ import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
 import com.votingapp.utils.Keys;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
@@ -94,6 +95,8 @@ public class TakePollFragment extends Fragment {
                 View parentView = (View) view.getParent();
                 int i = 0;
 
+                HashMap<String, String> votedOptions = new HashMap<>();
+
                 ArrayList<String> selectedByCurrentUserOptionsId = new ArrayList<>();
 
                 boolean allQuestionsAnswered = true;
@@ -124,6 +127,11 @@ public class TakePollFragment extends Fragment {
                                                 child("content").child(question).child(option.getId()).child("timesSelected");
 
                                 AppController.firebaseHelper.castVote(selectedOptionDatabaseReference);
+
+                                AppController.firebaseHelper.addToVotedByUser(poll, question, option.getId(), "polls");
+                                AppController.loggedUser.getVotingsVotedByUser().put(poll.getId(), option.getId());
+
+                                votedOptions.put(question, option.getId());
                             }
                         }
 
@@ -137,12 +145,12 @@ public class TakePollFragment extends Fragment {
                 }
 
                 if(allQuestionsAnswered) {
-                    AppController.loggedUser.addVote(poll);
-                    AppController.loggedUser.addUserVote(poll, selectedByCurrentUserOptionsId);
+                    AppController.loggedUser.getPollsVotedByUser().put(poll.getId(), votedOptions);
 
                     PollResultsFragment pollResultsFragment = new PollResultsFragment();
                     Bundle bundle = new Bundle();
                     bundle.putSerializable(Keys.VOTE_OBJECT, poll);
+                    bundle.putSerializable(Keys.VOTED_OPTION, votedOptions);
                     pollResultsFragment.setArguments(bundle);
                     FragmentTransaction transaction = getFragmentManager().beginTransaction();
                     transaction.replace(R.id.list_content_fragment, pollResultsFragment);

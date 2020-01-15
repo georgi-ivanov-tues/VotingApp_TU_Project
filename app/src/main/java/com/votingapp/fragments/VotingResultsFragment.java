@@ -44,6 +44,7 @@ public class VotingResultsFragment extends Fragment {
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_voting_results, container, false);
         final Voting voting = (Voting) getArguments().getSerializable(Keys.VOTE_OBJECT);
+        final String votedOption = (String) getArguments().getSerializable(Keys.VOTED_OPTION);
         ((TextView) view.findViewById(R.id.votingResultsТitle)).setText(voting.getQuestion());
         final LinearLayout votingResultsLinearLayout = (LinearLayout) view.findViewById(R.id.votingResultsOptionsLinearLayout);
 
@@ -63,7 +64,7 @@ public class VotingResultsFragment extends Fragment {
                         double optionPercentage = AppController.calculateOptionPercentage(option, totalNumberOfVotes);
                         optionTextView.setText(AppController.formatOptionPercentage(option, optionPercentage));
                         optionTextView.setTextAppearance(getActivity(), R.style.text_vote_result_option);
-                        if (option.isSelectedByCurrentUser())
+                        if (option.getId().equals(votedOption))
                             optionTextView.setTypeface(null, Typeface.BOLD);
 
                         votingResultsLinearLayout.addView(optionTextView);

@@ -23,6 +23,7 @@ import com.votingapp.models.Option;
 import com.votingapp.models.Poll;
 import com.votingapp.utils.Keys;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 public class PollResultsFragment extends Fragment {
@@ -46,6 +47,7 @@ public class PollResultsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_poll_results, container, false);
         final Poll poll = (Poll) getArguments().getSerializable(Keys.VOTE_OBJECT);
+        final HashMap<String, String> votedOption = (HashMap<String, String>) getArguments().getSerializable(Keys.VOTED_OPTION);
         ((TextView) view.findViewById(R.id.pollResultsТitle)).setText(poll.getTitle());
         final LinearLayout takeVotingLinearLayout = (LinearLayout) view.findViewById(R.id.pollResultsOptionsLinearLayout);
         takeVotingLinearLayout.addView(new ScrollView(getActivity()));
@@ -80,8 +82,12 @@ public class PollResultsFragment extends Fragment {
                             double optionPercentage = AppController.calculateOptionPercentage(option, totalNumberOfVotes);
                             optionTextView.setText(AppController.formatOptionPercentage(option, optionPercentage));
                             optionTextView.setTextAppearance(getActivity(), R.style.text_vote_result_option);
-                            if (option.isSelectedByCurrentUser())
-                                optionTextView.setTypeface(null, Typeface.BOLD);
+                            for (Map.Entry<String, String> votedPair : votedOption.entrySet()) {
+                                if (question.equals(votedPair.getKey().replace("\"", "")) &&
+                                        option.getId().equals(votedPair.getValue().replace("\"", "")))
+                                    optionTextView.setTypeface(null, Typeface.BOLD);
+                            }
+
                             takeVotingLinearLayout.addView(optionTextView);
 
                             // Add Percentage Bars

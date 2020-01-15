@@ -41,6 +41,7 @@ public class ReferendumResultsFragment extends Fragment {
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_referendum_results, container, false);
         final Referendum referendum = (Referendum) getArguments().getSerializable(Keys.VOTE_OBJECT);
+        final String votedOption = (String) getArguments().getSerializable(Keys.VOTED_OPTION);
         ((TextView) view.findViewById(R.id.referendumResultsТitle)).setText(referendum.getQuestion());
 
         FirebaseDatabase.getInstance().getReference().child(referendum.getId());
@@ -60,14 +61,14 @@ public class ReferendumResultsFragment extends Fragment {
                 double percentageYes = AppController.calculateOptionPercentage(referendum.getOptionYes(),totalNumberOfVotes);
                 TextView optionYesTextView = ((TextView) view.findViewById(R.id.referendumResultsYesOption));
                 optionYesTextView.setText(AppController.formatOptionPercentage(referendum.getOptionYes(), percentageYes));
-                if(referendum.getOptionYes().isSelectedByCurrentUser())
+                if(referendum.getOptionYes().getOptionText().equals(votedOption))
                     optionYesTextView.setTypeface(null, Typeface.BOLD);
 
                 double percentageNo = AppController.calculateOptionPercentage(referendum.getOptionNo(), totalNumberOfVotes);
                 TextView optionNoTextView = ((TextView) view.findViewById(R.id.referendumResultsNoOption));
                 optionNoTextView.setText(AppController.formatOptionPercentage(referendum.getOptionNo(),percentageNo));
 
-                if(referendum.getOptionNo().isSelectedByCurrentUser())
+                if(referendum.getOptionNo().getOptionText().equals(votedOption))
                     optionNoTextView.setTypeface(null, Typeface.BOLD);
 
                 view.findViewById(R.id.optionYesBar).setLayoutParams(new LinearLayout.LayoutParams(0, 15, (float) (percentageYes / 100)));

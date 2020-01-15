@@ -63,11 +63,69 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FirebaseHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/FirebaseHelper.java">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/models/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state relative-caret-position="655">
+              <caret line="100" column="52" lean-forward="false" selection-start-line="100" selection-start-column="52" selection-end-line="100" selection-end-column="52" />
+              <folding>
+                <element signature="e#2377#2378#0" expanded="true" />
+                <element signature="e#2418#2419#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VotingActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/activities/VotingActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="44" column="39" lean-forward="false" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TakeVotingFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/TakeVotingFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="531">
+              <caret line="113" column="62" lean-forward="false" selection-start-line="113" selection-start-column="62" selection-end-line="113" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TakePollFragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/TakePollFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="693">
+              <caret line="148" column="0" lean-forward="true" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PollResultsFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/PollResultsFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="65" column="27" lean-forward="false" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+              <folding>
+                <element signature="e#5386#5387#0" expanded="true" />
+                <element signature="e#5425#5426#0" expanded="true" />
+                <element signature="e#5469#5470#0" expanded="true" />
+                <element signature="e#5501#5502#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TakeReferendumFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/TakeReferendumFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="582">
+              <caret line="107" column="83" lean-forward="false" selection-start-line="107" selection-start-column="83" selection-end-line="107" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -76,49 +134,18 @@
       <file leaf-file-name="ReferendumResultsFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/ReferendumResultsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="61" column="33" lean-forward="false" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="33" />
+            <state relative-caret-position="-25">
+              <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VotingResultsFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/VotingResultsFragment.java">
+      <file leaf-file-name="FirebaseHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/FirebaseHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="56" column="31" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-              <folding>
-                <element signature="e#3705#3706#0" expanded="true" />
-                <element signature="e#3744#3745#0" expanded="true" />
-                <element signature="e#3788#3789#0" expanded="true" />
-                <element signature="e#3820#3821#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PollResultsFragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/PollResultsFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="66" column="30" lean-forward="true" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4969#4970#0" expanded="true" />
-                <element signature="e#5008#5009#0" expanded="true" />
-                <element signature="e#5052#5053#0" expanded="true" />
-                <element signature="e#5084#5085#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TakePollFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/TakePollFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="493">
+              <caret line="162" column="16" lean-forward="false" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -136,8 +163,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>google</find>
-      <find>gradle</find>
       <find>firebaseDatabase.child(&quot;polls&quot;)</find>
       <find>f</find>
       <find>firebase</find>
@@ -166,6 +191,8 @@
       <find>notifica</find>
       <find>sendNotification</find>
       <find>votingFromDB</find>
+      <find>selectedOption</find>
+      <find>pair</find>
     </findStrings>
     <dirStrings>
       <dir>D:\Projects\GitHub\VotingApp\app\src\main\java\com\votingapp\fragments</dir>
@@ -2058,7 +2085,6 @@
         <option value="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/utils/Keys.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/models/Vote.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/DatabaseHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_home_drawer.xml" />
@@ -2068,10 +2094,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/ViewPagerAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/models/Question.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/models/Option.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/activities/VotingActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/activities/HomeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/activities/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/models/User.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/models/Referendum.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/models/Voting.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/models/Poll.java" />
@@ -2082,15 +2106,18 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/CreateReferendumFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/CreatePollFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/activities/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_voting_results.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_poll_results.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/utils/Keys.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/ReferendumResultsFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/VotingResultsFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/models/User.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/activities/VotingActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/FirebaseHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/TakeReferendumFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/TakePollFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/TakeVotingFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/ReferendumResultsFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_voting_results.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/VotingResultsFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_poll_results.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/PollResultsFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/TakePollFragment.java" />
       </list>
     </option>
   </component>
@@ -2140,7 +2167,21 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="votingapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="activities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VotingApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="votingapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="fragments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VotingApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="votingapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -2160,7 +2201,7 @@
     <property name="SearchEverywhereHistoryKey" value="takep&#9;FILE&#9;file://D:/Projects/GitHub/VotingApp/app/src/main/java/com/votingapp/fragments/TakePollFragment.java&#10;takevo&#9;FILE&#9;file://D:/Projects/GitHub/VotingApp/app/src/main/java/com/votingapp/fragments/TakeVotingFragment.java&#10;takeref&#9;FILE&#9;file://D:/Projects/GitHub/VotingApp/app/src/main/java/com/votingapp/fragments/TakeReferendumFragment.java&#10;Us&#9;FILE&#9;file:///Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/java/com/votingapp/models/User.java&#10;user&#9;FILE&#9;file:///Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/java/com/votingapp/models/User.java&#10;gradle&#9;FILE&#9;file:///Users/giivanov/GitHub/VotingApp_TU_Project/build.gradle&#10;build&#9;FILE&#9;file:///Users/giivanov/GitHub/VotingApp_TU_Project/build.gradle&#10;grad&#9;FILE&#9;file:///Users/giivanov/GitHub/VotingApp_TU_Project/app/build.gradle&#10;mani&#9;FILE&#9;file:///Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml&#10;local.pro&#9;FILE&#9;file:///Users/giivanov/GitHub/VotingApp_TU_Project/local.properties&#10;androidmani&#9;FILE&#9;file:///Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml&#10;styl&#9;FILE&#9;file:///Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/res/values/styles.xml&#10;buil&#9;FILE&#9;file:///Users/giivanov/GitHub/VotingApp_TU_Project/app/build.gradle&#10;man&#9;FILE&#9;file:///Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml&#10;AndroidMani&#9;FILE&#9;file:///Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/AndroidManifest.xml&#10;colo&#9;PSI&#9;JAVA://com.votingapp.R.color&#10;style&#9;FILE&#9;file:///Users/giivanov/GitHub/VotingApp_TU_Project/app/src/main/res/values/styles.xml&#10;string&#9;FILE&#9;file://D:/Projects/GitHub/VotingApp/app/src/main/res/values/strings.xml&#10;AndroidMa&#9;FILE&#9;file://D:/Projects/GitHub/VotingApp/app/src/main/AndroidManifest.xml" />
     <property name="android.project.structure.last.selected" value="Project" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578997917345" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579098008464" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -2642,60 +2683,61 @@
           <properties />
           <option name="timeStamp" value="113" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/PollResultsFragment.java</url>
+          <line>84</line>
+          <properties />
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="128" />
+      <option name="time" value="144" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>dataSnapshot.child(&quot;content&quot;).child(pair.getKey()).child(option.getId()).child(&quot;timesSelected&quot;).getValue()</expression-string>
+        <expression-string>votedPair.getValue().replace(&quot;\&quot;&quot;, &quot;&quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>dataSnapshot.child(&quot;content&quot;).child(pair.getKey()).child(option.getId()).child(&quot;timesSelected&quot;).getValue();</expression-string>
+        <expression-string>votedPair.getKey().replace(&quot;\&quot;&quot;, &quot;&quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>dataSnapshot.child(&quot;content&quot;)</expression-string>
+        <expression-string>votedPair.getKey()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>dataSnapshot.child(&quot;content&quot;).child(&quot;\&quot;Любим цвят\&quot;&quot;)</expression-string>
+        <expression-string>option.getOptionText()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>pair.getKey()</expression-string>
+        <expression-string>votedOption</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>pair.getKey().toString()</expression-string>
+        <expression-string>poll.getValue()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>dataSnapshot.child(&quot;content&quot;).child('&quot;Любим цвят&quot;')</expression-string>
+        <expression-string>poll.getKey()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>dataSnapshot.child(&quot;content&quot;).child(&quot;Любим цвят&quot;)</expression-string>
+        <expression-string>pair.getValue()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>dataSnapshot.child(&quot;content&quot;).child(question)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>dataSnapshot</expression-string>
+        <expression-string>AppController.loggedUser.getPollsVotedByUser()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -2755,6 +2797,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="837" column="27" lean-forward="false" selection-start-line="837" selection-start-column="27" selection-end-line="837" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2772,6 +2815,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4">
           <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding>
+            <element signature="e#361#394#0" expanded="false" />
+            <element signature="e#419#454#0" expanded="false" />
+            <element signature="e#480#515#0" expanded="false" />
+            <element signature="e#539#572#0" expanded="false" />
+            <element signature="e#597#637#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2779,14 +2829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="2086" column="0" lean-forward="false" selection-start-line="2086" selection-start-column="0" selection-end-line="2086" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/utils/Keys.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2821,6 +2863,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2835,21 +2878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="110" column="13" lean-forward="false" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/activities/HomeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/activities/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2869,6 +2897,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2876,6 +2905,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
           <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2891,6 +2921,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
           <caret line="46" column="1" lean-forward="false" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+          <folding>
+            <element signature="e#576#577#0" expanded="false" />
+            <element signature="e#606#607#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2901,6 +2935,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="39" column="24" lean-forward="false" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2933,25 +2968,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-database-9.0.0.aar/ded2a932cf75848be08c8c21a04012e3/jars/classes.jar!/com/google/firebase/database/DatabaseReference.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="216" column="18" lean-forward="false" selection-start-line="216" selection-start-column="18" selection-end-line="216" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/ListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="141" column="11" lean-forward="false" selection-start-line="141" selection-start-column="11" selection-end-line="146" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="88" column="18" lean-forward="false" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -2963,16 +2984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/activities/VotingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="909">
-          <caret line="59" column="17" lean-forward="false" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/CreatePollFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -2981,66 +2992,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/activities/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="172" column="0" lean-forward="false" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
-          <folding>
-            <element signature="method#onChildChanged#0;class#2874:3724" expanded="false" />
-            <element signature="method#onChildRemoved#0;class#2874:3724" expanded="false" />
-            <element signature="method#onChildMoved#0;class#2874:3724" expanded="false" />
-            <element signature="method#onCancelled#0;class#2874:3724" expanded="false" />
-            <element signature="method#onChildChanged#0;class#3823:4663" expanded="false" />
-            <element signature="method#onChildRemoved#0;class#3823:4663" expanded="false" />
-            <element signature="method#onChildMoved#0;class#3823:4663" expanded="false" />
-            <element signature="method#onCancelled#0;class#3823:4663" expanded="false" />
-            <element signature="method#onChildChanged#0;class#4768:5638" expanded="false" />
-            <element signature="method#onChildRemoved#0;class#4768:5638" expanded="false" />
-            <element signature="method#onChildMoved#0;class#4768:5638" expanded="false" />
-            <element signature="method#onCancelled#0;class#4768:5638" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/AppController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="72" column="22" lean-forward="false" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/TakeReferendumFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="103" column="54" lean-forward="false" selection-start-line="103" selection-start-column="54" selection-end-line="103" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/FirebaseHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/models/Referendum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="56" column="30" lean-forward="true" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
-          <folding>
-            <element signature="e#1201#1202#0" expanded="false" />
-            <element signature="e#1241#1242#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/models/Option.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -3053,26 +3008,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/TakeVotingFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2781">
-          <caret line="133" column="13" lean-forward="false" selection-start-line="133" selection-start-column="13" selection-end-line="133" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-database-9.0.0.aar/ded2a932cf75848be08c8c21a04012e3/jars/classes.jar!/com/google/android/gms/internal/zzafp.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="45" column="33" lean-forward="false" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/ReferendumResultsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="61" column="33" lean-forward="false" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -3099,38 +3038,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/VotingResultsFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/models/Referendum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="56" column="31" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state relative-caret-position="779">
+          <caret line="35" column="14" lean-forward="false" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
           <folding>
-            <element signature="e#3705#3706#0" expanded="true" />
-            <element signature="e#3744#3745#0" expanded="true" />
-            <element signature="e#3788#3789#0" expanded="true" />
-            <element signature="e#3820#3821#0" expanded="true" />
+            <element signature="e#770#771#0" expanded="false" />
+            <element signature="e#802#803#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/TakePollFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/models/Option.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/utils/Keys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="40" lean-forward="false" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-database-9.0.0.aar/ded2a932cf75848be08c8c21a04012e3/jars/classes.jar!/com/google/firebase/database/DatabaseReference.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="56" column="22" lean-forward="false" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/VotingResultsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="60" column="35" lean-forward="false" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+          <folding>
+            <element signature="e#3802#3803#0" expanded="false" />
+            <element signature="e#3841#3842#0" expanded="false" />
+            <element signature="e#3885#3886#0" expanded="false" />
+            <element signature="e#3917#3918#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/activities/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="101" column="21" lean-forward="false" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
+          <folding>
+            <element signature="method#onChildChanged#0;class#2874:3724" expanded="false" />
+            <element signature="method#onChildRemoved#0;class#2874:3724" expanded="false" />
+            <element signature="method#onChildMoved#0;class#2874:3724" expanded="false" />
+            <element signature="method#onCancelled#0;class#2874:3724" expanded="false" />
+            <element signature="method#onChildChanged#0;class#3823:4663" expanded="false" />
+            <element signature="method#onChildRemoved#0;class#3823:4663" expanded="false" />
+            <element signature="method#onChildMoved#0;class#3823:4663" expanded="false" />
+            <element signature="method#onCancelled#0;class#3823:4663" expanded="false" />
+            <element signature="method#onChildChanged#0;class#4768:5638" expanded="false" />
+            <element signature="method#onChildRemoved#0;class#4768:5638" expanded="false" />
+            <element signature="method#onChildMoved#0;class#4768:5638" expanded="false" />
+            <element signature="method#onCancelled#0;class#4768:5638" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/activities/HomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/activities/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-284">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/PollResultsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="66" column="30" lean-forward="true" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+        <state relative-caret-position="146">
+          <caret line="65" column="27" lean-forward="false" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4969#4970#0" expanded="true" />
-            <element signature="e#5008#5009#0" expanded="true" />
-            <element signature="e#5052#5053#0" expanded="true" />
-            <element signature="e#5084#5085#0" expanded="true" />
+            <element signature="e#5386#5387#0" expanded="true" />
+            <element signature="e#5425#5426#0" expanded="true" />
+            <element signature="e#5469#5470#0" expanded="true" />
+            <element signature="e#5501#5502#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/TakeReferendumFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="107" column="83" lean-forward="false" selection-start-line="107" selection-start-column="83" selection-end-line="107" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/ReferendumResultsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/FirebaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="162" column="16" lean-forward="false" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/activities/VotingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="44" column="39" lean-forward="false" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/TakeVotingFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="113" column="62" lean-forward="false" selection-start-line="113" selection-start-column="62" selection-end-line="113" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="100" column="52" lean-forward="false" selection-start-line="100" selection-start-column="52" selection-end-line="100" selection-end-column="52" />
+          <folding>
+            <element signature="e#2377#2378#0" expanded="true" />
+            <element signature="e#2418#2419#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/votingapp/fragments/TakePollFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="148" column="0" lean-forward="true" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

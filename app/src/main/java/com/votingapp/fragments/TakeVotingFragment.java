@@ -95,8 +95,10 @@ public class TakeVotingFragment extends Fragment {
 
                     ArrayList<String> selectedByCurrentUserOptionsId = new ArrayList<>();
 
+                    String optionVotedByUser = null;
                     for (Option option : voting.getOptions()) {
                         if (option.getOptionText().equals(radioButton.getText())) {
+                            optionVotedByUser = option.getId();
                             option.increaseTimesSelected();
                             option.setSelectedByCurrentUser(true);
                             selectedByCurrentUserOptionsId.add(option.getId());
@@ -107,15 +109,17 @@ public class TakeVotingFragment extends Fragment {
                                     child("options").child(option.getId()).child("timesSelected");
 
                             AppController.firebaseHelper.castVote(selectedOptionDatabaseReference);
+                            AppController.loggedUser.addVote(voting);
+
+                            AppController.firebaseHelper.addToVotedByUser(voting, null, option.getId(), "votings");
+                            AppController.loggedUser.getVotingsVotedByUser().put(voting.getId(), option.getId());
                         }
                     }
-
-                    AppController.loggedUser.addVote(voting);
-                    AppController.loggedUser.addUserVote(voting, selectedByCurrentUserOptionsId);
 
                     VotingResultsFragment votingResultsFragment = new VotingResultsFragment();
                     Bundle bundle = new Bundle();
                     bundle.putSerializable(Keys.VOTE_OBJECT, voting);
+                    bundle.putSerializable(Keys.VOTED_OPTION, optionVotedByUser);
                     votingResultsFragment.setArguments(bundle);
                     FragmentTransaction transaction = getFragmentManager().beginTransaction();
                     transaction.replace(R.id.list_content_fragment, votingResultsFragment);

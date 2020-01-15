@@ -1,6 +1,10 @@
 package com.votingapp.models;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.jsonschema.JsonSerializableSchema;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class User {
     private String id;
@@ -11,18 +15,10 @@ public class User {
 
     private ArrayList<Vote> votes = new ArrayList<>();
 
-    private ArrayList<UserVote> userVotes = new ArrayList<>();
-
-    public void addUserVote(Vote vote, ArrayList<String> selectedByCurrentUserOptionsId){
-        UserVote userVote = new UserVote();
-        userVote.setVoteId(vote.getId());
-        userVote.setOptionsId(selectedByCurrentUserOptionsId);
-        userVotes.add(userVote);
-    }
-
-    public ArrayList<UserVote> getUserVotes(){
-        return userVotes;
-    }
+    private HashMap<String,String> referendumsVotedByUser = new HashMap<>();
+    private HashMap<String,String> votingsVotedByUser = new HashMap<>();
+    @JsonSerialize
+    private HashMap<String, HashMap<String,String>> pollsVotedByUser = new HashMap<String, HashMap<String, String>>();
 
     public User(){}
 
@@ -86,26 +82,27 @@ public class User {
         return votes;
     }
 
-    private class UserVote{
-        private String voteId;
-        private ArrayList<String> optionsId;
+    public HashMap<String, String> getReferendumsVotedByUser() {
+        return referendumsVotedByUser;
+    }
 
-        UserVote(){}
+    public void setReferendumsVotedByUser(HashMap<String, String> referendumsVotedByUser) {
+        this.referendumsVotedByUser = referendumsVotedByUser;
+    }
 
-        public String getVoteId() {
-            return voteId;
-        }
+    public HashMap<String, String> getVotingsVotedByUser() {
+        return votingsVotedByUser;
+    }
 
-        public void setVoteId(String vote_Id) {
-            this.voteId = vote_Id;
-        }
+    public void setVotingsVotedByUser(HashMap<String, String> votingsVotedByUser) {
+        this.votingsVotedByUser = votingsVotedByUser;
+    }
 
-        public ArrayList<String> getOptionsId() {
-            return optionsId;
-        }
+    public HashMap<String, HashMap<String, String>> getPollsVotedByUser() {
+        return pollsVotedByUser;
+    }
 
-        public void setOptionsId(ArrayList<String> optionsId) {
-            this.optionsId = optionsId;
-        }
+    public void setPollsVotedByUser(HashMap<String, HashMap<String, String>> pollsVotedByUser) {
+        this.pollsVotedByUser = pollsVotedByUser;
     }
 }

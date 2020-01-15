@@ -11,6 +11,7 @@ public interface Keys {
     String LIST_REFERENDUMS = "listReferendums";
     String VOTING_ACTIVITY_FRAGMENT = "votingActivityFragment";
     String VOTE_OBJECT = "voteObject";
+    String VOTED_OPTION = "votedOption";
     String ALREADY_VOTED = "alreadyVoted";
 
     String CURRENT_TAB = "currentTab";

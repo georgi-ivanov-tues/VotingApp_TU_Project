@@ -80,32 +80,38 @@ public class TakeReferendumFragment extends Fragment {
                 }else {
                     RadioButton radioButton = (RadioButton) parentView.findViewById(selectedId);
                     String selectedOption = "";
+                    String selectedOptionTimes = "";
                     if ("Да".equals(radioButton.getText())) {
                         referendum.getOptionYes().increaseTimesSelected();
                         referendum.getOptionYes().setSelectedByCurrentUser(true);
                         selectedByCurrentUserOptionsId.add(referendum.getOptionYes().getId());
 
-                        selectedOption = "yesSelectedTimes";
+                        selectedOption = "Да";
+                        selectedOptionTimes = "yesSelectedTimes";
                     }else if ("Не".equals(radioButton.getText())) {
                         referendum.getOptionNo().increaseTimesSelected();
                         referendum.getOptionNo().setSelectedByCurrentUser(true);
                         selectedByCurrentUserOptionsId.add(referendum.getOptionNo().getId());
 
-                        selectedOption = "noSelectedTimes";
+                        selectedOption = "Не";
+                        selectedOptionTimes = "noSelectedTimes";
                     }
 
                     AppController.loggedUser.addVote(referendum);
-                    AppController.loggedUser.addUserVote(referendum, selectedByCurrentUserOptionsId);
 
                     // Update record in DB
                     DatabaseReference selectedOptionDatabaseReference =
-                            FirebaseDatabase.getInstance().getReference().child("referendums").child(referendum.getId()).child(selectedOption);
+                            FirebaseDatabase.getInstance().getReference().child("referendums").child(referendum.getId()).child(selectedOptionTimes);
 
                     AppController.firebaseHelper.castVote(selectedOptionDatabaseReference);
+
+                    AppController.firebaseHelper.addToVotedByUser(referendum, null, selectedOption, "referendums");
+                    AppController.loggedUser.getReferendumsVotedByUser().put(referendum.getId(), selectedOption);
 
                     ReferendumResultsFragment referendumResultsFragment = new ReferendumResultsFragment();
                     Bundle bundle = new Bundle();
                     bundle.putSerializable(Keys.VOTE_OBJECT, referendum);
+                    bundle.putSerializable(Keys.VOTED_OPTION, selectedOption);
                     referendumResultsFragment.setArguments(bundle);
                     FragmentTransaction transaction = getFragmentManager().beginTransaction();
                     transaction.replace(R.id.list_content_fragment, referendumResultsFragment);

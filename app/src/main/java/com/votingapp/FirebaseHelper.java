@@ -13,6 +13,8 @@ import com.votingapp.models.Vote;
 import com.votingapp.models.Voting;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * Created by giivanov on 31.08.19.
@@ -26,6 +28,28 @@ public class FirebaseHelper {
         for(DataSnapshot activitySnapShot: dataSnapshot.getChildren()){
             User userFromDB = activitySnapShot.getValue(User.class);
             userFromDB.setLoggedIn(activitySnapShot.child("isLoggedIn").getValue(Boolean.class));
+
+            if(activitySnapShot.child("votedByUser").child("referendums").getValue() != null){
+                HashMap<String,String> referendumsVotedByUser = (HashMap<String,String>) activitySnapShot.child("votedByUser").child("referendums").getValue();
+                for (Map.Entry<String, String> pair : referendumsVotedByUser.entrySet()) {
+                    userFromDB.getReferendumsVotedByUser().put(pair.getKey(), pair.getValue());
+                }
+            }
+
+            if(activitySnapShot.child("votedByUser").child("votings").getValue() != null){
+                HashMap<String,String> votingsVotedByUser = (HashMap<String,String>) activitySnapShot.child("votedByUser").child("votings").getValue();
+                for (Map.Entry<String, String> pair : votingsVotedByUser.entrySet()) {
+                    userFromDB.getVotingsVotedByUser().put(pair.getKey(), pair.getValue());
+                }
+            }
+
+            if(activitySnapShot.child("votedByUser").child("polls").getValue() != null){
+                HashMap<String, HashMap<String, String>> polls = new HashMap<>();
+                for(DataSnapshot ds : activitySnapShot.child("votedByUser").child("polls").getChildren()){
+                    polls.put(ds.getKey(), (HashMap<String, String>) ds.getValue());
+                }
+                userFromDB.setPollsVotedByUser(polls);
+            }
             AppController.allUsers.add(userFromDB);
         }
     }
@@ -136,9 +160,16 @@ public class FirebaseHelper {
         return newFirebasePoll.getKey();
     }
 
-    public void createNotification(Vote vote){
-        DatabaseReference newFirebaseNotification =
-                FirebaseDatabase.getInstance().getReference().child("notifications").push();
-
+    public void addToVotedByUser(Vote vote, String question, String option, String voteType){
+        if("votings".equals(voteType)) {
+            FirebaseDatabase.getInstance().getReference().child("users").child(AppController.loggedUser.getId()).child("votedByUser").
+                    child(voteType).child(vote.getId()).setValue(option);
+        }else if("referendums".equals(voteType)){
+            FirebaseDatabase.getInstance().getReference().child("users").child(AppController.loggedUser.getId()).child("votedByUser").
+                    child(voteType).child(vote.getId()).setValue(option);
+        }else if("polls".equals(voteType)){
+            FirebaseDatabase.getInstance().getReference().child("users").child(AppController.loggedUser.getId()).child("votedByUser").
+                    child(voteType).child(vote.getId()).child(question).setValue(option);
+        }
     }
 }
