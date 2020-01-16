@@ -37,6 +37,7 @@ public class CreateVoteMainFragment extends Fragment {
                 CreateVotingFragment createVotingFragment = new CreateVotingFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.create_vote_fragment, createVotingFragment);
+                transaction.addToBackStack(null);
                 transaction.commit();
             }
         });
@@ -47,6 +48,7 @@ public class CreateVoteMainFragment extends Fragment {
                 CreatePollFragment createPollFragment = new CreatePollFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.create_vote_fragment, createPollFragment);
+                transaction.addToBackStack(null);
                 transaction.commit();
             }
         });
@@ -57,6 +59,7 @@ public class CreateVoteMainFragment extends Fragment {
                 CreateReferendumFragment createReferendumFragment = new CreateReferendumFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.create_vote_fragment, createReferendumFragment);
+                transaction.addToBackStack(null);
                 transaction.commit();
             }
         });

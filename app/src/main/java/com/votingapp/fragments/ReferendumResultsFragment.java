@@ -43,6 +43,7 @@ public class ReferendumResultsFragment extends Fragment {
         final Referendum referendum = (Referendum) getArguments().getSerializable(Keys.VOTE_OBJECT);
         final String votedOption = (String) getArguments().getSerializable(Keys.VOTED_OPTION);
         ((TextView) view.findViewById(R.id.referendumResultsТitle)).setText(referendum.getQuestion());
+        getActivity().setTitle(referendum.getTitle());
 
         FirebaseDatabase.getInstance().getReference().child(referendum.getId());
 

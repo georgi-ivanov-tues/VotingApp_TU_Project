@@ -138,7 +138,7 @@ public class ListFragment extends android.support.v4.app.ListFragment {
 //                    return false;
 //                }
 //            });
-
+//
 //            rowView.setOnClickListener(new View.OnClickListener() {
 //                @Override
 //                public void onClick(View view) {

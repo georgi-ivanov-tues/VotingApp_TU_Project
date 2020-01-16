@@ -47,6 +47,7 @@ public class VotingResultsFragment extends Fragment {
         final String votedOption = (String) getArguments().getSerializable(Keys.VOTED_OPTION);
         ((TextView) view.findViewById(R.id.votingResultsТitle)).setText(voting.getQuestion());
         final LinearLayout votingResultsLinearLayout = (LinearLayout) view.findViewById(R.id.votingResultsOptionsLinearLayout);
+        getActivity().setTitle(voting.getTitle());
 
         FirebaseDatabase.getInstance().getReference().child("votings").child(voting.getId()).addValueEventListener(new ValueEventListener() {
             @Override
@@ -59,7 +60,9 @@ public class VotingResultsFragment extends Fragment {
 
                     if(getActivity() != null) {
                         TextView optionTextView = new TextView(getActivity());
-                        optionTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                        params.setMargins(10, 20, 0, 20);
+                        optionTextView.setLayoutParams(params);
 
                         double optionPercentage = AppController.calculateOptionPercentage(option, totalNumberOfVotes);
                         optionTextView.setText(AppController.formatOptionPercentage(option, optionPercentage));

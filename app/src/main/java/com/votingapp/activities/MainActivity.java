@@ -79,7 +79,9 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 System.out.println("LOAD VOTING!!!");
                 Voting votingFromDB = AppController.firebaseHelper.getVoting(dataSnapshot);
-                viewPager.setAdapter(viewPagerAdapter);
+                if(viewPager != null) {
+                    viewPager.setAdapter(viewPagerAdapter);
+                }
 
                 AppController.sendNotification(votingFromDB);
             }
@@ -110,8 +112,9 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 System.out.println("LOAD POLL!!!");
                 Poll pollFromDB = AppController.firebaseHelper.getPoll(dataSnapshot);
-                viewPager.setAdapter(viewPagerAdapter);
-
+                if(viewPager != null) {
+                    viewPager.setAdapter(viewPagerAdapter);
+                }
                 AppController.sendNotification(pollFromDB);
             }
 
@@ -141,8 +144,9 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 System.out.println("LOAD REFERENDUM!!!");
                 Referendum referendumFromDB = AppController.firebaseHelper.getReferendum(dataSnapshot);
-                viewPager.setAdapter(viewPagerAdapter);
-
+                if(viewPager != null) {
+                    viewPager.setAdapter(viewPagerAdapter);
+                }
                 AppController.sendNotification(referendumFromDB);
             }
 
@@ -159,20 +163,6 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
             @Override
             public void onChildMoved(DataSnapshot dataSnapshot, String s) {
 
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-        FirebaseDatabase.getInstance().getReference().child("referendums").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                System.out.println("REFERENDUM VALUE CHANGED!!!");
-
-//                dataSnapshot.getChildren().iterator().next().getKey();
             }
 
             @Override

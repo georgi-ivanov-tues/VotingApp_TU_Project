@@ -68,6 +68,11 @@ public class TakePollFragment extends Fragment {
             TextView questionTitle = new TextView(getActivity());
             questionTitle.setText(question);
             questionTitle.setTextAppearance(getActivity(), R.style.text_vote_title);
+
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            params.setMargins(10, 20, 0, 0);
+            questionTitle.setLayoutParams(params);
+
             takePollLinearLayout.addView(questionTitle);
             RadioGroup radioGroup = new RadioGroup(getActivity());
             RadioButton[] radioButtonOptions = new RadioButton[options.size()];
@@ -85,8 +90,8 @@ public class TakePollFragment extends Fragment {
         }
         ContextThemeWrapper saveButtonContext = new ContextThemeWrapper(getActivity(), R.style.activity_login_button);
         Button saveButton = new Button(saveButtonContext);
-        saveButton.setBackgroundColor(R.color.dodgerBlue);
-        saveButton.setText("Гласуване");
+        saveButton.setBackgroundColor(getResources().getColor(R.color.dodgerBlue));
+        saveButton.setText("Гласувай");
         takePollLinearLayout.addView(saveButton);
 
         saveButton.setOnClickListener(new View.OnClickListener() {

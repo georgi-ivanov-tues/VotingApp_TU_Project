@@ -48,9 +48,9 @@ public class PollResultsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_poll_results, container, false);
         final Poll poll = (Poll) getArguments().getSerializable(Keys.VOTE_OBJECT);
         final HashMap<String, String> votedOption = (HashMap<String, String>) getArguments().getSerializable(Keys.VOTED_OPTION);
-        ((TextView) view.findViewById(R.id.pollResultsТitle)).setText(poll.getTitle());
         final LinearLayout takeVotingLinearLayout = (LinearLayout) view.findViewById(R.id.pollResultsOptionsLinearLayout);
         takeVotingLinearLayout.addView(new ScrollView(getActivity()));
+        getActivity().setTitle(poll.getTitle());
 
         FirebaseDatabase.getInstance().getReference().child("polls").child(poll.getId()).addValueEventListener(new ValueEventListener() {
             @Override
@@ -67,7 +67,10 @@ public class PollResultsFragment extends Fragment {
                     if(getActivity() != null) {
                         TextView questionTitle = new TextView(getActivity());
                         questionTitle.setText(question);
-                        questionTitle.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                        LinearLayout.LayoutParams questionParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                        questionParams.setMargins(10, 20, 0, 20);
+                        questionTitle.setLayoutParams(questionParams);
+
                         questionTitle.setTextAppearance(getActivity(), R.style.text_vote_title);
                         takeVotingLinearLayout.addView(questionTitle);
                         int totalNumberOfVotes = AppController.getTotalNumberOfVotes(options);
@@ -77,7 +80,9 @@ public class PollResultsFragment extends Fragment {
                             option.setTimesSelected(((Long) dataSnapshot.child("content").child((String) pair.getKey()).child(option.getId()).child("timesSelected").getValue()).intValue());
 
                             TextView optionTextView = new TextView(getActivity());
-                            optionTextView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                            LinearLayout.LayoutParams optionParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                            optionParams.setMargins(10, 20, 0, 20);
+                            optionTextView.setLayoutParams(optionParams);
 
                             double optionPercentage = AppController.calculateOptionPercentage(option, totalNumberOfVotes);
                             optionTextView.setText(AppController.formatOptionPercentage(option, optionPercentage));

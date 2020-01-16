@@ -43,6 +43,7 @@ public class CreateVoteActivity extends AppCompatActivity
         CreateVoteMainFragment createVoteMainFragment = new CreateVoteMainFragment();
         transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.create_vote_fragment, createVoteMainFragment);
+        transaction.addToBackStack(null);
         transaction.commit();
     }
 
@@ -52,7 +53,12 @@ public class CreateVoteActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            if (getFragmentManager().getBackStackEntryCount() > 1) {
+                getFragmentManager().popBackStack();
+            } else {
+                getFragmentManager().popBackStack();
+                super.onBackPressed();
+            }
         }
     }
 
@@ -84,5 +90,10 @@ public class CreateVoteActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_create_vote_drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 }

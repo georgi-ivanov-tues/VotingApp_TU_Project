@@ -73,8 +73,8 @@ public class TakeVotingFragment extends Fragment {
         takeVotingLinearLayout.addView(radioGroup);
         ContextThemeWrapper saveButtonContext = new ContextThemeWrapper(getActivity(), R.style.activity_login_button);
         Button saveButton = new Button(saveButtonContext);
-        saveButton.setBackgroundColor(R.color.dodgerBlue);
-        saveButton.setText("Гласуване");
+        saveButton.setBackgroundColor(getResources().getColor(R.color.dodgerBlue));
+        saveButton.setText("Гласувай");
         takeVotingLinearLayout.addView(saveButton);
 
         final RadioGroup radioGroupFinal = radioGroup;

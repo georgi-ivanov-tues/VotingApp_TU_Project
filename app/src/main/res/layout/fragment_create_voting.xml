@@ -75,7 +75,7 @@
         android:id="@+id/create_new_voting_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Създаване на гласуването"
+        android:text="Създаване на гласуване"
         style="@style/create_vote_button"/>
     </LinearLayout>
 </ScrollView>

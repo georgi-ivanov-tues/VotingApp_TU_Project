@@ -1,6 +1,7 @@
 package com.votingapp.fragments;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,8 +49,6 @@ public class CreateReferendumFragment extends Fragment {
                     String newReferendumId = AppController.firebaseHelper.createReferendum(newReferendum);
                     newReferendum.setId(newReferendumId);
 
-//                    AppController.sendNotification(newReferendum);
-
                     CharSequence text = "Референдумът е успешно създаден";
                     Toast toast = Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT);
                     toast.show();
@@ -60,5 +59,19 @@ public class CreateReferendumFragment extends Fragment {
         });
 
         return view;
+    }
+
+    public void onBackPressed() {
+        super.onResume();
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
     }
 }
