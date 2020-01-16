@@ -130,4 +130,13 @@ public class AppController extends Application{
         NotificationManager manager = (NotificationManager) getInstance().getApplicationContext().getSystemService(NOTIFICATION_SERVICE);
         manager.notify(11, myNotication);
     }
+
+    public static void removeVote(String voteToDeleteId){
+        Iterator<Vote> iterator = votes.iterator();
+        while (iterator.hasNext()) {
+            Vote vote = iterator.next();
+            if (vote.getId().equals(voteToDeleteId))
+                iterator.remove();
+        }
+    }
 }

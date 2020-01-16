@@ -11,8 +11,13 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -79,9 +84,9 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 System.out.println("LOAD VOTING!!!");
                 Voting votingFromDB = AppController.firebaseHelper.getVoting(dataSnapshot);
-                if(viewPager != null) {
+                try {
                     viewPager.setAdapter(viewPagerAdapter);
-                }
+                }catch (NullPointerException e){}
 
                 AppController.sendNotification(votingFromDB);
             }
@@ -93,7 +98,10 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
 
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
-
+                AppController.removeVote(dataSnapshot.getKey());
+                try {
+                    viewPager.setAdapter(viewPagerAdapter);
+                }catch (NullPointerException e){}
             }
 
             @Override
@@ -112,9 +120,9 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 System.out.println("LOAD POLL!!!");
                 Poll pollFromDB = AppController.firebaseHelper.getPoll(dataSnapshot);
-                if(viewPager != null) {
+                try {
                     viewPager.setAdapter(viewPagerAdapter);
-                }
+                }catch (NullPointerException e){}
                 AppController.sendNotification(pollFromDB);
             }
 
@@ -125,7 +133,10 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
 
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
-
+                AppController.removeVote(dataSnapshot.getKey());
+                try {
+                    viewPager.setAdapter(viewPagerAdapter);
+                }catch (NullPointerException e){}
             }
 
             @Override
@@ -144,9 +155,9 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 System.out.println("LOAD REFERENDUM!!!");
                 Referendum referendumFromDB = AppController.firebaseHelper.getReferendum(dataSnapshot);
-                if(viewPager != null) {
+                try {
                     viewPager.setAdapter(viewPagerAdapter);
-                }
+                }catch (NullPointerException e){}
                 AppController.sendNotification(referendumFromDB);
             }
 
@@ -157,7 +168,10 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
 
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
-
+                AppController.removeVote(dataSnapshot.getKey());
+                try {
+                    viewPager.setAdapter(viewPagerAdapter);
+                }catch (NullPointerException e){}
             }
 
             @Override

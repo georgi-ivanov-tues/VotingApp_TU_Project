@@ -172,4 +172,16 @@ public class FirebaseHelper {
                     child(voteType).child(vote.getId()).child(question).setValue(option);
         }
     }
+
+    public void deleteVoteFromDB(Vote vote){
+        String voteType = "";
+        if(vote instanceof Referendum)
+            voteType = "referendums";
+        else if(vote instanceof Voting)
+            voteType = "votings";
+        else if(vote instanceof Poll)
+            voteType = "polls";
+
+        FirebaseDatabase.getInstance().getReference().child(voteType).child(vote.getId()).removeValue();
+    }
 }
