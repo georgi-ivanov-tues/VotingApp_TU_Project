@@ -3,8 +3,12 @@ package com.votingapp.activities;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
+import com.google.firebase.database.Exclude;
 import com.votingapp.AppController;
 import com.votingapp.R;
 import com.votingapp.fragments.PollResultsFragment;
@@ -92,5 +96,14 @@ public class VotingActivity extends AppCompatActivity {
         transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.list_content_fragment, fragmentToLoad);
         transaction.commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (getFragmentManager().getBackStackEntryCount() != 0) {
+            getFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
+        }
     }
 }

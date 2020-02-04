@@ -162,13 +162,16 @@ public class FirebaseHelper {
 
     public void addToVotedByUser(Vote vote, String question, String option, String voteType){
         if("votings".equals(voteType)) {
-            FirebaseDatabase.getInstance().getReference().child("users").child(AppController.loggedUser.getId()).child("votedByUser").
+            FirebaseDatabase.getInstance().getReference().child("users").
+                    child(AppController.loggedUser.getId()).child("votedByUser").
                     child(voteType).child(vote.getId()).setValue(option);
         }else if("referendums".equals(voteType)){
-            FirebaseDatabase.getInstance().getReference().child("users").child(AppController.loggedUser.getId()).child("votedByUser").
+            FirebaseDatabase.getInstance().getReference().child("users").
+                    child(AppController.loggedUser.getId()).child("votedByUser").
                     child(voteType).child(vote.getId()).setValue(option);
         }else if("polls".equals(voteType)){
-            FirebaseDatabase.getInstance().getReference().child("users").child(AppController.loggedUser.getId()).child("votedByUser").
+            FirebaseDatabase.getInstance().getReference().child("users").
+                    child(AppController.loggedUser.getId()).child("votedByUser").
                     child(voteType).child(vote.getId()).child(question).setValue(option);
         }
     }
@@ -182,6 +185,7 @@ public class FirebaseHelper {
         else if(vote instanceof Poll)
             voteType = "polls";
 
-        FirebaseDatabase.getInstance().getReference().child(voteType).child(vote.getId()).removeValue();
+        FirebaseDatabase.getInstance().getReference().
+                child(voteType).child(vote.getId()).removeValue();
     }
 }

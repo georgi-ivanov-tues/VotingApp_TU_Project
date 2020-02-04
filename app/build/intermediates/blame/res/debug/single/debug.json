@@ -48,12 +48,12 @@
         "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\0d18b2f0bb4b81d703376d30c52111bb\\res\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4_common_google_signin_btn_text_dark_disabled.9.png.flat",
-        "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-9.0.0.aar\\b3fb0284c694de1a7ac40334b48886bb\\res\\drawable-tvdpi-v4\\common_google_signin_btn_text_dark_disabled.9.png"
-    },
-    {
         "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\anim_design_fab_in.xml.flat",
         "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.0.1.aar\\f50ab19b3f2bde8d996c6c5e9d4560de\\res\\anim\\design_fab_in.xml"
+    },
+    {
+        "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4_common_google_signin_btn_text_dark_disabled.9.png.flat",
+        "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-9.0.0.aar\\b3fb0284c694de1a7ac40334b48886bb\\res\\drawable-tvdpi-v4\\common_google_signin_btn_text_dark_disabled.9.png"
     },
     {
         "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_plus_signin_btn_icon_dark_pressed.9.png.flat",
@@ -64,12 +64,12 @@
         "source": "D:\\Projects\\GitHub\\VotingApp\\app\\src\\main\\res\\drawable-v21\\ic_menu_camera.xml"
     },
     {
-        "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\0d18b2f0bb4b81d703376d30c52111bb\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
-    },
-    {
         "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_subheader.xml.flat",
         "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.0.1.aar\\f50ab19b3f2bde8d996c6c5e9d4560de\\res\\layout\\design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\0d18b2f0bb4b81d703376d30c52111bb\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
         "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -80,12 +80,12 @@
         "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\0d18b2f0bb4b81d703376d30c52111bb\\res\\drawable\\abc_ratingbar_material.xml"
     },
     {
-        "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_list_selector_background_transition_holo_light.xml.flat",
-        "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\0d18b2f0bb4b81d703376d30c52111bb\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
-    },
-    {
         "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_plus_signin_btn_icon_light_disabled.9.png.flat",
         "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-9.0.0.aar\\b3fb0284c694de1a7ac40334b48886bb\\res\\drawable-xhdpi-v4\\common_plus_signin_btn_icon_light_disabled.9.png"
+    },
+    {
+        "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_list_selector_background_transition_holo_light.xml.flat",
+        "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\0d18b2f0bb4b81d703376d30c52111bb\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
         "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -196,12 +196,12 @@
         "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\0d18b2f0bb4b81d703376d30c52111bb\\res\\color\\abc_primary_text_material_dark.xml"
     },
     {
-        "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_icon_background.xml.flat",
-        "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\0d18b2f0bb4b81d703376d30c52111bb\\res\\drawable\\notification_icon_background.xml"
-    },
-    {
         "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_plus_signin_btn_icon_light_normal.9.png.flat",
         "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-9.0.0.aar\\b3fb0284c694de1a7ac40334b48886bb\\res\\drawable-mdpi-v4\\common_plus_signin_btn_icon_light_normal.9.png"
+    },
+    {
+        "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_icon_background.xml.flat",
+        "source": "C:\\Users\\giivanov\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\0d18b2f0bb4b81d703376d30c52111bb\\res\\drawable\\notification_icon_background.xml"
     },
     {
         "merged": "D:\\Projects\\GitHub\\VotingApp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action.xml.flat",

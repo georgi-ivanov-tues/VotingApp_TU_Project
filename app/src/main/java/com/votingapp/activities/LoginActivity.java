@@ -80,7 +80,8 @@ public class LoginActivity extends AppCompatActivity {
                         return false;
                     }else {
                         AppController.loggedUser = user;
-                        FirebaseDatabase.getInstance().getReference().child("users").child(user.getId()).child("isLoggedIn").setValue(true);
+                        FirebaseDatabase.getInstance().getReference().child("users").
+                                child(user.getId()).child("isLoggedIn").setValue(true);
                         return true;
                     }
                 }else{

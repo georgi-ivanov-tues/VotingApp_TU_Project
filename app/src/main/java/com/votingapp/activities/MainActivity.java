@@ -230,6 +230,7 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Sele
             Intent myIntent = new Intent(MainActivity.this, CreateVoteActivity.class);
             startActivity(myIntent);
         }else if(id == R.id.nav_exit){
+            FirebaseDatabase.getInstance().getReference().child("users").child(AppController.loggedUser.getId()).child("isLoggedIn").setValue(false);
             finish();
         }
 

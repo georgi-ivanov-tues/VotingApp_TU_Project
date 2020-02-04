@@ -1,7 +1,5 @@
 package com.votingapp.models;
 
-import com.google.firebase.database.Exclude;
-
 /**
  * Created by giivanov on 4.5.2018 г..
  */
@@ -11,7 +9,6 @@ public class Option {
     private String id;
     private String optionText;
     private int timesSelected;
-    private boolean selectedByCurrentUser = false;
 
     public Option(){}
 
@@ -52,14 +49,5 @@ public class Option {
 
     public void increaseTimesSelected(){
         timesSelected++;
-    }
-
-    @Exclude
-    public boolean isSelectedByCurrentUser() {
-        return selectedByCurrentUser;
-    }
-
-    public void setSelectedByCurrentUser(boolean selectedByCurrentUser) {
-        this.selectedByCurrentUser = selectedByCurrentUser;
     }
 }

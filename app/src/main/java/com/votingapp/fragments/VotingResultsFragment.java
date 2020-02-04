@@ -52,29 +52,31 @@ public class VotingResultsFragment extends Fragment {
         FirebaseDatabase.getInstance().getReference().child("votings").child(voting.getId()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                int totalNumberOfVotes = AppController.getTotalNumberOfVotes(voting.getOptions());
-                votingResultsLinearLayout.removeAllViews();
+                try {
+                    int totalNumberOfVotes = AppController.getTotalNumberOfVotes(voting.getOptions());
+                    votingResultsLinearLayout.removeAllViews();
 
-                for(Option option : voting.getOptions()){
-                    option.setTimesSelected(((Long) dataSnapshot.child("options").child(option.getId()).child("timesSelected").getValue()).intValue());
+                    for (Option option : voting.getOptions()) {
+                        option.setTimesSelected(((Long) dataSnapshot.child("options").child(option.getId()).child("timesSelected").getValue()).intValue());
 
-                    if(getActivity() != null) {
-                        TextView optionTextView = new TextView(getActivity());
-                        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                        params.setMargins(10, 20, 0, 20);
-                        optionTextView.setLayoutParams(params);
+                        if (getActivity() != null) {
+                            TextView optionTextView = new TextView(getActivity());
+                            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                            params.setMargins(10, 20, 0, 20);
+                            optionTextView.setLayoutParams(params);
 
-                        double optionPercentage = AppController.calculateOptionPercentage(option, totalNumberOfVotes);
-                        optionTextView.setText(AppController.formatOptionPercentage(option, optionPercentage));
-                        optionTextView.setTextAppearance(getActivity(), R.style.text_vote_result_option);
-                        if (option.getId().equals(votedOption))
-                            optionTextView.setTypeface(null, Typeface.BOLD);
+                            double optionPercentage = AppController.calculateOptionPercentage(option, totalNumberOfVotes);
+                            optionTextView.setText(AppController.formatOptionPercentage(option, optionPercentage));
+                            optionTextView.setTextAppearance(getActivity(), R.style.text_vote_result_option);
+                            if (option.getId().equals(votedOption))
+                                optionTextView.setTypeface(null, Typeface.BOLD);
 
-                        votingResultsLinearLayout.addView(optionTextView);
+                            votingResultsLinearLayout.addView(optionTextView);
 
-                        votingResultsLinearLayout.addView(AppController.createPercentangeBars(getActivity(), optionPercentage));
+                            votingResultsLinearLayout.addView(AppController.createPercentangeBars(getActivity(), optionPercentage));
+                        }
                     }
-                }
+                }catch (Exception e){}
             }
 
             @Override

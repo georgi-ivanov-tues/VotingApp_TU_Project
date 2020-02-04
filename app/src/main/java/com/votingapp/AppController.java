@@ -79,6 +79,7 @@ public class AppController extends Application{
     }
 
     public static double calculateOptionPercentage(Option option, int totalNumberOfVotes){
+        if(totalNumberOfVotes == 0) totalNumberOfVotes = 1;
         return (option.getTimesSelected() / (double) totalNumberOfVotes) * 100;
     }
 

@@ -65,25 +65,28 @@ public class ListFragment extends android.support.v4.app.ListFragment {
         getListView().setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> arg0, View arg1, final int arg2, long arg3) {
-                DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        switch (which){
-                            case DialogInterface.BUTTON_POSITIVE:
-                                Vote voteToDelete = votesAdapter.getItem(arg2);
-                                AppController.firebaseHelper.deleteVoteFromDB(voteToDelete);
-                                break;
+                if(AppController.loggedUser.getIsAdmin()) {
+                    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            switch (which) {
+                                case DialogInterface.BUTTON_POSITIVE:
+                                    Vote voteToDelete = votesAdapter.getItem(arg2);
+                                    AppController.firebaseHelper.deleteVoteFromDB(voteToDelete);
+                                    break;
 
-                            case DialogInterface.BUTTON_NEGATIVE:
-                                //No button clicked
-                                break;
+                                case DialogInterface.BUTTON_NEGATIVE:
+                                    //No button clicked
+                                    break;
+                            }
                         }
-                    }
-                };
+                    };
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setMessage("Искате ли да изтриете ... ?").setPositiveButton("Да", dialogClickListener).setNegativeButton("Не", dialogClickListener).show();
-                return true;
+                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                    builder.setMessage("Искате ли да изтриете вота?").setPositiveButton("Да", dialogClickListener).setNegativeButton("Не", dialogClickListener).show();
+                    return true;
+                }
+                return false;
             }
         });
     }

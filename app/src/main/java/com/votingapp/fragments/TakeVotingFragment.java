@@ -100,7 +100,6 @@ public class TakeVotingFragment extends Fragment {
                         if (option.getOptionText().equals(radioButton.getText())) {
                             optionVotedByUser = option.getId();
                             option.increaseTimesSelected();
-                            option.setSelectedByCurrentUser(true);
                             selectedByCurrentUserOptionsId.add(option.getId());
 
                             // Update record in DB

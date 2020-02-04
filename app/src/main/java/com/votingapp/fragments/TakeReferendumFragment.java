@@ -83,14 +83,12 @@ public class TakeReferendumFragment extends Fragment {
                     String selectedOptionTimes = "";
                     if ("Да".equals(radioButton.getText())) {
                         referendum.getOptionYes().increaseTimesSelected();
-                        referendum.getOptionYes().setSelectedByCurrentUser(true);
                         selectedByCurrentUserOptionsId.add(referendum.getOptionYes().getId());
 
                         selectedOption = "Да";
                         selectedOptionTimes = "yesSelectedTimes";
                     }else if ("Не".equals(radioButton.getText())) {
                         referendum.getOptionNo().increaseTimesSelected();
-                        referendum.getOptionNo().setSelectedByCurrentUser(true);
                         selectedByCurrentUserOptionsId.add(referendum.getOptionNo().getId());
 
                         selectedOption = "Не";
